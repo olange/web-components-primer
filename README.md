@@ -1,11 +1,15 @@
 # A primer on Web Components
 
-GenevaWeb conference · 11.03.2019 12h–14h
 
-### Annonces
+### Performance
 
-* https://www.meetup.com/fr-FR/GenevaWeb/events/258787967/
-* http://techup.ch/2700/genevaweb-a-primer-on-web-components
+* GenevaWeb conference, 11.03.2019, 12h–14h  
+  https://www.meetup.com/fr-FR/GenevaWeb/events/258787967/  
+  http://techup.ch/2700/genevaweb-a-primer-on-web-components
+
+### Audience
+
+TODO
 
 ### Outline
 
