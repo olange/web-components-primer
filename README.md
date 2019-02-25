@@ -13,7 +13,7 @@ TODO
 
 ### Outline
 
-<a href="http://model-viewer.glitch.me"><img height="360" title="Astronaut by Poly · Example of using a ‹model-viewer› web component" src="images/model-viewer-astronaut.png" style="border: 1px solid #cecece; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">
+<a href="http://model-viewer.glitch.me"><img height="360" title="Astronaut by Poly · Example of using a ‹model-viewer› web component" src="images/model-viewer-astronaut.png" style="border: 1px solid #cecece; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"></a>
 
 Web Components are ubiquitous and run natively on billion of devices in 2018. They allow to share and reuse functionality across web pages and apps, with the simplicity of markup — developers can create new HTML tags, beef-up existing HTML tags, or extend the components other developers have authored.
 
