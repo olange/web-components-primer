@@ -3,13 +3,15 @@
 
 ### Performance
 
-* GenevaWeb conference, 11.03.2019, 12h–14h  
-  https://www.meetup.com/fr-FR/GenevaWeb/events/258787967/  
+* GenevaWeb conference, 11.03.2019, 12h–14h
+  https://www.meetup.com/fr-FR/GenevaWeb/events/258787967/
   http://techup.ch/2700/genevaweb-a-primer-on-web-components
 
-### Audience
+### Audiences
 
-TODO
+* Web software developers / architects / project managers
+* Web Enthusiasts
+* Web Designers
 
 ### Outline
 
