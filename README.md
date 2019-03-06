@@ -25,19 +25,19 @@ At the end of the talk, you should be able to start building such an app and web
 
 #### Primary topics covered
 
-* Foundation of Web Components:
-· What they are? Custom Elements, Shadow DOM, Templates, Modules
-· How to create, use and publish them
+* Foundation of Web Components:  
+· What they are? Custom Elements, Shadow DOM, Templates, Modules  
+· How to create, use and publish them  
 · Web Components Best practices
 
-* Dataflows of Web Components:
-· Retrieving and storing data
+* Dataflows of Web Components:  
+· Retrieving and storing data  
 · Vanilla data bindings: « data in via attributes, data out via events »
 
-* The Ecosystem of Web Components:
-· Understand the Polymer project
-· Navigate WebComponents.org and discover its main collections
-· Understand Material Design and A11Y
+* The Ecosystem of Web Components:  
+· Understand the Polymer project  
+· Navigate WebComponents.org and discover its main collections  
+· Understand Material Design and A11Y  
 · Lit-HTML and Lit-Element
 
 #### Secondary topics
