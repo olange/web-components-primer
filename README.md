@@ -3,8 +3,8 @@
 
 ### Performance
 
-* GenevaWeb conference, 11.03.2019, 12h–14h
-  https://www.meetup.com/fr-FR/GenevaWeb/events/258787967/
+* GenevaWeb conference, 11.03.2019, 12h–14h  
+  https://www.meetup.com/fr-FR/GenevaWeb/events/258787967/ . 
   http://techup.ch/2700/genevaweb-a-primer-on-web-components
 
 ### Audiences
@@ -23,7 +23,7 @@ In this 45–60 min talk & live-coding, we will walk you thru building a static 
 
 At the end of the talk, you should be able to start building such an app and web components yourself, deploy it within minutes, find the documentation and resources to help learn to #UseThePlatform.
 
-Primary topics covered:
+#### Primary topics covered
 
 * Foundation of Web Components:
 · What they are? Custom Elements, Shadow DOM, Templates, Modules
@@ -40,12 +40,12 @@ Primary topics covered:
 · Understand Material Design and A11Y
 · Lit-HTML and Lit-Element
 
-Secondary topics:
+#### Secondary topics
 
 * Progressive Web Apps Starter Kit
 * A glimpse of Google Firebase.
 
-About us:
+#### About us
 
 Yves and Olivier Lange are running Le Petit Atelier de Génie logiciel sàrl (https://petit-atelier.ch), a software consultancy specialized in crafting ad-hoc software and business analysis — that is, whenever a piece is missing, we will analyse, design with you & craft it for you: either from scratch; or integrating with legacy systems.
 
