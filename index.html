@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>A Primer on Web Components</title>
+    <title>A Primer on Web Components · Welcome</title>
     <meta name="generator" content="@petitatelier/slideshow" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Slideshow of the conference « A Primer on Web Components », first presented at Geneva Web Meetup on 11.03.2019" />
+    <meta name="description" content="Landing page of the conference « A Primer on Web Components », first presented at Geneva Web Meetup on 11.03.2019" />
 
     <!--
       The `<base>` tag below is present to support two advanced deployment options:
@@ -78,9 +78,10 @@
           <h1>A Primer on Web Components</h1>
           <p>by Yves & Olivier Lange<br>
             Geneva Web meetup · 11.03.2019</p>
+          <p><a href="public/index.html"><strong>Join the conference</strong> »</a> <span class="chip">LIVE</span></p>
         </div>
         <a class="logo" href="https://petit-atelier.ch/">
-          <img height="72" src="public/images/manifest/icon-72x72.png">
+          <img height="96" src="public/images/manifest/icon-192x192.png">
         </a>
         <noscript>Please enable JavaScript to view this website.</noscript>
       </section>
@@ -88,14 +89,14 @@
       <model-viewer
         src="public/images/models/Astronaut.glb"
         alt="A 3D model of an astronaut"
-        background-color="#70BCD1"
+        background-color="lightskyblue"
         controls auto-rotate>
       </model-viewer>
 
       <section class="attribution">
         <span>
           <h1>Astronaut</h1>
-          <span>By <a href="https://poly.google.com/view/dLHpzNdygsg" target="_blank">Poly</a></span>
+          <span>by <a href="https://poly.google.com/view/dLHpzNdygsg" target="_blank">Poly</a></span>
         </span>
         <a class="cc" href="https://creativecommons.org/licenses/by/2.0/" target="_blank">
           <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg">
@@ -112,21 +113,6 @@
     <script src="node_modules/intersection-observer/intersection-observer.js"></script>
     <script src="node_modules/@google/model-viewer/dist/model-viewer.js"></script>
 
-    <!-- Dependencies of the slideshow -->
-    <script type="module" src="node_modules/@petitatelier/dia-show/index.js"></script>
-    <script type="module" src="node_modules/@petitatelier/dia-code/dia-code.js"></script>
-    <script type="module" src="node_modules/@petitatelier/dia-livecode/dia-livecode.js"></script>
-
-    <!-- Load Firebase libraries (see https://www.npmjs.com/package/firebase, -->
-    <!-- as well as https://firebase.google.com/docs/hosting/reserved-urls) -->
-    <!--
-    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-firestore.js"></script>
-    -->
-    <!-- NOTE: prefer CDN for Firebase libs, to be able to use `polymer serve` -->
-
     <!-- Built with love using PWA Starter Kit, made by Google Polymer team -->
-    <!-- <script type="module" src="src/components/my-app.js" crossorigin></script> -->
   </body>
 </html>

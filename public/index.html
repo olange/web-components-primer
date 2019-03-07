@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>A Primer on Web Components</title>
+    <meta name="generator" content="@petitatelier/slideshow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Slideshow of the conference « A Primer on Web Components », first presented at Geneva Web Meetup on 11.03.2019" />
+
+    <link rel="icon" href="images/favicon.ico" />
+
+    <!-- Performance tip: hint to the browser to start the handshake for the fonts site -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link rel="preconnect" href="https://www.gstatic.com/" crossorigin />
+
+    <!-- Add any global styles for body, document, etc. -->
+    <style>
+      @import url( "public/styles.css");
+      @import url( "https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans+Condensed|Fira+Sans+Extra+Condensed");
+    </style>
+  </head>
+  <body>
+    <!-- Load webcomponents-loader.js to check and load any polyfills your browser needs -->
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+
+    <!-- Dependencies of the slideshow -->
+    <script type="module" src="../node_modules/@petitatelier/dia-show/index.js"></script>
+    <script type="module" src="../node_modules/@petitatelier/dia-code/dia-code.js"></script>
+    <script type="module" src="../node_modules/@petitatelier/dia-livecode/dia-livecode.js"></script>
+
+    <!-- Load Firebase libraries (see https://www.npmjs.com/package/firebase, -->
+    <!-- as well as https://firebase.google.com/docs/hosting/reserved-urls) -->
+    <!--
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-firestore.js"></script>
+    -->
+    <!-- NOTE: prefer CDN for Firebase libs, to be able to use `polymer serve` -->
+
+    <!-- Built with love using PWA Starter Kit, made by Google Polymer team -->
+    <!-- <script type="module" src="src/components/my-app.js" crossorigin></script> -->
+  </body>
+</html>
