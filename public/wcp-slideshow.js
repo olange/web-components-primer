@@ -201,7 +201,7 @@ $ npm run serve
           <dia-po display="tv02">
             Demonstrates:
             * A simple PWA shell (public/index.html)
-            * wrapping a Web Component with the slideshow (public/web-components-primer.js)
+            * wrapping a Web Component with the slideshow (public/wcp-slideshow.js)
             * with Service Worker Precache (sw-precache-config.js)
             * Web App Manifest (manifest.json)
             * Polymer Differential Builds (polymer.json)
@@ -233,4 +233,4 @@ $ npm run serve
 }
 
 // Register the element with the browser
-customElements.define( "web-components-primer", WebComponentsPrimerSlideshow);
+customElements.define( "wcp-slideshow", WebComponentsPrimerSlideshow);

@@ -20,10 +20,10 @@ body {
   background-color: var(--main-bg-color);
   color: var(--primary-text-color) }
 
-body, web-components-primer {
+body, wcp-slideshow {
   display: flex; flex-direction: row }
 
-web-components-primer {
+wcp-slideshow {
   flex-grow: 1 }
 
 main {

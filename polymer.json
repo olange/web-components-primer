@@ -1,13 +1,17 @@
 {
   "root": "public",
   "entrypoint": "index.html",
-  "shell": "web-components-primer.html",
+  "shell": "wcp-slideshow.html",
   "sources": [
-    "web-components-primer.js",
-    "web-components-primer.html",
     "index.html",
+    "wcp-slideshow.html",
+    "wcp-slideshow.js",
+    "wcp-summary.js",
     "styles.css",
     "styles.js"
+  ],
+  "fragments": [
+    "wcp-summary.js"
   ],
   "extraDependencies": [
     "manifest.json",
