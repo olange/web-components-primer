@@ -6,7 +6,8 @@
     "web-components-primer.js",
     "web-components-primer.html",
     "index.html",
-    "styles.css"
+    "styles.css",
+    "styles.js"
   ],
   "extraDependencies": [
     "manifest.json",

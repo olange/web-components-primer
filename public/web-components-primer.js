@@ -1,4 +1,7 @@
 import { LitElement, html, css } from "lit-element";
+
+import { SlideshowStyles } from "./styles.js";
+
 import "@petitatelier/dia-show";
 import "@petitatelier/dia-code";
 import "@petitatelier/dia-livecode";
@@ -10,47 +13,14 @@ import "@google/model-viewer";
 export class WebComponentsPrimerSlideshow extends LitElement {
 
   static get styles() {
-    return [
-      css`
-        .big { font-size: var(--big-normal-text-size); }
-        .big pre, pre.big,
-        .big code, code.big {
-          font-size: var(--big-monospaced-text-size); }
-
-        .center { text-align: center; }
-
-        pre, code {
-          font-family: var(--monospaced-text-font);
-          font-size: var(--monospaced-text-size); }
-
-        h1, pre, model-viewer {
-          margin: calc(1.5 * var(--big-normal-text-size)) auto;
-          padding: 0; }
-
-        aside {
-          background-color: lightgray;
-          width: 1fr; padding: 1em 2em; }
-
-        a { color: var(--primary-text-color); }
-        a:hover, a:visited { color: var(--secondary-text-color); }
-
-        model-viewer {
-          width: 100%; height: 400px; }
-
-        .chip {
-          border-radius: 0.25em;
-          border: 1px solid var(--primary-text-color);
-          background-color: var(--primary-text-color);
-          color: var(--main-bg-color);
-          margin: 0 0.5em; padding: 0 0.25em; }
-      `
-    ];
+    return [ SlideshowStyles ];
   }
 
   static get properties() {
     return {
       primerURL: { type: String, attribute: "primer-url" },
-      starterURL: { type: String, attribute: "starter-url" }
+      starterURL: { type: String, attribute: "starter-url" },
+      meetupURL: { type: String, attribute: "meetup-url" }
     };
   }
 
@@ -68,7 +38,9 @@ export class WebComponentsPrimerSlideshow extends LitElement {
     const primerURL = new URL( this.primerURL),
           primerURLShortened = `${primerURL.host}${primerURL.pathname}`,
           starterURL = new URL( this.starterURL),
-          starterURLShortened = `${starterURL.host}${starterURL.pathname}`;
+          starterURLShortened = `${starterURL.host}${starterURL.pathname}`,
+          meetupURL = new URL( this.meetupURL),
+          meetupURLShortened = `${meetupURL.host}/GenevaWeb`
 
     return html`
       <dia-show slide="s01">
@@ -144,7 +116,7 @@ export class WebComponentsPrimerSlideshow extends LitElement {
           <dia-po display="sp01"></dia-po>
           <dia-po display="sp02"></dia-po>
         </dia-slide>
-        <dia-slide id="s03">
+        <dia-slide id="s04">
           <dia-po display="pj01"></dia-po>
           <dia-po display="tv01" default>
             <h1>The Promises of Web Components</h1>
@@ -156,14 +128,14 @@ export class WebComponentsPrimerSlideshow extends LitElement {
           <dia-po display="sp01"></dia-po>
           <dia-po display="sp02"></dia-po>
         </dia-slide>
-        <dia-slide id="s03">
+        <dia-slide id="s05">
           <dia-po display="pj01"></dia-po>
           <dia-po display="tv01" default>Can I Use… ?</dia-po>
           <dia-po display="tv02">Diagramme compatibilité avec navigateurs (avec polyfills)</dia-po>
           <dia-po display="sp01"></dia-po>
           <dia-po display="sp02"></dia-po>
         </dia-slide>
-        <dia-slide id="s03">
+        <dia-slide id="s06">
           <dia-po display="pj01"></dia-po>
           <dia-po display="tv01" default>Difficult bits</dia-po>
           <dia-po display="tv02">Modules / npm install hairball / Dataflow: many strategies, all valid, soon you'll start mixing strategies / Building for production</dia-po>
@@ -184,7 +156,7 @@ export class WebComponentsPrimerSlideshow extends LitElement {
           <dia-po display="tv01" default class="center">
             <h1>Thank you for your attention<br>🙏🏻</h1>
             <p class="big">Your feedback would be very appreciated!</p>
-            <p>Please leave a comment on <a href="${this.meetupURL}">meetup.com/GenevaWeb</a><br>
+            <p>Please leave a comment on <a href="${meetupURL}">${meetupURLShortened}</a><br>
               or ping us on Twitter <a href="https://twitter.com/olange">@olange</a>
               and <a href="https://twitter.com/yveslangech">@yveslangech</a><br>
               or on LinkedIn <a href="https://www.linkedin.com/in/olange">@olange</a> and <a href="https://www.linkedin.com/in/yveslange">@yveslange</a>.</p>
