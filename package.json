@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/olange/web-components-primer.git"
+    "url": "git+https://github.com/petitatelier/web-components-primer.git"
   },
   "keywords": [
     "primer",
@@ -31,7 +31,7 @@
   "author": "Olivier & Yves Lange",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/olange/web-components-primer/issues"
+    "url": "https://github.com/petitatelier/web-components-primer/issues"
   },
-  "homepage": "https://github.com/olange/web-components-primer#readme"
+  "homepage": "https://github.com/petitatelier/web-components-primer#readme"
 }

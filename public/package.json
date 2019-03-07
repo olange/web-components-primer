@@ -1,5 +1,5 @@
 {
-  "name": "@petitatelier/web-components-primer",
+  "name": "@petitatelier/web-components-primer-slideshow",
   "version": "0.1.0",
   "description": "« A Primer on Web Components » conference slideshow",
   "main": "index.html",
@@ -18,7 +18,7 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/olange/web-components-primer.git"
+    "url": "git+https://github.com/petitatelier/web-components-primer.git"
   },
   "keywords": [
     "primer",
@@ -30,7 +30,7 @@
   "author": "Olivier & Yves Lange",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/olange/web-components-primer/issues"
+    "url": "https://github.com/petitatelier/web-components-primer/issues"
   },
-  "homepage": "https://github.com/olange/web-components-primer#readme"
+  "homepage": "https://github.com/petitatelier/web-components-primer#readme"
 }
