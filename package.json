@@ -1,0 +1,39 @@
+{
+  "name": "@petitatelier/web-components-primer",
+  "version": "0.1.0",
+  "description": "« A Primer on Web Components » conference slideshow",
+  "main": "public/index.html",
+  "files": [
+    "public/**"
+  ],
+  "scripts": {
+    "dev": "polyserve --npm --module-resolution=node --open-path=public/index.html",
+    "build": "npm run build:static",
+    "build:static": "polymer build",
+    "serve": "polymer serve --port 8001",
+    "serve:static": "polymer serve --port 8000 build/es5-bundled",
+    "postshrinkwrap": "if [ \"`uname`\" = \"Darwin\" ]; then sed -i '' -e 's/http:\\/\\//https:\\/\\//g' package-lock.json; else sed -i -e 's/http:\\/\\//https:\\/\\//g' package-lock.json; fi"
+  },
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.2.7",
+    "polymer-cli": "^1.9.7",
+    "polyserve": "^0.27.15"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olange/web-components-primer.git"
+  },
+  "keywords": [
+    "primer",
+    "webcomponents",
+    "talk",
+    "conference",
+    "slideshow"
+  ],
+  "author": "Olivier & Yves Lange",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/olange/web-components-primer/issues"
+  },
+  "homepage": "https://github.com/olange/web-components-primer#readme"
+}
