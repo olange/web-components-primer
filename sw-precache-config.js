@@ -10,8 +10,8 @@
 
 module.exports = {
   staticFileGlobs: [
-    'manifest.json',
-    'src/**/*',
+    "manifest.json",
+    "public/**/*",
   ],
   runtimeCaching: [
     {
@@ -32,5 +32,3 @@ module.exports = {
   navigateFallback: '/index.html',
   navigateFallbackWhitelist: [ /^\/[^\_]+\/?/ ]
 };
-
-// eof

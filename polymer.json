@@ -6,7 +6,7 @@
     "public/**/*"
   ],
   "extraDependencies": [
-    "public/manifest.json",
+    "manifest.json",
     "node_modules/@webcomponents/webcomponentsjs/**",
     "data/**"
   ],
