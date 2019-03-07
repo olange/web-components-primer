@@ -2,19 +2,20 @@
   "name": "@petitatelier/web-components-primer",
   "version": "0.1.0",
   "description": "« A Primer on Web Components » conference slideshow",
-  "main": "public/index.html",
+  "main": "index.html",
   "scripts": {
-    "dev": "polyserve --npm --module-resolution=node --hostname 0.0.0.0 --port 8081 --root public/",
-    "build": "npm run build:static",
-    "build:static": "polymer build",
-    "serve": "polymer serve --hostname 0.0.0.0 --port 8001 --root public/",
-    "serve:static": "polymer serve --hostname 0.0.0.0 --port 8000 --root build/esm-bundled/public/",
     "postshrinkwrap": "if [ \"`uname`\" = \"Darwin\" ]; then sed -i '' -e 's/http:\\/\\//https:\\/\\//g' package-lock.json; else sed -i -e 's/http:\\/\\//https:\\/\\//g' package-lock.json; fi"
   },
-  "devDependencies": {
-    "polymer-cli": "^1.9.7",
-    "polyserve": "^0.27.15"
+  "dependencies": {
+    "@google/model-viewer": "^0.1.1",
+    "@petitatelier/dia-code": "^0.1.2",
+    "@petitatelier/dia-livecode": "^0.1.2",
+    "@petitatelier/dia-show": "^0.1.2",
+    "@webcomponents/webcomponentsjs": "^2.2.7",
+    "intersection-observer": "^0.5.1",
+    "resize-observer-polyfill": "^1.5.1"
   },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/olange/web-components-primer.git"

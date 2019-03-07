@@ -2,16 +2,68 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>A Primer on Web Components</title>
+    <title>A Primer on Web Components · Welcome</title>
     <meta name="generator" content="@petitatelier/slideshow" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Slideshow of the conference « A Primer on Web Components », first presented at Geneva Web Meetup on 11.03.2019" />
+    <meta name="description" content="Landing page of the conference « A Primer on Web Components », first presented at Geneva Web Meetup on 11.03.2019" />
+
+    <!--
+      The `<base>` tag below is present to support two advanced deployment options:
+      1) Differential serving. 2) Serving from a non-root path.
+
+      Instead of manually editing the `<base>` tag yourself, you should generally either:
+      a) Add a `basePath` property to the build configuration in your `polymer.json`.
+      b) Use the `--base-path` command-line option for `polymer build`.
+    -->
+    <base href="/" />
 
     <link rel="icon" href="images/favicon.ico" />
+
+    <!-- See https://goo.gl/OOhYW5 -->
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- See https://goo.gl/qRE0vM -->
+    <meta name="theme-color" content="#3f51b5" />
+
+    <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Web Components Primer" />
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Web Components Primer" />
+
+    <!-- Homescreen icons -->
+    <link rel="apple-touch-icon" href="images/manifest/icon-48x48.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/manifest/icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="96x96" href="images/manifest/icon-96x96.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/manifest/icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="images/manifest/icon-192x192.png" />
+
+    <!-- Tile icon for Windows 8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/manifest/icon-144x144.png" />
+    <meta name="msapplication-TileColor" content="#3f51b5" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <!-- Default twitter cards -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@olange" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="web-components-primer" />
+    <meta property="og:image" content="images/manifest/icon-144x144.png" />
 
     <!-- Performance tip: hint to the browser to start the handshake for the fonts site -->
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link rel="preconnect" href="https://www.gstatic.com/" crossorigin />
+    <script>
+      // Load and register pre-caching Service Worker
+      if( "serviceWorker" in navigator) {
+        window.addEventListener( "load", function() {
+          navigator.serviceWorker.register( "service-worker.js", { scope: "/", });
+        });
+      }
+    </script>
 
     <!-- Add any global styles for body, document, etc. -->
     <style>
@@ -20,19 +72,53 @@
     </style>
   </head>
   <body class="unresolved">
+    <main>
+      <div id="card">
+        <section class="header">
+          <div>
+            <h1>A Primer on Web Components</h1>
+            <p>by Yves & Olivier Lange<br>
+              Geneva Web meetup · 11.03.2019</p>
+            <p><a href="web-components-primer.html"><strong>Join the conference</strong> »</a> <span class="chip">LIVE</span> 🍀🦄🔥✨💖</p>
+          </div>
+          <a class="logo" href="https://petit-atelier.ch/">
+            <img height="96" src="images/manifest/icon-192x192.png">
+          </a>
+          <noscript>Please enable JavaScript to view this website.</noscript>
+        </section>
+
+        <model-viewer
+          src="images/models/Astronaut.glb"
+          alt="A 3D model of an astronaut"
+          background-color="lightskyblue"
+          controls auto-rotate>
+        </model-viewer>
+
+        <section class="attribution">
+          <span>
+            <h1>Astronaut</h1>
+            <span>by <a href="https://poly.google.com/view/dLHpzNdygsg" target="_blank">Poly</a></span>
+            <span>· Tap the astronaut and drag</span>
+          </span>
+          <a class="cc" href="https://creativecommons.org/licenses/by/2.0/" target="_blank">
+            <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg">
+            <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg">
+          </a>
+        </section>
+      </div>
+    </main>
+
     <!-- Load webcomponents-loader.js to check and load any polyfills your browser needs -->
-    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 
-    <!-- Load Firebase libraries -->
-    <!--
-    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-firestore.js"></script>
-    -->
+    <!-- Dependencies of the ‹model-viewer› element -->
+    <script type="module">
+      import "resize-observer-polyfill";
+      import "intersection-observer";
+      import "@google/model-viewer";
+    </script>
 
-    <web-components-primer></web-components-primer>
-    <script type="module" src="web-components-primer.js" crossorigin></script>
-
+    <!-- Built with love using PWA Starter Kit, made by Google Polymer team -->
     <script>addEventListener( "load", () => document.body.classList.remove( "unresolved"));</script>
   </body>
 </html>

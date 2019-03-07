@@ -4,11 +4,11 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "build/es5-bundled",
+    "public": "build/esm-bundled/public",
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**"
+      "/node_modules/**"
     ]
   }
 }

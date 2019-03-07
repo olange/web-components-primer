@@ -163,6 +163,13 @@ export class WebComponentsPrimerSlideshow extends LitElement {
           <dia-po display="sp01"></dia-po>
           <dia-po display="sp02"></dia-po>
         </dia-slide>
+        <dia-slide id="s03">
+          <dia-po display="pj01"></dia-po>
+          <dia-po display="tv01" default>Difficult bits</dia-po>
+          <dia-po display="tv02">Modules / npm install hairball / Dataflow: many strategies, all valid, soon you'll start mixing strategies / Building for production</dia-po>
+          <dia-po display="sp01"></dia-po>
+          <dia-po display="sp02"></dia-po>
+        </dia-slide>
         <dia-slide id="sEnd">
           <dia-po display="pj01" class="center">
             <p>These slides are available at:</p>

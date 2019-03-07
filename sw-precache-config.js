@@ -10,9 +10,10 @@
 
 module.exports = {
   staticFileGlobs: [
-    "manifest.json",
-    "public/**/*",
+    "public/manifest.json",
+    "public/**"
   ],
+  stripPrefix: "public/",
   runtimeCaching: [
     {
       urlPattern: /\/@webcomponents\/webcomponentsjs\//,
@@ -28,6 +29,10 @@ module.exports = {
     },
     {
       urlPattern: /\/@petitatelier\/dia-code\//,
+      handler: 'fastest'
+    },
+    {
+      urlPattern: /\/@google\/model-viewer\//,
       handler: 'fastest'
     },
     {
