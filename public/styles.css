@@ -20,10 +20,10 @@ body {
   background-color: var(--main-bg-color);
   color: var(--primary-text-color) }
 
-body, main, web-components-primer {
+body, web-components-primer {
   display: flex; flex-direction: row }
 
-main, web-components-primer {
+web-components-primer {
   flex-grow: 1 }
 
 main {
