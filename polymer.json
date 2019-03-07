@@ -3,9 +3,10 @@
   "entrypoint": "index.html",
   "shell": "web-components-primer.html",
   "sources": [
-    "*.js",
-    "*.html",
-    "*.css"
+    "web-components-primer.js",
+    "web-components-primer.html",
+    "index.html",
+    "styles.css"
   ],
   "extraDependencies": [
     "manifest.json",
@@ -15,34 +16,9 @@
   ],
   "builds": [
     {
-      "name": "esm-bundled",
+      "name": "esm-unbundled",
       "browserCapabilities": [ "es2015", "modules" ],
       "js": { "minify": true },
-      "css": { "minify": true },
-      "html": { "minify": true },
-      "addServiceWorker": true,
-      "swPrecacheConfig": "../sw-precache-config.js"
-    },
-    {
-      "name": "es6-bundled",
-      "browserCapabilities": [ "es2015" ],
-      "js": {
-        "compile": "es2015",
-        "minify": true,
-        "transformModulesToAmd": true
-      },
-      "css": { "minify": true },
-      "html": { "minify": true },
-      "addServiceWorker": true,
-      "swPrecacheConfig": "../sw-precache-config.js"
-    },
-    {
-      "name": "es5-bundled",
-      "js": {
-        "compile": "es5",
-        "minify": true,
-        "transformModulesToAmd": true
-      },
       "css": { "minify": true },
       "html": { "minify": true },
       "addServiceWorker": true,

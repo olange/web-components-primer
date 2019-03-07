@@ -14,6 +14,7 @@ module.exports = {
     "public/**"
   ],
   stripPrefix: "public/",
+  replacePrefix: "",
   runtimeCaching: [
     {
       urlPattern: /\/@webcomponents\/webcomponentsjs\//,

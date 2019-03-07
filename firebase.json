@@ -4,7 +4,7 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "build/esm-bundled/public",
+    "public": "build/esm-unbundled/public",
     "ignore": [
       "firebase.json",
       "**/.*",
