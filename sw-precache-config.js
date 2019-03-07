@@ -19,6 +19,18 @@ module.exports = {
       handler: 'fastest'
     },
     {
+      urlPattern: /\/@petitatelier\/dia-show\//,
+      handler: 'fastest'
+    },
+    {
+      urlPattern: /\/@petitatelier\/dia-livecode\//,
+      handler: 'fastest'
+    },
+    {
+      urlPattern: /\/@petitatelier\/dia-code\//,
+      handler: 'fastest'
+    },
+    {
       urlPattern: /^https:\/\/fonts.gstatic.com\//,
       handler: 'fastest'
     },

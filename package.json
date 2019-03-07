@@ -7,11 +7,11 @@
     "public/**"
   ],
   "scripts": {
-    "dev": "polyserve --npm --module-resolution=node --open-path=public/index.html",
+    "dev": "polyserve --npm --module-resolution=node --hostname 0.0.0.0 --port 8081",
     "build": "npm run build:static",
     "build:static": "polymer build",
-    "serve": "polymer serve --port 8001",
-    "serve:static": "polymer serve --port 8000 build/es5-bundled",
+    "serve": "polymer serve --hostname 0.0.0.0 --port 8001",
+    "serve:static": "polymer serve --hostname 0.0.0.0 --port 8000 build/es5-bundled",
     "postshrinkwrap": "if [ \"`uname`\" = \"Darwin\" ]; then sed -i '' -e 's/http:\\/\\//https:\\/\\//g' package-lock.json; else sed -i -e 's/http:\\/\\//https:\\/\\//g' package-lock.json; fi"
   },
   "dependencies": {

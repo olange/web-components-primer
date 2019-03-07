@@ -2,13 +2,15 @@
   "entrypoint": "index.html",
   "shell": "index.html",
   "sources": [
-    "data/**/*",
     "public/**/*"
   ],
   "extraDependencies": [
     "manifest.json",
+    "data/**",
     "node_modules/@webcomponents/webcomponentsjs/**",
-    "data/**"
+    "node_modules/@petitatelier/dia-show/**",
+    "node_modules/@petitatelier/dia-livecode/**",
+    "node_modules/@petitatelier/dia-code/**"
   ],
   "builds": [
     {
