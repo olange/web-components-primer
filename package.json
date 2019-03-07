@@ -5,8 +5,10 @@
   "main": "public/index.html",
   "scripts": {
     "dev": "polyserve --npm --module-resolution=node --hostname 0.0.0.0 --port 8081 --root public/",
+    "build-mv-sw": "mv build/esm-unbundled/service-worker.js build/esm-unbundled/public/",
+    "build-subst-sw": "if [ \"`uname`\" = \"Darwin\" ]; then sed -i '' -e 's/\"public\\//\"/g' build/esm-unbundled/service-worker.js; else sed -i -e 's/\"public\\//\"/g' build/esm-unbundled/service-worker.js; fi",
     "build": "npm run build:static",
-    "build:static": "polymer build && sed -i '' -e 's/\"public\\//\"/g' build/esm-unbundled/service-worker.js && mv build/esm-unbundled/service-worker.js build/esm-unbundled/public/",
+    "build:static": "polymer build && npm run build-subst-sw && npm run build-mv-sw",
     "serve": "polymer serve --hostname 0.0.0.0 --port 8001 --root public/",
     "serve:static": "polymer serve --hostname 0.0.0.0 --port 8000 --root build/esm-unbundled/public/",
     "postshrinkwrap": "if [ \"`uname`\" = \"Darwin\" ]; then sed -i '' -e 's/http:\\/\\//https:\\/\\//g' package-lock.json; else sed -i -e 's/http:\\/\\//https:\\/\\//g' package-lock.json; fi"
