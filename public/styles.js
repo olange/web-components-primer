@@ -44,6 +44,29 @@ const SlideshowStyles = css`
     background-color: var(--primary-text-color);
     color: var(--main-bg-color);
     margin: 0 0.5em; padding: 0 0.25em; }
+
+  table {
+    border-collapse: collapse; border-spacing: 0;
+    display: block; overflow: auto; width: 100%; }
+
+  table tr {
+    border-top: 1px solid #c6cbd1; }
+
+  table tr:nth-child( 2n) {
+    background-color: #f6f8fa33; }
+
+  table th, td {
+    border: 1px solid #dfe2e5;
+    padding: 6px 13px; }
+
+  table th { font-weight: 600; }
+
+  blockquote {
+    background-color: #f6f8fa33;
+    padding: 2em 4em; margin: 1em 1em; }
+  }
+  cite {}
+  .blockquote { margin: 1em 1em; }
 `;
 
 export {
