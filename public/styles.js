@@ -63,7 +63,7 @@ const SlideshowStyles = css`
 
   blockquote {
     background-color: #f6f8fa33;
-    padding: 2em 4em; margin: 1em 1em; }
+    padding: 2em 2em; margin: 1em 1em; }
   }
   cite {}
   .blockquote { margin: 1em 1em; }

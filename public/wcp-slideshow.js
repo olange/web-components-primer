@@ -327,10 +327,19 @@ export class WebComponentsPrimerSlideshow extends LitElement {
           <dia-po display="tv02">
             <h1>Learning is an investment</h1>
             <blockquote cite="https://malloc.fi/go-long-on-web-components">
-              « If I had to choose a single front end technology in 2017 for a long lasting
-                career in Web Development, I would choose Web Components. »
+              « If I had to choose a single front end technology in 2017 for a long
+                lasting career in Web Development, I would choose Web Components. »
+              <p><cite>— Jani Tarvainen, 18.05.2017, <a href="https://malloc.fi/go-long-on-web-components">Go Long on Web Components</a></cite></p>
             </blockquote>
-            <p class="blockquote"><cite>— Jani Tarvainen, 18.05.2017, <a href="https://malloc.fi/go-long-on-web-components">Go Long on Web Components</a></cite></p>
+            <p>We embraced Web Components two years ago and use it for
+              everything we're developing since two years on the front-end.</p>
+            <p>We helped one of our customers to build an UI Toolbox based on
+              Polymer 2 and 1.5 years later, they have rebuilt 14 of their apps.</p>
+            <p>Despite the rapid evolving environment and inevitable technical
+              challenges (building libraries), it is a foundation that proved
+              sound — the standards, librairies and tools and are actively
+              developed, supported and wel documented, and there is a vibrant
+              community. We will continue investing in learning using it.</p>
           </dia-po>
           <dia-po display="sp01"></dia-po>
           <dia-po display="sp02"></dia-po>
@@ -345,6 +354,10 @@ export class WebComponentsPrimerSlideshow extends LitElement {
             <p class="big">
               Web Components Starter<br/>
               <a href="${starterURL}">${starterURLShortened}</a></p>
+            <p>Then publish them for all of us:</p>
+            <p class="big">
+              Web Components Publish<br/>
+              <a href="">webcomponents.org/publish</a></p>
           </dia-po>
           <dia-po display="tv01" default class="center">
             <h1>Thank you for your attention<br>🙏🏻</h1>
