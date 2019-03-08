@@ -1,5 +1,13 @@
 import { css } from "lit-element";
 
+const SummaryStyles = css`
+  *[active] {
+    background-color: var(--primary-text-color);
+    color: var(--main-bg-color); }
+  .summary {
+    margin: 0 auto; max-width: 600px; }
+`;
+
 const SlideshowStyles = css`
   .big { font-size: var(--big-normal-text-size); }
   .big pre, pre.big,
@@ -39,5 +47,6 @@ const SlideshowStyles = css`
 `;
 
 export {
-  SlideshowStyles
+  SlideshowStyles,
+  SummaryStyles
 }

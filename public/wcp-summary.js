@@ -1,39 +1,60 @@
 import { LitElement, html, css } from "lit-element";
+import { SummaryStyles } from "./styles.js";
 
 export class WebComponentsPrimerSummary extends LitElement {
+
+  static get styles() {
+    return [ SummaryStyles ];
+  }
+
   static get properties() {
     return {
-      index: { type: String }
+      active: { type: String, attribute: "active-index", reflect: true }
     };
   }
 
   constructor() {
     super();
-    this.index = undefined;
+    this.active = undefined;
+  }
+
+  updated( changedProperties) {
+    if( changedProperties.has( "active")) {
+      const oldActive = changedProperties.get( "active");
+
+      if( typeof oldActive !== "undefined") {
+        const oldActiveElt = this.shadowRoot.getElementById( oldActive);
+        if( oldActiveElt) oldActiveElt.removeAttribute( "active"); }
+
+      const activeElt = this.shadowRoot.getElementById( this.active);
+      if( activeElt) activeElt.setAttribute( "active", "");
+    }
   }
 
   render() {
     return html`
-      <h1>Foundation of Web Components</h1>
-      <ul>
-        <li>What they are? Custom Elements, Shadow DOM, Templates, Modules</li>
-        <li>How to create, use and publish them</li>
-        <li>Web Components Best practices</li>
-      </ul>
+      <div class="summary">
+        <h1 id="F">Foundation of Web Components</h1>
+        <ul>
+          <li id="F01">What they are? Custom Elements, Shadow DOM, Templates, Modules</li>
+          <li id="F02">How to create, use and publish them</li>
+          <li id="F03">Web Components Best practices</li>
+        </ul>
 
-      <h1>Dataflows of Web Components</h1>
-      <ul>
-        <li>Retrieving and storing data</li>
-        <li>Vanilla data bindings: « data in via attributes, data out via events »</li>
-      </ul>
+        <h1 id="D">Dataflows of Web Components</h1>
+        <ul>
+          <li id="D01">Retrieving and storing data</li>
+          <li id="D02">Vanilla data bindings: « data in via attributes, data out via events »</li>
+        </ul>
 
-      <h1>The Ecosystem of Web Components</h1>
-      <ul>
-        <li>Understand the Polymer project</li>
-        <li>Navigate WebComponents.org and discover its main collections</li>
-        <li>Understand Material Design and A11Y</li>
-        <li>Lit-HTML and Lit-Element</li>
-      </ul>
+        <h1 id="E">The Ecosystem of Web Components</h1>
+        <ul>
+          <li id="E01">Understand the Polymer project</li>
+          <li id="E02">Navigate WebComponents.org and discover its main collections</li>
+          <li id="E03">Understand Material Design and A11Y</li>
+          <li id="E04">Lit-HTML and Lit-Element</li>
+        </ul>
+      </div>
     `;
   }
 }

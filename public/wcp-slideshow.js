@@ -1,6 +1,7 @@
 import { LitElement, html, css } from "lit-element";
 
 import { SlideshowStyles } from "./styles.js";
+import "./wcp-summary.js";
 
 import "@petitatelier/dia-show";
 import "@petitatelier/dia-code";
@@ -103,7 +104,9 @@ export class WebComponentsPrimerSlideshow extends LitElement {
           </dia-po>
         </dia-slide>
         <dia-slide id="s02">
-          <dia-po display="pj01"></dia-po>
+          <dia-po display="pj01">
+            <wcp-summary active-index="E"></wcp-summary>
+          </dia-po>
           <dia-po display="tv01" default>
             <h1>What are Web Components?</h1>
             * Web Standards (Custom Elements, Shadow DOM & CSS, Import, Template)
