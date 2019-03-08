@@ -21,7 +21,8 @@ export class WebComponentsPrimerSlideshow extends LitElement {
     return {
       primerURL: { type: String, attribute: "primer-url" },
       starterURL: { type: String, attribute: "starter-url" },
-      meetupURL: { type: String, attribute: "meetup-url" }
+      meetupURL: { type: String, attribute: "meetup-url" },
+      slackURL: { type: String, attribute: "slack-url" }
     };
   }
 
@@ -33,6 +34,8 @@ export class WebComponentsPrimerSlideshow extends LitElement {
     this.starterURL = "https://ptat.ch/webcomponents-starter";
     // URL of the Geneva Web Meetup of 11.03.2019 (where to leave feedback)
     this.meetupURL = "https://www.meetup.com/fr-FR/GenevaWeb/events/258787967";
+    // URL of our `#webcomponents-primer` channel on Slack
+    this.slackURL = "https://petit-atelier.slack.com/messages/CGSSPMXJ7";
   }
 
   render() {
@@ -350,14 +353,14 @@ export class WebComponentsPrimerSlideshow extends LitElement {
             <p class="big">
               A Primer on Web Components<br/>
               <a href="${primerURL}">${primerURLShortened}</a></p>
-            <p>And once you're ready to roll your own collection of Web Components and publish them to NPM:</p>
+            <p>Once you're ready to roll your own collection of Web Components and publish them to NPM:</p>
             <p class="big">
               Web Components Starter<br/>
               <a href="${starterURL}">${starterURLShortened}</a></p>
-            <p>Then publish them for all of us:</p>
+            <p>Then publish your elements for all of us to use:</p>
             <p class="big">
-              Web Components Publish<br/>
-              <a href="">webcomponents.org/publish</a></p>
+              Web Components › Publish element<br/>
+              <a href="https://www.webcomponents.org/publish">webcomponents.org/publish</a></p>
           </dia-po>
           <dia-po display="tv01" default class="center">
             <h1>Thank you for your attention<br>🙏🏻</h1>
@@ -365,7 +368,10 @@ export class WebComponentsPrimerSlideshow extends LitElement {
             <p>Please leave a comment on <a href="${meetupURL}">${meetupURLShortened}</a><br>
               or ping us on Twitter <a href="https://twitter.com/olange">@olange</a>
               and <a href="https://twitter.com/yveslangech">@yveslangech</a><br>
-              or on LinkedIn <a href="https://www.linkedin.com/in/olange">@olange</a> and <a href="https://www.linkedin.com/in/yveslange">@yveslange</a>.</p>
+              or on LinkedIn <a href="https://www.linkedin.com/in/olange">@olange</a>
+              and <a href="https://www.linkedin.com/in/yveslange">@yveslange</a>.</p>
+            <p>Or request an invite and join our <a href="${this.slackURL}">#webcomponents-primer</a>
+              channel on Slack.</p>
           </dia-po>
           <dia-po display="tv02" class="center">
             <a href="https://petit-atelier.ch/">
@@ -379,7 +385,8 @@ export class WebComponentsPrimerSlideshow extends LitElement {
             <p class="big">Your feedback would be very appreciated!</p>
           </dia-po>
           <dia-po display="sp02" class="center">
-            (Petit Atelier · Logo)
+            <p>(Petit Atelier · Logo)</p>
+            <p>TODO: does the link to the #webcomponents-primer channel on Slack work for guests?</p>
           </dia-po>
         </dia-slide>
         <dia-slide id="sPost">

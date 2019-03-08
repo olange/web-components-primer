@@ -35,8 +35,7 @@ const SlideshowStyles = css`
     width: 100%; height: 400px; }
 
   dia-show, dia-po {
-    background-color: var(--main-bg-color);
-  }
+    background-color: var(--main-bg-color); }
 
   .chip {
     border-radius: 0.25em;
