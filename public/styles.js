@@ -25,7 +25,7 @@ const SlideshowStyles = css`
     padding: 0; }
 
   aside {
-    background-color: lightgray;
+    background-color: #d3d3d333;
     width: 1fr; padding: 1em 2em; }
 
   a { color: var(--primary-text-color); }
@@ -36,6 +36,15 @@ const SlideshowStyles = css`
 
   dia-show, dia-po {
     background-color: var(--main-bg-color); }
+
+  /* Scale of diapositive contents */
+  dia-po {
+    transform: scale( 1); }
+
+  /* Perspective of the diapositives displayed on projector
+   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/transform */
+  dia-po[display=pj01] {
+    transform: skew( 0, -5deg); }
 
   .chip {
     border-radius: 0.25em;
@@ -60,12 +69,11 @@ const SlideshowStyles = css`
 
   table th { font-weight: 600; }
 
+  cite {}
+  .blockquote { margin: 1em 1em; }
   blockquote {
     background-color: #f6f8fa33;
     padding: 2em 2em; margin: 1em 1em; }
-  }
-  cite {}
-  .blockquote { margin: 1em 1em; }
 `;
 
 export {
