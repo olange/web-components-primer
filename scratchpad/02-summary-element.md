@@ -1,5 +1,7 @@
 # Example of ‹wcp-summary› element
 
+<img height="400" src="02-summary-element.png" />
+
 ## wcp-summary.js
 
 ```
