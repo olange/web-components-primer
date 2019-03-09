@@ -134,20 +134,39 @@ export class WebComponentsPrimerSlideshow extends LitElement {
             </ol>
             <h2>And by extension</h2>
             <ul>
-              <li>Units of deployment</li>
-              <li>Public registry</li>
-              <li>Tool chain</li>
+              <li>Units of deployment — self-contained</li>
+              <li><a href="https://webcomponents.org/">WebComponents.org</a> public registry</li>
               <li>Design guidelines & Good practices (A11Y)</li>
               <li>A vibrant and diverse open-source community</li>
             </ul>
             <p><a href="https://www.webcomponents.org/specs">www.webcomponents.org/specs</a></p>
           </dia-po>
           <dia-po display="tv02">
+            <a href="about:blank" target="_blank">about:blank</a>
+            <dia-code>customElements.define( "my-element",
+  class extends HTMLElement{
+    connectedCallback() {
+      this.attachShadow( { mode: "open" })
+        .innerHTML = "&lt;div>Web Components are 🚀🦄✨ native!&lt;/div>
+                   + "&lt;style>div { color: green }</style>"
+    }
+  });</dia-code>
           </dia-po>
           <dia-po display="sp01">
-            TODO: Exemple de terrain avec élevation 3D
+            <h1>What are Web Components?</h1>
+            <h2>Web Standards</h2>
+            <h2>And by extension</h2>
           </dia-po>
           <dia-po display="sp02">
+            <a href="about:blank" target="_blank">about:blank</a>
+            <dia-code>customElements.define( "my-element",
+  class extends HTMLElement{
+    connectedCallback() {
+      this.attachShadow( { mode: "open" })
+        .innerHTML = "&lt;div>Web Components are 🚀🦄✨ native!&lt;/div>
+                   + "&lt;style>div { color: green }</style>"
+    }
+  });</dia-code>
           </dia-po>
         </dia-slide>
         <dia-slide id="s03">
