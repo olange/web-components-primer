@@ -38,7 +38,8 @@ export class WebComponentsPrimerSummary extends LitElement {
         <ul>
           <li id="F01">What they are? Custom Elements, Shadow DOM, Templates, Modules</li>
           <li id="F02">How to create, use and publish them</li>
-          <li id="F03">Web Components Best practices</li>
+          <li id="F03">Lit-HTML and Lit-Element</li>
+          <li id="F04">Web Components Best practices</li>
         </ul>
 
         <h1 id="D">Dataflows of Web Components</h1>
@@ -52,8 +53,8 @@ export class WebComponentsPrimerSummary extends LitElement {
           <li id="E01">Understand the Polymer project</li>
           <li id="E02">Navigate WebComponents.org and discover its main collections</li>
           <li id="E03">Understand Material Design and A11Y</li>
-          <li id="E04">Lit-HTML and Lit-Element</li>
         </ul>
+        <h3 id="C">Conclusion</h3>
       </div>
     `;
   }

@@ -74,11 +74,13 @@ export class WebComponentsPrimerSlideshow extends LitElement {
           <dia-po display="sp02">${diapoLiveCodeCustomElement()}</dia-po>
         </dia-slide>
         <dia-slide id="s03">
-          <dia-po display="pj01"></dia-po>
-          <dia-po display="tv01" default>${diapoWebComponentPromises()}</dia-po>
-          <dia-po display="tv02">${diapoColorOfTimePatchwork()}</dia-po>
-          <dia-po display="sp01">${diapoWebComponentPromisesAsideOlivier()}</dia-po>
-          <dia-po display="sp02">${diapoColorOfTimePatchwork()}</dia-po>
+          <dia-po display="pj01">TODO</dia-po>
+          <dia-po display="tv01">TODO
+            Custom Elements, Shadow DOM & CSS, Import, Template
+          </dia-po>
+          <dia-po display="tv02">TODO</dia-po>
+          <dia-po display="sp01">TODO</dia-po>
+          <dia-po display="sp02">TODO</dia-po>
         </dia-slide>
         <dia-slide id="s04">
           <dia-po display="pj01">TODO</dia-po>
@@ -97,7 +99,14 @@ export class WebComponentsPrimerSlideshow extends LitElement {
           <dia-po display="sp02">${diapoBrowserLatestVersions()}</dia-po>
         </dia-slide>
         <dia-slide id="s06">
-          <dia-po display="pj01">TODO</dia-po>
+          <dia-po display="pj01"><wcp-summary active-index="C" /></dia-po>
+          <dia-po display="tv01" default>${diapoWebComponentPromises()}</dia-po>
+          <dia-po display="tv02">${diapoColorOfTimePatchwork()}</dia-po>
+          <dia-po display="sp01">${diapoWebComponentPromisesAsideOlivier()}</dia-po>
+          <dia-po display="sp02">${diapoColorOfTimePatchwork()}</dia-po>
+        </dia-slide>
+        <dia-slide id="s07">
+          <dia-po display="pj01"><wcp-summary active-index="C" /></dia-po>
           <dia-po display="tv01" default>${diapoDifficultBits()}</dia-po>
           <dia-po display="tv02">${diapoLearningInvestment()}</dia-po>
           <dia-po display="sp01">${diapoDifficultBits()}</dia-po>
