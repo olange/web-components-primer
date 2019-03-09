@@ -19,6 +19,7 @@ export class WebComponentsPrimerSlideshow extends LitElement {
 
   static get properties() {
     return {
+      wifi: { type: Array, attribute: "wifi" },
       primerURL: { type: String, attribute: "primer-url" },
       starterURL: { type: String, attribute: "starter-url" },
       meetupURL: { type: String, attribute: "meetup-url" },
@@ -28,6 +29,9 @@ export class WebComponentsPrimerSlideshow extends LitElement {
 
   constructor() {
     super();
+    // Wifi SSID & pwd
+    this.wifi = [ "wifi-network", "123456" ];
+
     // URL of this slideshow « A Primer to Web Components »
     this.primerURL = "https://ptat.ch/webcomponents-primer";
     // URL of the « Web Components Starter » kit on GitHub
@@ -39,7 +43,8 @@ export class WebComponentsPrimerSlideshow extends LitElement {
   }
 
   render() {
-    const primerURL = new URL( this.primerURL),
+    const [ wifiSSID, wifiPWD ] = this.wifi,
+          primerURL = new URL( this.primerURL),
           primerURLShortened = `${primerURL.host}${primerURL.pathname}`,
           starterURL = new URL( this.starterURL),
           starterURLShortened = `${starterURL.host}${starterURL.pathname}`,
@@ -49,9 +54,9 @@ export class WebComponentsPrimerSlideshow extends LitElement {
     return html`
       <dia-show detached dashboard speaker>
         <dia-slide id="s01">
-          <dia-po display="pj01">
+          <dia-po display="pj01" class="center">
             <h1>WiFi</h1>
-            <pre class="big" style="text-align: center">sdg-solution-space<br>123456</pre>
+            <pre class="big">${wifiSSID}<br>${wifiPWD}</pre>
             <h1>Join the conference <span class="chip">LIVE</span></h1>
             <pre class="big"><a href="${primerURL}">${primerURLShortened}</a></pre>
           </dia-po>
@@ -60,7 +65,7 @@ export class WebComponentsPrimerSlideshow extends LitElement {
               #UseThePlatform</h1>
             <p>by Yves & Olivier Lange<br>
               Geneva Web meetup · 11.03.2019</p>
-            <a class="logo" href="https://petit-atelier.ch/"><img height="96" src="images/manifest/icon-192x192.png"></a>
+            <a class="logo" href="#"><img height="96" src="images/manifest/icon-192x192.png"></a>
           </dia-po>
           <dia-po display="tv02">
             <pre>‹model-viewer
@@ -81,12 +86,15 @@ export class WebComponentsPrimerSlideshow extends LitElement {
               #UseThePlatform</h1>
             <aside>
               <ul>
-                <li>Welcome! My name is Olivier… We're running a software consultancy,
+                <li>Welcome! Thank you for coming and joining us in this talk.</li>
+                <li>My name is Olivier…</li>
+                <li>'re running a software consultancy,
                   le PAGL, and crafting software for our partners and customers.</li>
                 <li>In about 45 min. we are going to try to present you Web Components,
                   a standard of the web, that as slowly matured and is now taking on.</li>
                 <li>Everything you see around you is made of webcomponents and
-                    markup text — so you'll get a live proof of how well it works!</li>
+                    markup text. We crafted the slideshow system using web components,
+                    and the content using HTML and CSS.</li>
               </ul>
             </aside>
           </dia-po>
@@ -101,7 +109,8 @@ export class WebComponentsPrimerSlideshow extends LitElement {
 ‹/model-viewer›</pre>
             <aside>
               <ul>
-                <li>… and my name is Yves. We're both open-source developers,
+                <li>… and my name is Yves.</li>
+                <li>We're both open-source developers,
                   and web fundamentals enthusiasts.</li>
                 <li>To follow the slideshow on your computer/tablet</li>
                 <li>connect to the WiFi (optionaly)</li>
@@ -116,18 +125,30 @@ export class WebComponentsPrimerSlideshow extends LitElement {
           </dia-po>
           <dia-po display="tv01" default>
             <h1>What are Web Components?</h1>
+            <h2>Web Standards</h2>
+            <ol>
+              <li><strong>Custom Elements</strong> — called <em>Web Components</em> by metonymy</li>
+              <li><strong>Shadow DOM/CSS</strong></li>
+              <li><strong>Templates</strong></li>
+              <li><strong>Modules & Imports</strong></li>
+            </ol>
+            <h2>And by extension</h2>
             <ul>
-              <li>Web Standards – more on this soon</li>
               <li>Units of deployment</li>
-              <li>Tool chain</li>
               <li>Public registry</li>
+              <li>Tool chain</li>
               <li>Design guidelines & Good practices (A11Y)</li>
               <li>A vibrant and diverse open-source community</li>
             </ul>
+            <p><a href="https://www.webcomponents.org/specs">www.webcomponents.org/specs</a></p>
           </dia-po>
-          <dia-po display="tv02">Exemple de terrain en 3D avec élévation</dia-po>
-          <dia-po display="sp01"></dia-po>
-          <dia-po display="sp02"></dia-po>
+          <dia-po display="tv02">
+          </dia-po>
+          <dia-po display="sp01">
+            TODO: Exemple de terrain avec élevation 3D
+          </dia-po>
+          <dia-po display="sp02">
+          </dia-po>
         </dia-slide>
         <dia-slide id="s03">
           <dia-po display="pj01"></dia-po>
@@ -140,12 +161,14 @@ export class WebComponentsPrimerSlideshow extends LitElement {
             </ul>
           </dia-po>
           <dia-po display="tv02">
-            (Patchwork image / Color of time)
+            <h1>Color of Time</h1>
+            <img src="images/color-of-time(screenshot).png"
+              alt="Color of Time · Patchwork of colors" />
           </dia-po>
           <dia-po display="sp01">
             <ul>
-                <li>Patchwork – beware hairball though</li>
-                <li>Composability & Reuse – UMD libraries though</li>
+                <li>Patchwork – beware hairball and AMD/UMD libraries interop though</li>
+                <li>Composability & Reuse</li>
                 <li>Built-in your browser – not a framework, nor a library!</li>
               </ul>
           </dia-po>
@@ -321,7 +344,7 @@ export class WebComponentsPrimerSlideshow extends LitElement {
           <dia-po display="tv01" default>
             <h1>Difficult bits</h1>
             <ul>
-              <li>Mixing ES2015 Modules and UMD/AMD libraries</li>
+              <li>ES2015 Modules and UMD/AMD libraries interop</li>
               <li>npm install hairball</li>
               <li>Dataflow: many strategies, all valid, soon you'll start mixing strategies</li>
               <li>Building for production</li>
@@ -349,10 +372,11 @@ export class WebComponentsPrimerSlideshow extends LitElement {
         </dia-slide>
         <dia-slide id="sEnd">
           <dia-po display="pj01" class="center">
-            <p>These slides are available at:</p>
+            <h2>Slides of the presentation</h2>
             <p class="big">
               A Primer on Web Components<br/>
               <a href="${primerURL}">${primerURLShortened}</a></p>
+            <h2>Share your components</h2>
             <p>Once you're ready to roll your own collection of Web Components and publish them to NPM:</p>
             <p class="big">
               Web Components Starter<br/>
