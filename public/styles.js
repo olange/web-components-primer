@@ -69,7 +69,7 @@ const SlideshowStyles = css`
 
   table th { font-weight: 600; }
 
-  cite {}
+  cite { font-style: normal; }
   .blockquote { margin: 1em 1em; }
   blockquote {
     background-color: #f6f8fa33;

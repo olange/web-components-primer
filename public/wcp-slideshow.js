@@ -1,8 +1,5 @@
 import { LitElement, html, css } from "lit-element";
 
-import { SlideshowStyles } from "./styles.js";
-import "./wcp-summary.js";
-
 import "@petitatelier/dia-show";
 import "@petitatelier/dia-code";
 import "@petitatelier/dia-livecode";
@@ -10,6 +7,19 @@ import "@petitatelier/dia-livecode";
 import "resize-observer-polyfill";
 import "intersection-observer";
 import "@google/model-viewer";
+
+import { SlideshowStyles } from "./styles.js";
+import { diapoWCPTitle, diapoWCPTitleAsideOlivier, diapoWCPTitleAsideYves, diapoWiFi, diapoModelViewer } from "./wcp-parts01.js";
+import { diapoWhatAreWebComponents, diapoLiveCodeCustomElement } from "./wcp-parts02.js";
+import { diapoWebComponentPromises, diapoColorOfTimePatchwork, diapoWebComponentPromisesAsideOlivier } from "./wcp-parts03.js";
+// import { } from "./wcp-parts04.js";
+import { diapo1BDevices, diapoCanIUseWebComponents, diapoWebComponentsPolyfill, diapoBrowserReleases, diapoBrowserLatestVersions } from "./wcp-parts05.js";
+import { diapoDifficultBits, diapoLearningInvestment } from "./wcp-parts06.js";
+import { diapoSlideshowShare, diapoThankYouFeedback, diapoPetitAtelier } from "./wcp-parts07.js";
+import { diapoGōngfuIO, diapoPlayWithWebComponents, diapoPlayWithDemonstrates, diapoPlayWithWebComponentsAside } from "./wcp-parts08.js";
+// import { } from "./wcp-parts09.js";
+// import { } from "./wcp-parts10.js";
+import "./wcp-summary.js";
 
 export class WebComponentsPrimerSlideshow extends LitElement {
 
@@ -54,433 +64,62 @@ export class WebComponentsPrimerSlideshow extends LitElement {
     return html`
       <dia-show detached dashboard speaker>
         <dia-slide id="s01">
-          <dia-po display="pj01" class="center">
-            <h1>WiFi</h1>
-            <pre class="big">${wifiSSID}<br>${wifiPWD}</pre>
-            <h1>Join the conference <span class="chip">LIVE</span></h1>
-            <pre class="big"><a href="${primerURL}">${primerURLShortened}</a></pre>
-          </dia-po>
-          <dia-po display="tv01" default>
-            <h1>A Primer on Web Components<br>
-              #UseThePlatform</h1>
-            <p>by Yves & Olivier Lange<br>
-              Geneva Web meetup · 11.03.2019</p>
-            <a class="logo" href="#"><img height="96" src="images/manifest/icon-192x192.png"></a>
-          </dia-po>
-          <dia-po display="tv02">
-            <pre>‹model-viewer
-  src="images/models/Astronaut.glb"
-  alt="A 3D model of an astronaut"
-  background-color="lightskyblue"
-  controls auto-rotate›
-‹/model-viewer›</pre>
-            <model-viewer
-              src="images/models/Astronaut.glb"
-              alt="A 3D model of an astronaut"
-              background-color="lightskyblue"
-              controls auto-rotate>
-            </model-viewer>
-          </dia-po>
-          <dia-po display="sp01">
-            <h1>A Primer on Web Components<br>
-              #UseThePlatform</h1>
-            <aside>
-              <ul>
-                <li>Welcome! Thank you for coming and joining us in this talk.</li>
-                <li>My name is Olivier…</li>
-                <li>'re running a software consultancy,
-                  le PAGL, and crafting software for our partners and customers.</li>
-                <li>In about 45 min. we are going to try to present you Web Components,
-                  a standard of the web, that as slowly matured and is now taking on.</li>
-                <li>Everything you see around you is made of webcomponents and
-                    markup text. We crafted the slideshow system using web components,
-                    and the content using HTML and CSS.</li>
-              </ul>
-            </aside>
-          </dia-po>
-          <dia-po display="sp02">
-            <pre>
-<script src="https://unpkg.com/@google/model-viewer@0.1.1/dist/model-viewer.js"></script>
-‹model-viewer
-  src="images/models/Astronaut.glb"
-  alt="A 3D model of an astronaut"
-  background-color="lightskyblue"
-  controls auto-rotate›
-‹/model-viewer›</pre>
-            <aside>
-              <ul>
-                <li>… and my name is Yves.</li>
-                <li>We're both open-source developers,
-                  and web fundamentals enthusiasts.</li>
-                <li>To follow the slideshow on your computer/tablet</li>
-                <li>connect to the WiFi (optionaly)</li>
-                <li>and navigate to the address written on projector</li>
-              </ul>
-            </aside>
-          </dia-po>
+          <dia-po display="pj01" class="center">${diapoWiFi( wifiSSID, wifiPWD, primerURL, primerURLShortened)}</dia-po>
+          <dia-po display="tv01" default>${diapoWCPTitle()}</dia-po>
+          <dia-po display="tv02">${diapoModelViewer()}</dia-po>
+          <dia-po display="sp01">${diapoWCPTitleAsideOlivier()}</dia-po>
+          <dia-po display="sp02">${diapoWCPTitleAsideYves()}</dia-po>
         </dia-slide>
         <dia-slide id="s02">
-          <dia-po display="pj01">
-            <wcp-summary active-index="F"></wcp-summary>
-          </dia-po>
-          <dia-po display="tv01" default>
-            <h1>What are Web Components?</h1>
-            <h2>Web Standards</h2>
-            <ol>
-              <li><strong>Custom Elements</strong> — called <em>Web Components</em> by metonymy</li>
-              <li><strong>Shadow DOM/CSS</strong></li>
-              <li><strong>Templates</strong></li>
-              <li><strong>Modules & Imports</strong></li>
-            </ol>
-            <h2>And by extension</h2>
-            <ul>
-              <li>Units of deployment — self-contained</li>
-              <li><a href="https://webcomponents.org/">WebComponents.org</a> public registry</li>
-              <li>Design guidelines & Good practices (A11Y)</li>
-              <li>A vibrant and diverse open-source community</li>
-            </ul>
-            <p><a href="https://www.webcomponents.org/specs">www.webcomponents.org/specs</a></p>
-          </dia-po>
-          <dia-po display="tv02">
-            <a href="about:blank" target="_blank">about:blank</a>
-            <dia-code>customElements.define( "my-element",
-  class extends HTMLElement{
-    connectedCallback() {
-      this.attachShadow( { mode: "open" })
-        .innerHTML = "&lt;div>Web Components are 🚀🦄✨ native!&lt;/div>
-                   + "&lt;style>div { color: green }</style>"
-    }
-  });</dia-code>
-          </dia-po>
-          <dia-po display="sp01">
-            <h1>What are Web Components?</h1>
-            <h2>Web Standards</h2>
-            <h2>And by extension</h2>
-          </dia-po>
-          <dia-po display="sp02">
-            <a href="about:blank" target="_blank">about:blank</a>
-            <dia-code>customElements.define( "my-element",
-  class extends HTMLElement{
-    connectedCallback() {
-      this.attachShadow( { mode: "open" })
-        .innerHTML = "&lt;div>Web Components are 🚀🦄✨ native!&lt;/div>
-                   + "&lt;style>div { color: green }</style>"
-    }
-  });</dia-code>
-          </dia-po>
+          <dia-po display="pj01"><wcp-summary active-index="F" /></dia-po>
+          <dia-po display="tv01" default>${diapoWhatAreWebComponents()}</dia-po>
+          <dia-po display="tv02">${diapoLiveCodeCustomElement()}</dia-po>
+          <dia-po display="sp01">${diapoWhatAreWebComponents()}</dia-po>
+          <dia-po display="sp02">${diapoLiveCodeCustomElement()}</dia-po>
         </dia-slide>
         <dia-slide id="s03">
           <dia-po display="pj01"></dia-po>
-          <dia-po display="tv01" default>
-            <h1>The Promises of Web Components</h1>
-            <ul>
-              <li>Patchwork</li>
-              <li>Composability & Reuse</li>
-              <li>Built-in your browser</li>
-            </ul>
-          </dia-po>
-          <dia-po display="tv02">
-            <h1>Color of Time</h1>
-            <img src="images/color-of-time(screenshot).png"
-              alt="Color of Time · Patchwork of colors" />
-          </dia-po>
-          <dia-po display="sp01">
-            <ul>
-                <li>Patchwork – beware hairball and AMD/UMD libraries interop though</li>
-                <li>Composability & Reuse</li>
-                <li>Built-in your browser – not a framework, nor a library!</li>
-              </ul>
-          </dia-po>
-          <dia-po display="sp02">
-            (Patchwork image / Color of time)
-          </dia-po>
+          <dia-po display="tv01" default>${diapoWebComponentPromises()}</dia-po>
+          <dia-po display="tv02">${diapoColorOfTimePatchwork()}</dia-po>
+          <dia-po display="sp01">${diapoWebComponentPromisesAsideOlivier()}</dia-po>
+          <dia-po display="sp02">${diapoColorOfTimePatchwork()}</dia-po>
         </dia-slide>
         <dia-slide id="s04">
-          <dia-po display="pj01"></dia-po>
-          <dia-po display="tv01">
+          <dia-po display="pj01">TODO</dia-po>
+          <dia-po display="tv01">TODO
             Custom Elements, Shadow DOM & CSS, Import, Template
           </dia-po>
-          <dia-po display="tv02"></dia-po>
-          <dia-po display="sp01"></dia-po>
-          <dia-po display="sp02"></dia-po>
+          <dia-po display="tv02">TODO</dia-po>
+          <dia-po display="sp01">TODO</dia-po>
+          <dia-po display="sp02">TODO</dia-po>
         </dia-slide>
         <dia-slide id="s05">
-          <dia-po display="pj01">
-            <blockquote cite="https://youtu.be/cuoZenpQveQ?t=960" style="padding: 4em 4em">
-              <h2>« Web Components run natively on 1B+ devices »</h2>
-              <p><cite>— Wendy Ginsberg, 17.05.2017</cite></p>
-            </blockquote>
-            <p class="blockquote"><cite><a href="https://youtu.be/cuoZenpQveQ?t=960">Future, Faster: Unlock the Power of Web Components with Polymer (Google I/O '17)</a></cite> at min. 16:00 of the talk</p>
-          </dia-po>
-          <dia-po display="tv01" default>
-            <h1>Can I Use Web Components ?</h1>
-            <table>
-            <thead>
-            <tr>
-            <th>Native browser support</th>
-            <th align="center">Chrome 66+</th>
-            <th align="center">Safari 11.1+</th>
-            <th align="center">Firefox 63+</th>
-            <th align="center">Edge 16+</th>
-            <th align="center">IE11</th>
-            <th align="center">Chrome Android</th>
-            <th align="center">Mobile Safari</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-            <td><a href="https://caniuse.com/#search=ES6%20classes">ES6 Classes</a></td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            <td align="center">Transpile</td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            </tr>
-            <tr>
-            <td><a href="https://polymer-library.polymer-project.org/3.0/docs/browsers">ES6 Modules</a></td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            <td align="center">Transpile</td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            </tr>
-            <tr>
-            <td><a href="https://caniuse.com/#search=Custom%20elements">Custom Elements</a></td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            <td align="center">Polyfill</td>
-            <td align="center">Polyfill</td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            </tr>
-            <tr>
-            <td><a href="https://caniuse.com/#search=shadow%20dom">Shadow DOM</a></td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            <td align="center">Polyfill</td>
-            <td align="center">Polyfill</td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            </tr>
-            <tr>
-            <td><a href="https://caniuse.com/#search=CSS%20variables">CSS Custom Properties</a></td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            <td align="center">Polyfill</td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            </tr>
-            <tr>
-            <td><a href="https://polymer-library.polymer-project.org/3.0/docs/browsers">Class decorators</a></td>
-            <td align="center">Transpile</td>
-            <td align="center">Transpile</td>
-            <td align="center">Transpile</td>
-            <td align="center">Transpile</td>
-            <td align="center">Transpile</td>
-            <td align="center">Transpile</td>
-            <td align="center">Transpile</td>
-            </tr>
-            </tbody>
-            </table>
-            <p><cite>Sources: <a href="https://caniuse.com/#search=Custom%20elements">caniuse.com</a> as of 11.03.2019
-              and <a href="https://polymer-library.polymer-project.org/3.0/docs/browsers">Polymer 3.0 Browser support overview</a> as of 05.2018.</cite></p>
-          </dia-po>
-          <dia-po display="tv02">
-            <h1>Web Components Polyfills (v1 spec)</h1>
-            <h2>Provide support for the Web Components specs</h2>
-            <ul>
-              <li><strong>Custom Elements v1</strong>: allows authors to define their own <em>custom tags</em>.</li>
-              <li><strong>Shadow DOM v1</strong>: provides encapsulation by hiding DOM subtrees under <em>shadow roots</em>.</li>
-            </ul>
-            <h2>Browser support matrix of the polyfills</h2>
-            <table>
-            <thead>
-            <tr>
-            <th>Polyfill</th>
-            <th align="center">Edge</th>
-            <th align="center">IE11+</th>
-            <th align="center">Chrome*</th>
-            <th align="center">Firefox*</th>
-            <th align="center">Safari 9+*</th>
-            <th align="center">Chrome Android*</th>
-            <th align="center">Mobile Safari*</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-            <td>Custom Elements</td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            </tr>
-            <tr>
-            <td>Shady CSS/DOM</td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            <td align="center">✓</td>
-            </tr>
-            </tbody>
-            </table>
-            <p><cite>Source: <a href="https://github.com/webcomponents/webcomponentsjs#browser-support">github.com/webcomponents/webcomponentsjs#browser-support</a></cite></p>
-          </dia-po>
-          <dia-po display="sp01">
-            <h2>Releases of the browsers</h2>
-            <ul>
-              <li>Chrome 66: released 04.2018</li>
-              <li>Safari 11.1: released 03.2018</li>
-              <li>Firefox 63: released 10.2018</li>
-              <li>Edge 16: released 10.2017</li>
-            </ul>
-          </dia-po>
-          <dia-po display="sp02">
-            <h2>Latest versions of the browsers as of today</h2>
-            <ul>
-              <li>Chrome 72</li>
-              <li>Safari 12</li>
-              <li>Firefox 667</li>
-              <li>Edge 18</li>
-            </ul>
-          </dia-po>
+          <dia-po display="pj01">${diapo1BDevices()}</dia-po>
+          <dia-po display="tv01" default>${diapoCanIUseWebComponents()}</dia-po>
+          <dia-po display="tv02">${diapoWebComponentsPolyfill()}</dia-po>
+          <dia-po display="sp01">${diapoBrowserReleases()}</dia-po>
+          <dia-po display="sp02">${diapoBrowserLatestVersions()}</dia-po>
         </dia-slide>
         <dia-slide id="s06">
-          <dia-po display="pj01"></dia-po>
-          <dia-po display="tv01" default>
-            <h1>Difficult bits</h1>
-            <ul>
-              <li>ES2015 Modules and UMD/AMD libraries interop</li>
-              <li>npm install hairball</li>
-              <li>Dataflow: many strategies, all valid, soon you'll start mixing strategies</li>
-              <li>Building for production</li>
-            </ul>
-          </dia-po>
-          <dia-po display="tv02">
-            <h1>Learning is an investment</h1>
-            <blockquote cite="https://malloc.fi/go-long-on-web-components">
-              « If I had to choose a single front end technology in 2017 for a long
-                lasting career in Web Development, I would choose Web Components. »
-              <p><cite>— Jani Tarvainen, 18.05.2017, <a href="https://malloc.fi/go-long-on-web-components">Go Long on Web Components</a></cite></p>
-            </blockquote>
-            <p>We embraced Web Components two years ago and use it for
-              everything we're developing since two years on the front-end.</p>
-            <p>We helped one of our customers to build an UI Toolbox based on
-              Polymer 2 and 1.5 years later, they have rebuilt 14 of their apps.</p>
-            <p>Despite the rapid evolving environment and inevitable technical
-              challenges (building libraries), it is a foundation that proved
-              sound — the standards, librairies and tools and are actively
-              developed, supported and wel documented, and there is a vibrant
-              community. We will continue investing in learning using it.</p>
-          </dia-po>
-          <dia-po display="sp01"></dia-po>
-          <dia-po display="sp02"></dia-po>
+          <dia-po display="pj01">TODO</dia-po>
+          <dia-po display="tv01" default>${diapoDifficultBits()}</dia-po>
+          <dia-po display="tv02">${diapoLearningInvestment()}</dia-po>
+          <dia-po display="sp01">${diapoDifficultBits()}</dia-po>
+          <dia-po display="sp02">${diapoLearningInvestment()}</dia-po>
         </dia-slide>
         <dia-slide id="sEnd">
-          <dia-po display="pj01" class="center">
-            <h2>Slides of the presentation</h2>
-            <p class="big">
-              A Primer on Web Components<br/>
-              <a href="${primerURL}">${primerURLShortened}</a></p>
-            <h2>Share your components</h2>
-            <p>Once you're ready to roll your own collection of Web Components and publish them to NPM:</p>
-            <p class="big">
-              Web Components Starter<br/>
-              <a href="${starterURL}">${starterURLShortened}</a></p>
-            <p>Then publish your elements for all of us to use:</p>
-            <p class="big">
-              Web Components › Publish element<br/>
-              <a href="https://www.webcomponents.org/publish">webcomponents.org/publish</a></p>
-          </dia-po>
-          <dia-po display="tv01" default class="center">
-            <h1>Thank you for your attention<br>🙏🏻</h1>
-            <p class="big">Your feedback would be very appreciated!</p>
-            <p>Please leave a comment on <a href="${meetupURL}">${meetupURLShortened}</a><br>
-              or ping us on Twitter <a href="https://twitter.com/olange">@olange</a>
-              and <a href="https://twitter.com/yveslangech">@yveslangech</a><br>
-              or on LinkedIn <a href="https://www.linkedin.com/in/olange">@olange</a>
-              and <a href="https://www.linkedin.com/in/yveslange">@yveslange</a>.</p>
-            <p>Or request an invite and join our <a href="${this.slackURL}">#webcomponents-primer</a>
-              channel on Slack.</p>
-          </dia-po>
-          <dia-po display="tv02" class="center">
-            <a href="https://petit-atelier.ch/">
-              <img height="200" width="200"
-                src="images/petit-atelier-logo.png"
-                alt="Le Petit Atelier de Génie logiciel sàrl">
-            </a>
-          </dia-po>
-          <dia-po display="sp01" class="center">
-            <h1>Thank you for your attention<br>🙏🏻</h1>
-            <p class="big">Your feedback would be very appreciated!</p>
-          </dia-po>
-          <dia-po display="sp02" class="center">
-            <p>(Petit Atelier · Logo)</p>
-            <p>TODO: does the link to the #webcomponents-primer channel on Slack work for guests?</p>
-          </dia-po>
+          <dia-po display="pj01" class="center">${diapoSlideshowShare( primerURL, primerURLShortened, starterURL, starterURLShortened)}</dia-po>
+          <dia-po display="tv01" default class="center">${diapoThankYouFeedback( meetupURL, meetupURLShortened, this.slackURL)}</dia-po>
+          <dia-po display="tv02" class="center">${diapoPetitAtelier()}</dia-po>
+          <dia-po display="sp01" class="center">${diapoSlideshowShare( primerURL, primerURLShortened, starterURL, starterURLShortened)}</dia-po>
+          <dia-po display="sp02" class="center">${diapoThankYouFeedback( meetupURL, meetupURLShortened, this.slackURL)}</dia-po>
         </dia-slide>
         <dia-slide id="sPost">
-          <dia-po display="pj01" class="center">
-            <h1><img src="images/gongfuio-icon-128.png"
-              height="128" width="128" alt="Gōng-fu I/O"><br>
-              Gōng-fu I/O meetup</h1>
-            <p>Wednesday 20:30–22:30, Cité Bleue, Geneva<br>
-              <a href="https://www.meetup.com/fr-FR/g%C5%8DngfuIO/">meetup.com/gongfuIO</a></p>
-            <p>Study sessions & creative coding<br>
-            <a href="http://gongfu.io/presentations/10-min/">Gōng-fu I/O in 10 min.</a></p>
-          </dia-po>
-          <dia-po display="tv01" default>
-            <h1>Play with Web Components</h1>
-            <p>Install and serve locally the sources of this slideshow:</p>
-            <pre>
-$ git clone git@github.com:petitatelier/web-components-primer.git
-$ cd web-components-primer
-$ npm install
-$ npm run serve
-            </pre>
-            <p>open <a href="http://localhost:8001/">http://localhost:8001/</a>
-              and explore the sources.</p>
-          </dia-po>
-          <dia-po display="tv02">
-            Demonstrates:
-            * A simple PWA shell (public/index.html)
-            * wrapping a Web Component with the slideshow (public/wcp-slideshow.js)
-            * with Service Worker Precache (sw-precache-config.js)
-            * Web App Manifest (manifest.json)
-            * Polymer Differential Builds (polymer.json)
-            * A Firebase project config (firebase.json)
-          </dia-po>
-          <dia-po display="sp01">
-            <h1>Play with Web Components</h1>
-            <aside>
-              <ul>
-                <li>How to install <code>@petitatelier/web-components-primer</code></li>
-                <li>Gōng-fu I/O: David, Andreas and I run it since 5 years. You'll find us there, hacking
-                  Javascript, Canvas APIs, WebGL, Firebase, Flutter, Web Components,
-                  Three.js, D3.js, Observable, force-directed layouts, spherical force-directed graphs,
-                  VEGA, reactive dataflow & computational graphs, Machine learning, Web Workers
-                  & Web Streams, mapping…</li>
-                <li>Creative coding altogether, 2 hours every week, all levels, own projects, among peers</p>
-              </ul>
-            </aside>
-          </dia-po>
-          <dia-po display="sp02">
-            <h1>Play with Web Components</h1>
-            <p>What the code source of <code>@petitatelier/web-components-primer</code> demonstrates</p>
-          </dia-po>
+          <dia-po display="pj01" class="center">${diapoGōngfuIO()}</dia-po>
+          <dia-po display="tv01" default>${diapoPlayWithWebComponents()}</dia-po>
+          <dia-po display="tv02">${diapoPlayWithDemonstrates()}</dia-po>
+          <dia-po display="sp01">${diapoPlayWithWebComponentsAside()}</dia-po>
+          <dia-po display="sp02">${diapoPlayWithDemonstrates()}</dia-po>
         </dia-slide>
       </dia-show>
       <slot></slot>`;
