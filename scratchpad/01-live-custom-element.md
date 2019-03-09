@@ -1,4 +1,8 @@
-[« Future, Faster: Unlock the Power of Web Components with Polymer (Google I/O '17) »](https://www.youtube.com/watch?v=cuoZenpQveQ&feature=youtu.be&t=1044) Kevin P. Schaaf, at min. 18:35:
+# Immediate anonymous class
+
+Open [about:blank](about:blank) browser window, then the console and elements (CMD-ALT-I).
+
+## 1. Just text
 
 ```
 customElements.define( "my-element", class extends HTMLElement{
@@ -9,7 +13,7 @@ customElements.define( "my-element", class extends HTMLElement{
 });
 ```
 
-With CSS styling — scoped to the Shadow DOM:
+## 2. With CSS styling — scoped to the Shadow DOM:
 
 ```
 customElements.define( "my-element", class extends HTMLElement{
@@ -20,9 +24,9 @@ customElements.define( "my-element", class extends HTMLElement{
 });
 ```
 
----
+# ES6 class definition and constructor
 
-Variant with ES6 class definition and constructor:
+## 1. Just text
 
 ```
 class MyElement extends HTMLElement {
@@ -36,3 +40,20 @@ class MyElement extends HTMLElement {
 customElements.define( "my-element", MyElement);
 ```
 
+## 2. With CSS styling — scoped to the Shadow DOM
+
+```
+class MyElement extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow( { mode: "open" })
+      .innerHTML = "<div>Web Components are 🚀🦄✨ native!</div><style>div { color: green }</style>"
+  }
+}
+
+customElements.define( "my-element", MyElement);
+```
+
+# Source
+
+Example presented by Kevin Schaaf at min. 18:35 of collective talk [« Future, Faster: Unlock the Power of Web Components with Polymer (Google I/O '17) »](https://www.youtube.com/watch?v=cuoZenpQveQ&feature=youtu.be&t=1044).
