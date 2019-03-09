@@ -4,10 +4,6 @@ import "@petitatelier/dia-show";
 import "@petitatelier/dia-code";
 import "@petitatelier/dia-livecode";
 
-import "resize-observer-polyfill";
-import "intersection-observer";
-import "@google/model-viewer";
-
 import { SlideshowStyles } from "./styles.js";
 import { diapoWCPTitle, diapoWCPTitleAsideOlivier, diapoWCPTitleAsideYves, diapoWiFi, diapoModelViewer } from "./wcp-parts01.js";
 import { diapoWhatAreWebComponents, diapoLiveCodeCustomElement } from "./wcp-parts02.js";

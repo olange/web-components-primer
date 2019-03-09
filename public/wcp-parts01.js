@@ -1,5 +1,9 @@
 import { html } from "lit-element";
 
+import "resize-observer-polyfill";
+import "intersection-observer";
+import "@google/model-viewer";
+
 export function diapoWiFi( wifiSSID, wifiPWD, primerURL, primerURLShortened) {
   return html`
     <h1>WiFi</h1>
