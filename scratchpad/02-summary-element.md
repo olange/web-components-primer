@@ -1,5 +1,7 @@
 # Example of ‹wcp-summary› element
 
+Complete example of a [`Lit-Element`](https://lit-element.polymer-project.org/), with an [Lit-HTML template](https://lit-html.polymer-project.org/) and a bound attribute.
+
 <img height="400" src="02-summary-element.png" />
 
 ## wcp-summary.js

@@ -1,8 +1,10 @@
 # Example of custom element, live in the browser console
 
-Open [about:blank](about:blank) browser window, then the console and elements views of developer tools (CMD-ALT-I). Observe that no library is needed, no compilation step — the definition and upgrade of the custom element are immediate.
+Open [about:blank](about:blank) browser window, then the console and elements views of developer tools (CMD-ALT-I).
 
 <img height="400" src="01-live-custom-element.png" />
+
+Observe that no library is needed, no compilation step — the definition and upgrade of the custom element are immediate.
 
 ## Immediate anonymous class
 
