@@ -7,14 +7,14 @@ import "@petitatelier/dia-livecode";
 import { SlideshowStyles } from "./styles.js";
 import { diapoWCPTitle, diapoWCPTitleAsideOlivier, diapoWCPTitleAsideYves, diapoWiFi, diapoModelViewer } from "./wcp-parts01.js";
 import { diapoWhatAreWebComponents, diapoLiveCodeCustomElement } from "./wcp-parts02.js";
-import { diapoWebComponentPromises, diapoColorOfTimePatchwork, diapoWebComponentPromisesAsideOlivier } from "./wcp-parts03.js";
+// import { } from "./wcp-parts03.js";
 // import { } from "./wcp-parts04.js";
 import { diapo1BDevices, diapoCanIUseWebComponents, diapoWebComponentsPolyfill, diapoBrowserReleases, diapoBrowserLatestVersions } from "./wcp-parts05.js";
-import { diapoDifficultBits, diapoLearningInvestment } from "./wcp-parts06.js";
-import { diapoSlideshowShare, diapoThankYouFeedback, diapoPetitAtelier } from "./wcp-parts07.js";
-import { diapoGōngfuIO, diapoPlayWithWebComponents, diapoPlayWithDemonstrates, diapoPlayWithWebComponentsAside } from "./wcp-parts08.js";
-// import { } from "./wcp-parts09.js";
-// import { } from "./wcp-parts10.js";
+// import { } from "./wcp-parts06.js";
+import { diapoWebComponentPromises, diapoColorOfTimePatchwork, diapoWebComponentPromisesAsideOlivier } from "./wcp-parts-concl01.js";
+import { diapoDifficultBits, diapoLearningInvestment } from "./wcp-parts-concl02.js";
+import { diapoSlideshowShare, diapoThankYouFeedback, diapoPetitAtelier } from "./wcp-parts-thankyou.js";
+import { diapoGōngfuIO, diapoPlayWithWebComponents, diapoPlayWithDemonstrates, diapoPlayWithWebComponentsAside } from "./wcp-parts-play.js";
 import "./wcp-summary.js";
 
 export class WebComponentsPrimerSlideshow extends LitElement {
