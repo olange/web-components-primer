@@ -24,7 +24,7 @@ export function diapoWhatAreWebComponents() {
 export function diapoLiveCodeCustomElement( withStyle = false) {
   const myElementName = (withStyle) ? "my-styled-element" : "my-element",
     innerHTMLFragment = (withStyle)
-    ? html`.innerHTML = "&lt;div>Web Components are 🚀🦄✨ native!&lt;/div>
+    ? html`.innerHTML = "&lt;div>Web Components are 🚀🦄✨ native!&lt;/div>"
                 + "&lt;style>div { color: green }&lt;/style>"`
     : html`.innerHTML = "&lt;div>Web Components are 🚀🦄✨ native!&lt;/div>"`;
 
