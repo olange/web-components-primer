@@ -1,5 +1,6 @@
 :root {
-  --main-bg-color: hsl(248, 39%, 25%);
+  --primary-bg-color: hsl(248, 39%, 25%);
+  --secondary-bg-color: #f6f8fa33;
   --primary-text-color: white;
   --secondary-text-color: lightskyblue;
   --primary-text-font: "Fira Sans Extra Condensed", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -17,7 +18,7 @@ body {
   font-family: var(--primary-text-font);
   font-size: var(--normal-text-size);
   line-height: 1.5; -webkit-font-smoothing: antialiased;
-  background-color: var(--main-bg-color);
+  background-color: var(--primary-bg-color);
   color: var(--primary-text-color) }
 
 body, wcp-slideshow {
@@ -46,7 +47,7 @@ a:hover, a:visited {
   border-radius: 0.25em;
   border: 1px solid var(--primary-text-color);
   background-color: var(--primary-text-color);
-  color: var(--main-bg-color);
+  color: var(--primary-bg-color);
   margin: 0 0.5em; padding: 0 0.25em; }
 
 #card {

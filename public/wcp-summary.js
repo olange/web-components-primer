@@ -36,7 +36,7 @@ export class WebComponentsPrimerSummary extends LitElement {
       <div class="summary">
         <h1 id="F">Foundation of Web Components</h1>
         <ul>
-          <li id="F01">What they are? Custom Elements, Shadow DOM, Templates, Modules</li>
+          <li id="F01">What are they? Custom Elements, Shadow DOM, Templates, Modules</li>
           <li id="F02">How to create, use and publish them</li>
           <li id="F03">Lit-HTML and Lit-Element</li>
           <li id="F04">Web Components Best practices</li>

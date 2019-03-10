@@ -21,16 +21,36 @@ export function diapoWhatAreWebComponents() {
   `;
 }
 
-export function diapoLiveCodeCustomElement() {
+export function diapoLiveCodeCustomElement( withStyle = false) {
+  const myElementName = (withStyle) ? "my-styled-element" : "my-element",
+    innerHTMLFragment = (withStyle)
+    ? html`.innerHTML = "&lt;div>Web Components are 🚀🦄✨ native!&lt;/div>
+                + "&lt;style>div { color: green }&lt;/style>"`
+    : html`.innerHTML = "&lt;div>Web Components are 🚀🦄✨ native!&lt;/div>"`;
+
   return html`
-    <a href="about:blank" target="_blank">about:blank</a>
-    <dia-code>customElements.define( "my-element",
-  class extends HTMLElement{
+      <a href="about:blank" target="_blank">about:blank</a>
+      <dia-code>customElements.define( "${myElementName}",
+  class extends HTMLElement {
     connectedCallback() {
       this.attachShadow( { mode: "open" })
-        .innerHTML = "&lt;div>Web Components are 🚀🦄✨ native!&lt;/div>
-                   + "&lt;style>div { color: green }</style>"
+        ${innerHTMLFragment}
     }
-  });</dia-code>
-  `;
+  });</dia-code>`;
+}
+
+export function diapoLiveCodeCustomElementWithSlot() {
+  return html`
+      <p><a href="about:blank" target="_blank">about:blank</a></p>
+      <dia-code>&lt;my-header>Slotted title&lt;/my-header></dia-code>
+      <dia-code>customElements.define( "my-header",
+  class extends HTMLElement {
+    connectedCallback() {
+      this.attachShadow({ mode:"open" })
+        .innerHTML = "&lt;header>
+          &lt;h1>&lt;slot>&lt;/slot>&lt;/h1>
+          &lt;button>Menu&lt;/button>
+        &lt;/header>"
+    }
+  });</dia-code>`;
 }
