@@ -3,7 +3,7 @@ import { css } from "lit-element";
 const SummaryStyles = css`
   .summary {
     margin: 0 auto; max-width: 600px; }
-  ul li[ active] {
+  *[ active] {
     background-color: var(--primary-text-color);
     color: var(--primary-bg-color); }
 `;
