@@ -5,16 +5,16 @@ import "@petitatelier/dia-code";
 import "@petitatelier/dia-livecode";
 
 import { SlideshowStyles } from "./styles.js";
-import { diapoWCPTitle, diapoWCPTitleAsideOlivier, diapoWCPTitleAsideYves, diapoWiFi, diapoModelViewer } from "./wcp-parts01.js";
-import { diapoWhatAreWebComponents, diapoLiveCodeCustomElement, diapoLiveCodeCustomElementWithSlot } from "./wcp-parts02.js";
+import { diapoWCPTitle, diapoWCPTitleAsideOlivier, diapoWCPTitleAsideYves, diapoWiFi, diapoModelViewer } from "./wcp-parts-I01.js";
+import { diapoWhatAreWebComponents, diapoLiveCodeCustomElement, diapoLiveCodeCustomElementWithSlot } from "./wcp-parts-F01.js";
+import { diapo1BDevices, diapoCanIUseWebComponents, diapoWebComponentsPolyfill, diapoBrowserReleases, diapoBrowserLatestVersions } from "./wcp-parts-F01B.js";
 // import { } from "./wcp-parts03.js";
 // import { } from "./wcp-parts04.js";
-import { diapo1BDevices, diapoCanIUseWebComponents, diapoWebComponentsPolyfill, diapoBrowserReleases, diapoBrowserLatestVersions } from "./wcp-parts05.js";
 // import { } from "./wcp-parts06.js";
-import { diapoWebComponentPromises, diapoColorOfTimePatchwork, diapoWebComponentPromisesAsideOlivier } from "./wcp-parts-concl01.js";
-import { diapoDifficultBits, diapoLearningInvestment } from "./wcp-parts-concl02.js";
-import { diapoSlideshowShare, diapoThankYouFeedback, diapoPetitAtelier } from "./wcp-parts-thankyou.js";
-import { diapoGōngfuIO, diapoPlayWithWebComponents, diapoPlayWithDemonstrates, diapoPlayWithWebComponentsAside } from "./wcp-parts-play.js";
+import { diapoWebComponentPromises, diapoColorOfTimePatchwork, diapoWebComponentPromisesAsideOlivier } from "./wcp-parts-C01.js";
+import { diapoDifficultBits, diapoLearningInvestment } from "./wcp-parts-C02.js";
+import { diapoSlideshowShare, diapoThankYouFeedback, diapoPetitAtelier } from "./wcp-parts-C03.js";
+import { diapoGōngfuIO, diapoPlayWithWebComponents, diapoPlayWithDemonstrates, diapoPlayWithWebComponentsAside } from "./wcp-parts-C04.js";
 import "./wcp-summary.js";
 
 export class WebComponentsPrimerSlideshow extends LitElement {
@@ -85,7 +85,7 @@ export class WebComponentsPrimerSlideshow extends LitElement {
         </dia-slide>
 
         <!-- Can I Use Web Components? -->
-        <dia-slide id="F01+">
+        <dia-slide id="F01B">
           <dia-po display="pj01">${diapo1BDevices()}</dia-po>
           <dia-po display="tv01" default>${diapoCanIUseWebComponents()}</dia-po>
           <dia-po display="tv02">${diapoWebComponentsPolyfill()}</dia-po>
@@ -205,13 +205,13 @@ export class WebComponentsPrimerSlideshow extends LitElement {
           <dia-po display="tv02">
             <h3>index.html</h3>
             <dia-code>
-              &lt;script type="module" src="wcp-summary.js">&lt;/script>
-              &lt;wcp-summary active-index="F01">&lt;/wcp-summary>
+&lt;script type="module" src="wcp-summary.js">&lt;/script>
+&lt;wcp-summary active-index="F01">&lt;/wcp-summary>
             </dia-code>
             <h3>wcp-summary.js</h3>
             <dia-code>
-              export class WCPSummary extends HTMLElement { … };
-              customElements.define( "wcp-summary", WCPSummary);
+export class WCPSummary extends HTMLElement { … };
+customElements.define( "wcp-summary", WCPSummary);
             </dia-code>
           </dia-po>
           <dia-po display="sp01">TODO</dia-po>
