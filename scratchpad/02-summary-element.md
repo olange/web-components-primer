@@ -4,13 +4,16 @@ Complete example of a [`Lit-Element`](https://lit-element.polymer-project.org/),
 
 <img height="400" src="02-summary-element.png" />
 
-## wcp-summary.js
+[View it on Glitch](https://wcp-summary.glitch.me/)  
+[Remix it on Glitch](glitch.com/edit/#!/wcp-summary)
+
+## script.js
 
 ```
-import { LitElement, html, css } from "lit-element";
-import { SummaryStyles } from "./styles.js";
+import { LitElement, html } from "lit-element";
+import { SummaryStyles } from "./style.js";
 
-export class WebComponentsPrimerSummary extends LitElement {
+export class WCPSummary extends LitElement {
 
   static get styles() {
     return [ SummaryStyles ];
@@ -71,23 +74,102 @@ export class WebComponentsPrimerSummary extends LitElement {
 }
 
 // Register the element with the browser
-customElements.define( "wcp-summary", WebComponentsPrimerSummary);
+customElements.define( "wcp-summary", WCPSummary);
 ```
 
-## styles.css
+## style.css
 
 ```
 import { css } from "lit-element";
 
 const SummaryStyles = css`
-  *[active] {
-    background-color: var(--primary-text-color);
-    color: var(--main-bg-color); }
+  *[ active] {
+    background-color: white;
+    color: hsl(248, 39%, 25%) }
   .summary {
     margin: 0 auto; max-width: 600px; }
 `;
 
 export {
   SummaryStyles
+}
+```
+
+## style.css
+
+```
+@import url( "https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans+Condensed|Fira+Sans+Extra+Condensed");
+
+body {
+  margin: 0; min-height: 100vh;
+  display: flex; flex-direction: row;
+  font-family: "Fira Sans Extra Condensed", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px; line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: hsl(248, 39%, 25%);
+  color: white }
+
+body, wcp-slideshow {
+  display: flex; flex-direction: row }
+
+body {
+  align-items: center;
+  justify-content: center;
+  transform: skew( 0, -5deg) }
+
+wcp-slideshow {
+  flex-grow: 1 }
+
+h1 {
+  font-family: "Fira Sans Condensed", sans-serif }
+
+a { color: white }
+a:hover, a:visited { color: lightskyblue }
+```
+
+## index.html
+
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hello!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script type="module" src="/script.js" defer></script>
+  </head>  
+  <body>
+    <wcp-summary active-index="F" />
+  </body>
+</html>
+```
+
+## package.json
+
+```
+{
+  "name": "wcp-summary",
+  "version": "0.0.1",
+  "description": "Web Components Primer Summary · Live Coding",
+  "scripts": {
+    "start": "polyserve --npm --module-resolution=node"
+  },
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.2.7",
+    "lit-element": "^2.0.1"
+  },
+  "devDependencies": {
+    "polyserve": "^0.27.15"
+  },
+  "engines": {
+    "node": "8.x"
+  }
 }
 ```
