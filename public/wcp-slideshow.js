@@ -178,7 +178,7 @@ export class WebComponentsPrimerSlideshow extends LitElement {
               <li>The <code>‹template›</code> element is used to declare fragments
               of HTML that can be cloned and inserted in the document by script.</li>
               <li>Will not render until it is activated</li>
-              <li>Has no effect on other parts of the page - scripts won’t run, images won’t load, audio won’t play - until activated</li>
+              <li>Has no effect on the page, until activated – scripts won’t run, images won’t load, audio won’t play</li>
               <li>Will not appear in the DOM</li>
             </ul>
           </dia-po>
