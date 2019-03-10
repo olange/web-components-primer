@@ -63,7 +63,8 @@ export class WebComponentsPrimerSlideshow extends LitElement {
 
     return html`
       <dia-show slide="F03">
-        <!-- Introduction -->
+        <!-- 0. INTRODUCTION -->
+
         <dia-slide id="I01">
           <dia-po display="pj01" class="center">${diapoWiFi( wifiSSID, wifiPWD, primerURL, primerURLShortened)}</dia-po>
           <dia-po display="tv01" default>${diapoWCPTitle()}</dia-po>
@@ -71,6 +72,8 @@ export class WebComponentsPrimerSlideshow extends LitElement {
           <dia-po display="sp01">${diapoWCPTitleAsideOlivier()}</dia-po>
           <dia-po display="sp02">${diapoWCPTitleAsideYves()}</dia-po>
         </dia-slide>
+
+        <!-- 1. FOUNDATIONS OF WEB COMPONENTS -->
 
         <!-- What are Web Components? -->
         <dia-slide id="F01">
@@ -81,8 +84,18 @@ export class WebComponentsPrimerSlideshow extends LitElement {
           <dia-po display="sp02">${diapoLiveCodeCustomElement( false)}</dia-po>
         </dia-slide>
 
+        <!-- Can I Use Web Components? -->
+        <dia-slide id="F01+">
+          <dia-po display="pj01">${diapo1BDevices()}</dia-po>
+          <dia-po display="tv01" default>${diapoCanIUseWebComponents()}</dia-po>
+          <dia-po display="tv02">${diapoWebComponentsPolyfill()}</dia-po>
+          <dia-po display="sp01">${diapoBrowserReleases()}</dia-po>
+          <dia-po display="sp02">${diapoBrowserLatestVersions()}</dia-po>
+        </dia-slide>
+
+        <!-- Custom Elements (& Shadow DOM) -->
         <dia-slide id="F02">
-          <dia-po display="pj01"><wcp-summary active-index="F01" /></dia-po>
+          <dia-po display="pj01"><wcp-summary active-index="F02" /></dia-po>
           <dia-po display="tv01">
             <h1>Custom Elements</h1>
             <ul>
@@ -135,16 +148,17 @@ export class WebComponentsPrimerSlideshow extends LitElement {
           <dia-po display="sp02">${diapoLiveCodeCustomElement( true)}</dia-po>
         </dia-slide>
 
+        <!-- Shadow DOM -->
         <dia-slide id="F03">
-          <dia-po display="pj01"><wcp-summary active-index="F01" /></dia-po>
+          <dia-po display="pj01"><wcp-summary active-index="F03" /></dia-po>
           <dia-po display="tv01">
             <h1>Shadow DOM · a bit more</h1>
             <h2>Composition & Slots</h2>
             <ul>
               <li>By default, if an element has shadow DOM, the shadow tree
                 is rendered instead of the element's children</li>
-              <li>Use the <code>‹slot›</code> tag to add a placeholder,
-                where the children can render</li>
+              <li>Use the <code>‹slot›</code> tag to add a placeholder in the
+                Shadow DOM, to allow the children to render</li>
               <li><code>‹my-header›</code> renders as if the <code>‹slot›</code>
                 element was replaced by its child <code>"Slotted title"</code>
                 text node</li>
@@ -163,15 +177,21 @@ export class WebComponentsPrimerSlideshow extends LitElement {
           <dia-po display="sp02">${diapoLiveCodeCustomElementWithSlot()}</dia-po>
         </dia-slide>
 
+        <!-- Modules & Templates -->
         <dia-slide id="F04">
-          <dia-po display="pj01"><wcp-summary active-index="F01" /></dia-po>
+          <dia-po display="pj01"><wcp-summary active-index="F04" /></dia-po>
           <dia-po display="tv01">
             <h1>ES Modules & Imports</h1>
             <ul>
               <li>The <a href="https://html.spec.whatwg.org/multipage/webappapis.html#integration-with-the-javascript-module-system">ES Module specification</a>
                 defines the inclusion and reuse of JS documents in other JS documents</li>
+              <li>The native <code>customElements.define( "my-element", MyElement)</code>
+                expects <code>MyElement</code> to be an <strong>ES6 class</strong></li>
               <li>The entire contents of JavaScript modules are automatically in
                 <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a></strong></li>
+              <li>Import with the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import">ES6 module import</a> syntax:<br/>
+                <code>import { WebComponentsPrimerSummary } from "wcp-summary";</code><br/>
+                <code>import * as WCPSummary from "wcp-summary";</code></li>
             </ul>
             <h1>HTML Template</h1>
             <ul>
@@ -198,7 +218,10 @@ export class WebComponentsPrimerSlideshow extends LitElement {
           <dia-po display="sp02">TODO</dia-po>
         </dia-slide>
 
-        <dia-slide id="F05">
+        <!-- 2. CREATING AND USING WEB COMPONENTS -->
+
+        <!-- How to start? -->
+        <dia-slide id="U01">
           <dia-po display="pj01"><dia-livecode project="wcp-summary" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
           <dia-po display="tv01">TODO</dia-po>
           <dia-po display="tv02" default>
@@ -209,7 +232,34 @@ export class WebComponentsPrimerSlideshow extends LitElement {
           <dia-po display="sp02">TODO</dia-po>
         </dia-slide>
 
-        <dia-slide id="F06">
+        <!-- Lit-Element Templates -->
+        <dia-slide id="U02">
+          <dia-po display="pj01"><dia-livecode project="wcp-summary" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
+          <dia-po display="tv01">TODO</dia-po>
+          <dia-po display="tv02" default>
+            <h1>‹wcp-summary› element · Live code</h1>
+            <dia-livecode project="wcp-summary" mode="editor" file="script.js" />
+          </dia-po>
+          <dia-po display="sp01">TODO</dia-po>
+          <dia-po display="sp02">TODO</dia-po>
+        </dia-slide>
+
+        <!-- Lit-Element Data bindings -->
+        <dia-slide id="U03">
+          <dia-po display="pj01"><dia-livecode project="wcp-summary" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
+          <dia-po display="tv01">TODO</dia-po>
+          <dia-po display="tv02" default>
+            <h1>‹wcp-summary› element · Live code</h1>
+            <dia-livecode project="wcp-summary" mode="editor" file="script.js" />
+          </dia-po>
+          <dia-po display="sp01">TODO</dia-po>
+          <dia-po display="sp02">TODO</dia-po>
+        </dia-slide>
+
+        <!-- 3. DATAFLOWS OF WEB COMPONENTS -->
+
+        <!-- Vanilla data bindings: « data-in via attributes, data-out via events » -->
+        <dia-slide id="D01">
           <dia-po display="pj01"><dia-livecode project="wcp-vega-histogram" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
           <dia-po display="tv01">TODO</dia-po>
           <dia-po display="tv02" default>
@@ -220,28 +270,41 @@ export class WebComponentsPrimerSlideshow extends LitElement {
           <dia-po display="sp02">TODO</dia-po>
         </dia-slide>
 
-        <dia-slide id="F07">
-          <dia-po display="pj01">${diapo1BDevices()}</dia-po>
-          <dia-po display="tv01" default>${diapoCanIUseWebComponents()}</dia-po>
-          <dia-po display="tv02">${diapoWebComponentsPolyfill()}</dia-po>
-          <dia-po display="sp01">${diapoBrowserReleases()}</dia-po>
-          <dia-po display="sp02">${diapoBrowserLatestVersions()}</dia-po>
+        <!-- Retrieving and storing data -->
+        <dia-slide id="D02">
+          <dia-po display="pj01"><dia-livecode project="wcp-vega-histogram" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
+          <dia-po display="tv01">TODO</dia-po>
+          <dia-po display="tv02" default>
+            <h1>‹wcp-vega-histogram› element · Live code</h1>
+            <dia-livecode project="wcp-vega-histogram" mode="editor" file="index.html" />
+          </dia-po>
+          <dia-po display="sp01">TODO</dia-po>
+          <dia-po display="sp02">TODO</dia-po>
         </dia-slide>
 
+        <!-- 4. THE ECOSYSTEM OF WEB COMPONENTS -->
+
+        <!-- 5. CONCLUSION -->
+
+        <!-- The Promises of Web Components -->
         <dia-slide id="C01">
-          <dia-po display="pj01"><wcp-summary active-index="C" /></dia-po>
+          <dia-po display="pj01"><wcp-summary active-index="C01" /></dia-po>
           <dia-po display="tv01" default>${diapoWebComponentPromises()}</dia-po>
           <dia-po display="tv02">${diapoColorOfTimePatchwork()}</dia-po>
           <dia-po display="sp01">${diapoWebComponentPromisesAsideOlivier()}</dia-po>
           <dia-po display="sp02">${diapoColorOfTimePatchwork()}</dia-po>
         </dia-slide>
+
+        <!-- Difficult bits & Learning investment -->
         <dia-slide id="C02">
-          <dia-po display="pj01"><wcp-summary active-index="C" /></dia-po>
+          <dia-po display="pj01"><wcp-summary active-index="C02" /></dia-po>
           <dia-po display="tv01" default>${diapoDifficultBits()}</dia-po>
           <dia-po display="tv02">${diapoLearningInvestment()}</dia-po>
           <dia-po display="sp01">${diapoDifficultBits()}</dia-po>
           <dia-po display="sp02">${diapoLearningInvestment()}</dia-po>
         </dia-slide>
+
+        <!-- Thank You for Your Attention -->
         <dia-slide id="C03">
           <dia-po display="pj01" class="center">${diapoSlideshowShare( primerURL, primerURLShortened, starterURL, starterURLShortened)}</dia-po>
           <dia-po display="tv01" default class="center">${diapoThankYouFeedback( meetupURL, meetupURLShortened, this.slackURL)}</dia-po>
@@ -249,6 +312,8 @@ export class WebComponentsPrimerSlideshow extends LitElement {
           <dia-po display="sp01" class="center">${diapoSlideshowShare( primerURL, primerURLShortened, starterURL, starterURLShortened)}</dia-po>
           <dia-po display="sp02" class="center">${diapoThankYouFeedback( meetupURL, meetupURLShortened, this.slackURL)}</dia-po>
         </dia-slide>
+
+        <!-- Gōng-fu I/O & Play with Web Components -->
         <dia-slide id="C04">
           <dia-po display="pj01" class="center">${diapoGōngfuIO()}</dia-po>
           <dia-po display="tv01" default>${diapoPlayWithWebComponents()}</dia-po>
@@ -257,7 +322,7 @@ export class WebComponentsPrimerSlideshow extends LitElement {
           <dia-po display="sp02">${diapoPlayWithDemonstrates()}</dia-po>
         </dia-slide>
       </dia-show>
-      <slot></slot>`;
+    `;
   }
 
 }

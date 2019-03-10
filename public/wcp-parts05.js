@@ -33,7 +33,7 @@ export function diapoCanIUseWebComponents() {
     <td align="center">✓</td>
     <td align="center">✓</td>
     <td align="center">✓</td>
-    <td align="center">Transpile</td>
+    <td align="center">✓ Transpile</td>
     <td align="center">✓</td>
     <td align="center">✓</td>
     </tr>
@@ -43,7 +43,7 @@ export function diapoCanIUseWebComponents() {
     <td align="center">✓</td>
     <td align="center">✓</td>
     <td align="center">✓</td>
-    <td align="center">Transpile</td>
+    <td align="center">✓ Transpile</td>
     <td align="center">✓</td>
     <td align="center">✓</td>
     </tr>
@@ -52,8 +52,8 @@ export function diapoCanIUseWebComponents() {
     <td align="center">✓</td>
     <td align="center">✓</td>
     <td align="center">✓</td>
-    <td align="center">Polyfill</td>
-    <td align="center">Polyfill</td>
+    <td align="center">✓ Polyfill</td>
+    <td align="center">✓ Polyfill</td>
     <td align="center">✓</td>
     <td align="center">✓</td>
     </tr>
@@ -62,8 +62,8 @@ export function diapoCanIUseWebComponents() {
     <td align="center">✓</td>
     <td align="center">✓</td>
     <td align="center">✓</td>
-    <td align="center">Polyfill</td>
-    <td align="center">Polyfill</td>
+    <td align="center">✓ Polyfill</td>
+    <td align="center">✓ Polyfill</td>
     <td align="center">✓</td>
     <td align="center">✓</td>
     </tr>
@@ -73,19 +73,19 @@ export function diapoCanIUseWebComponents() {
     <td align="center">✓</td>
     <td align="center">✓</td>
     <td align="center">✓</td>
-    <td align="center">Polyfill</td>
+    <td align="center">✓ Polyfill</td>
     <td align="center">✓</td>
     <td align="center">✓</td>
     </tr>
     <tr>
     <td><a href="https://polymer-library.polymer-project.org/3.0/docs/browsers">Class decorators</a></td>
-    <td align="center">Transpile</td>
-    <td align="center">Transpile</td>
-    <td align="center">Transpile</td>
-    <td align="center">Transpile</td>
-    <td align="center">Transpile</td>
-    <td align="center">Transpile</td>
-    <td align="center">Transpile</td>
+    <td align="center">✓ Transpile</td>
+    <td align="center">✓ Transpile</td>
+    <td align="center">✓ Transpile</td>
+    <td align="center">✓ Transpile</td>
+    <td align="center">✓ Transpile</td>
+    <td align="center">✓ Transpile</td>
+    <td align="center">✓ Transpile</td>
     </tr>
     </tbody>
     </table>

@@ -4,8 +4,8 @@ export function diapoDifficultBits() {
   return html`
     <h1>Difficult bits</h1>
     <ul>
-      <li>ES2015 Modules and UMD/AMD libraries interop</li>
-      <li>npm install hairball</li>
+      <li>ES6 Modules and UMD/AMD libraries interop</li>
+      <li><code>npm install hairball</code></li>
       <li>Dataflow: many strategies, all valid, soon you'll start mixing strategies</li>
       <li>Building for production</li>
     </ul>
