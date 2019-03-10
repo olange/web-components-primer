@@ -165,17 +165,41 @@ export class WebComponentsPrimerSlideshow extends LitElement {
 
         <dia-slide id="F04">
           <dia-po display="pj01"><wcp-summary active-index="F01" /></dia-po>
-          <dia-po display="tv01">TODO
-            Import: ES Modules
-            Template: template tag; Lit-Element
+          <dia-po display="tv01">
+            <h1>ES Modules & Imports</h1>
+            <ul>
+              <li>The <a href="https://html.spec.whatwg.org/multipage/webappapis.html#integration-with-the-javascript-module-system">ES Module specification</a>
+                defines the inclusion and reuse of JS documents in other JS documents</li>
+              <li>The entire contents of JavaScript modules are automatically in
+                <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a></strong></li>
+            </ul>
+            <h1>HTML Template</h1>
+            <ul>
+              <li>The <code>‹template›</code> element is used to declare fragments
+              of HTML that can be cloned and inserted in the document by script.</li>
+              <li>Will not render until it is activated</li>
+              <li>Has no effect on other parts of the page - scripts won’t run, images won’t load, audio won’t play - until activated</li>
+              <li>Will not appear in the DOM</li>
+            </ul>
           </dia-po>
-          <dia-po display="tv02">TODO</dia-po>
+          <dia-po display="tv02">
+            <h3>index.html</h3>
+            <dia-code>
+              &lt;script type="module" src="wcp-summary.js">&lt;/script>
+              &lt;wcp-summary active-index="F01">&lt;/wcp-summary>
+            </dia-code>
+            <h3>wcp-summary.js</h3>
+            <dia-code>
+              export class WCPSummary extends HTMLElement { … };
+              customElements.define( "wcp-summary", WCPSummary);
+            </dia-code>
+          </dia-po>
           <dia-po display="sp01">TODO</dia-po>
           <dia-po display="sp02">TODO</dia-po>
         </dia-slide>
 
         <dia-slide id="F05">
-          <dia-po display="pj01"><dia-livecode project="wcp-summary" mode="preview" refresh="${this.refresh}" /></dia-po>
+          <dia-po display="pj01"><dia-livecode project="wcp-summary" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
           <dia-po display="tv01">TODO</dia-po>
           <dia-po display="tv02" default>
             <h1>‹wcp-summary› element · Live code</h1>
@@ -186,7 +210,7 @@ export class WebComponentsPrimerSlideshow extends LitElement {
         </dia-slide>
 
         <dia-slide id="F06">
-          <dia-po display="pj01"><dia-livecode project="wcp-vega-histogram" mode="preview" refresh="${this.refresh}" /></dia-po>
+          <dia-po display="pj01"><dia-livecode project="wcp-vega-histogram" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
           <dia-po display="tv01">TODO</dia-po>
           <dia-po display="tv02" default>
             <h1>‹wcp-vega-histogram› element · Live code</h1>
