@@ -85,7 +85,10 @@ export class WebComponentsPrimerSlideshow extends LitElement {
         <dia-slide id="s04">
           <dia-po display="pj01"><dia-livecode project="wcp-summary" mode="preview" refresh=7500></dia-po>
           <dia-po display="tv01">TODO</dia-po>
-          <dia-po display="tv02" default><dia-livecode project="wcp-summary" mode="editor" file="script.js"></dia-po>
+          <dia-po display="tv02" default>
+            <h1>‹wcp-summary› element · Live code</h1>
+            <dia-livecode project="wcp-summary" mode="editor" file="script.js">
+          </dia-po>
           <dia-po display="sp01">TODO</dia-po>
           <dia-po display="sp02">TODO</dia-po>
         </dia-slide>
