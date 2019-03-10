@@ -4,8 +4,11 @@ Complete example of a [`Lit-Element`](https://lit-element.polymer-project.org/),
 
 <img height="400" src="02-summary-element.png" />
 
-[View it on Glitch](https://wcp-summary.glitch.me/)
-[Remix it on Glitch](glitch.com/edit/#!/wcp-summary)
+[View it on Glitch](https://wcp-summary.glitch.me/) /
+[Remix it on Glitch](https://glitch.com/edit/#!/wcp-summary)
+
+<div class="glitchButton" style="position:fixed;top:20px;right:20px;" />
+<script src="https://button.glitch.me/button.js" />
 
 ## script.js
 
@@ -78,7 +81,7 @@ export class WCPSummary extends LitElement {
 customElements.define( "wcp-summary", WCPSummary);
 ```
 
-## style.css
+## style.js
 
 ```
 import { css } from "lit-element";
