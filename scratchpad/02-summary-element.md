@@ -4,7 +4,7 @@ Complete example of a [`Lit-Element`](https://lit-element.polymer-project.org/),
 
 <img height="400" src="02-summary-element.png" />
 
-[View it on Glitch](https://wcp-summary.glitch.me/)  
+[View it on Glitch](https://wcp-summary.glitch.me/)
 [Remix it on Glitch](glitch.com/edit/#!/wcp-summary)
 
 ## script.js
@@ -52,7 +52,8 @@ export class WCPSummary extends LitElement {
         <ul>
           <li id="F01">What they are? Custom Elements, Shadow DOM, Templates, Modules</li>
           <li id="F02">How to create, use and publish them</li>
-          <li id="F03">Web Components Best practices</li>
+          <li id="F03">Lit-HTML and Lit-Element</li>
+          <li id="F04">Web Components Best practices</li>
         </ul>
 
         <h1 id="D">Dataflows of Web Components</h1>
@@ -66,8 +67,8 @@ export class WCPSummary extends LitElement {
           <li id="E01">Understand the Polymer project</li>
           <li id="E02">Navigate WebComponents.org and discover its main collections</li>
           <li id="E03">Understand Material Design and A11Y</li>
-          <li id="E04">Lit-HTML and Lit-Element</li>
         </ul>
+        <h3 id="C">Conclusion</h3>
       </div>
     `;
   }
@@ -137,14 +138,14 @@ a:hover, a:visited { color: lightskyblue }
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css">
-    
+
     <!-- import the webpage's javascript file -->
     <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script type="module" src="/script.js" defer></script>
-  </head>  
+  </head>
   <body>
     <wcp-summary active-index="F" />
   </body>
