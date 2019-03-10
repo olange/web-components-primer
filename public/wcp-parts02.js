@@ -28,7 +28,7 @@ export function diapoLiveCodeCustomElement() {
   class extends HTMLElement{
     connectedCallback() {
       this.attachShadow( { mode: "open" })
-        .innerHTML = "&lt;div>Web Components are 🚀🦄✨ native!&lt;/div>
+        .innerHTML = "&lt;div>Web Components are 🚀🦄✨ native!&lt;/div>"
                    + "&lt;style>div { color: green }</style>"
     }
   });</dia-code>
