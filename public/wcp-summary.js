@@ -34,18 +34,25 @@ export class WebComponentsPrimerSummary extends LitElement {
   render() {
     return html`
       <div class="summary">
-        <h1 id="F">Foundation of Web Components</h1>
+      <h1 id="F">Foundations of Web Components</h1>
         <ul>
-          <li id="F01">What are they? Custom Elements, Shadow DOM, Templates, Modules</li>
-          <li id="F02">How to create, use and publish them</li>
-          <li id="F03">Lit-HTML and Lit-Element</li>
-          <li id="F04">Web Components Best practices</li>
+          <li id="F01">What are they?</li>
+          <li id="F02">Custom Elements</li>
+          <li id="F03">Shadow DOM</li>
+          <li id="F04">Templates & Modules</li>
+        </ul>
+
+        <h1 id="U">Creating and using Web Components</h1>
+        <ul>
+          <li id="U01">How to start?</li>
+          <li id="U02">Lit-Element Templates</li>
+          <li id="U03">Lit-Element Data bindings</li>
         </ul>
 
         <h1 id="D">Dataflows of Web Components</h1>
         <ul>
-          <li id="D01">Retrieving and storing data</li>
-          <li id="D02">Vanilla data bindings: « data in via attributes, data out via events »</li>
+          <li id="D01">Vanilla data bindings: « data-in via attributes, data-out via events »</li>
+          <li id="D02">Retrieving and storing data</li>
         </ul>
 
         <h1 id="E">The Ecosystem of Web Components</h1>
