@@ -8,9 +8,9 @@ import { SlideshowStyles } from "./styles.js";
 import { diapoWCPTitle, diapoWCPTitleAsideOlivier, diapoWCPTitleAsideYves, diapoWiFi, diapoModelViewer } from "./wcp-parts-I01.js";
 import { diapoWhatAreWebComponents, diapoLiveCodeCustomElement, diapoLiveCodeCustomElementWithSlot } from "./wcp-parts-F01.js";
 import { diapo1BDevices, diapoCanIUseWebComponents, diapoWebComponentsPolyfill, diapoBrowserReleases, diapoBrowserLatestVersions } from "./wcp-parts-F01B.js";
-// import { } from "./wcp-parts03.js";
-// import { } from "./wcp-parts04.js";
-// import { } from "./wcp-parts06.js";
+import { diapoCustomElements, diapoCustomElementsAside } from "./wcp-parts-F02.js";
+import { diapoShadowDOM } from "./wcp-parts-F03.js";
+import { diapoModulesAndImports, diapoModuleImportExample } from "./wcp-parts-F04.js";
 import { diapoWebComponentPromises, diapoColorOfTimePatchwork, diapoWebComponentPromisesAsideOlivier } from "./wcp-parts-C01.js";
 import { diapoDifficultBits, diapoLearningInvestment } from "./wcp-parts-C02.js";
 import { diapoSlideshowShare, diapoThankYouFeedback, diapoPetitAtelier } from "./wcp-parts-C03.js";
@@ -78,8 +78,8 @@ export class WebComponentsPrimerSlideshow extends LitElement {
         <!-- What are Web Components? -->
         <dia-slide id="F01">
           <dia-po display="pj01"><wcp-summary active-index="F01" /></dia-po>
-          <dia-po display="tv01" default>${diapoWhatAreWebComponents()}</dia-po>
-          <dia-po display="tv02">${diapoLiveCodeCustomElement( false)}</dia-po>
+          <dia-po display="tv01">${diapoWhatAreWebComponents()}</dia-po>
+          <dia-po display="tv02" default>${diapoLiveCodeCustomElement( false)}</dia-po>
           <dia-po display="sp01">${diapoWhatAreWebComponents()}</dia-po>
           <dia-po display="sp02">${diapoLiveCodeCustomElement( false)}</dia-po>
         </dia-slide>
@@ -96,126 +96,28 @@ export class WebComponentsPrimerSlideshow extends LitElement {
         <!-- Custom Elements (& Shadow DOM) -->
         <dia-slide id="F02">
           <dia-po display="pj01"><wcp-summary active-index="F02" /></dia-po>
-          <dia-po display="tv01">
-            <h1>Custom Elements</h1>
-            <ul>
-              <li><strong>Autonomous custom elements</strong> are new HTML tags</li>
-              <li><strong>Customized built-ins</strong> extend existing HTML elements</li>
-              <li>To define and register a custom element, use<br>
-                <code>customElements.define( "my-element", MyElement)</code></li>
-            </ul>
-            <h1>Shadow DOM</h1>
-            <ul>
-              <li>Use the <code>attachShadow()</code> method to create and
-                attach a Shadow DOM</li>
-              <li>Style information inside them cannot apply to outside
-                elements, and vice-versa.</li>
-            </ul>
-          </dia-po>
-          <dia-po display="tv02">${diapoLiveCodeCustomElement( true)}</dia-po>
-          <dia-po display="sp01">
-            <h1>Custom Elements</h1>
-            <aside>
-              <ul>
-                <li><strong>Autonomous custom elements</strong> are new HTML tags —
-                  defined entirely by the author. They have none of the semantics of
-                  existing HTML elements, so all behaviors need to be defined by the author.</li>
-                <li><strong>Customized built-ins</strong> extend existing HTML element —
-                  They inherit semantics from the elements they extend. The specification
-                  for customized built-ins is still a work in progress, and at present is
-                  only supported by Chrome.</li>
-                <li>To define and register a custom element, use
-                  <code>customElements.define( "my-element", MyElementClass)</code></li>
-              </ul>
-            </aside>
-            <h1>Shadow DOM</h1>
-            <aside>
-              <ul>
-                <li>Use the <code>attachShadow()</code> method to create and
-                  attach a Shadow DOM</li>
-                <li><strong>Styles inside</strong> a shadow tree are <em>scoped
-                  to the shadow tree</em>, and don't affect elements outside
-                  the shadow tree.</li>
-                <li><strong>Styles outside</strong> the shadow tree also don't
-                  match selectors inside the shadow tree. However, <em>inheritable
-                  style properties</em> like color still inherit down from host
-                  to shadow tree.</li>
-                <li>To style elements with a shadow root, you can use custom
-                  CSS properties, if the element’s author has defined them.</li>
-              </ul>
-            </aside>
-          </dia-po>
+          <dia-po display="tv01">${diapoCustomElements()}</dia-po>
+          <dia-po display="tv02" default>${diapoLiveCodeCustomElement( true)}</dia-po>
+          <dia-po display="sp01">${diapoCustomElementsAside()}</dia-po>
           <dia-po display="sp02">${diapoLiveCodeCustomElement( true)}</dia-po>
         </dia-slide>
 
         <!-- Shadow DOM -->
         <dia-slide id="F03">
           <dia-po display="pj01"><wcp-summary active-index="F03" /></dia-po>
-          <dia-po display="tv01">
-            <h1>Shadow DOM · a bit more</h1>
-            <h2>Composition & Slots</h2>
-            <ul>
-              <li>By default, if an element has shadow DOM, the shadow tree
-                is rendered instead of the element's children</li>
-              <li>Use the <code>‹slot›</code> tag to add a placeholder in the
-                Shadow DOM, to allow the children to render</li>
-              <li><code>‹my-header›</code> renders as if the <code>‹slot›</code>
-                element was replaced by its child <code>"Slotted title"</code>
-                text node</li>
-            </ul>
-            <h2>Lifecycle</h2>
-            <ul>
-              <li><code>constructor()</code> — invoked each time a new instance of the custom element is created</li>
-              <li><code>connectedCallback()</code> — invoked each time the custom element is appended into a document-connected element</li>
-              <li><code>disconnectedCallback()</code> — invoked each time the custom element is disconnected from the document's DOM</li>
-              <li><code>adoptedCallback()</code> — invoked each time the custom element is moved to a new document</li>
-              <li><code>attributeChanged()</code> – invoked each time one of the custom element's attributes is added, removed, or changed</li>
-            </ul>
-          </dia-po>
-          <dia-po display="tv02">${diapoLiveCodeCustomElementWithSlot()}</dia-po>
-          <dia-po display="sp01">TODO</dia-po>
+          <dia-po display="tv01">${diapoShadowDOM()}</dia-po>
+          <dia-po display="tv02" default>${diapoLiveCodeCustomElementWithSlot()}</dia-po>
+          <dia-po display="sp01">${diapoShadowDOM()}</dia-po>
           <dia-po display="sp02">${diapoLiveCodeCustomElementWithSlot()}</dia-po>
         </dia-slide>
 
         <!-- Modules & Templates -->
         <dia-slide id="F04">
           <dia-po display="pj01"><wcp-summary active-index="F04" /></dia-po>
-          <dia-po display="tv01">
-            <h1>ES Modules & Imports</h1>
-            <ul>
-              <li>The <a href="https://html.spec.whatwg.org/multipage/webappapis.html#integration-with-the-javascript-module-system">ES Module specification</a>
-                defines the inclusion and reuse of JS documents in other JS documents</li>
-              <li>The native <code>customElements.define( "my-element", MyElement)</code>
-                expects <code>MyElement</code> to be an <strong>ES6 class</strong></li>
-              <li>The entire contents of JavaScript modules are automatically in
-                <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a></strong></li>
-              <li>Import with the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import">ES6 module import</a> syntax:<br/>
-                <code>import { WebComponentsPrimerSummary } from "wcp-summary";</code><br/>
-                <code>import * as WCPSummary from "wcp-summary";</code></li>
-            </ul>
-            <h1>HTML Template</h1>
-            <ul>
-              <li>The <code>‹template›</code> element is used to declare fragments
-              of HTML that can be cloned and inserted in the document by script.</li>
-              <li>Will not render until it is activated</li>
-              <li>Has no effect on the page, until activated – scripts won’t run, images won’t load, audio won’t play</li>
-              <li>Will not appear in the DOM</li>
-            </ul>
-          </dia-po>
-          <dia-po display="tv02">
-            <h3>index.html</h3>
-            <dia-code>
-&lt;script type="module" src="wcp-summary.js">&lt;/script>
-&lt;wcp-summary active-index="F01">&lt;/wcp-summary>
-            </dia-code>
-            <h3>wcp-summary.js</h3>
-            <dia-code>
-export class WCPSummary extends HTMLElement { … };
-customElements.define( "wcp-summary", WCPSummary);
-            </dia-code>
-          </dia-po>
-          <dia-po display="sp01">TODO</dia-po>
-          <dia-po display="sp02">TODO</dia-po>
+          <dia-po display="tv01">${diapoModulesAndImports()}</dia-po>
+          <dia-po display="tv02" default>${diapoModuleImportExample()}</dia-po>
+          <dia-po display="sp01">${diapoModulesAndImports()}</dia-po>
+          <dia-po display="sp02">${diapoModuleImportExample()}</dia-po>
         </dia-slide>
 
         <!-- 2. CREATING AND USING WEB COMPONENTS -->
@@ -228,8 +130,14 @@ customElements.define( "wcp-summary", WCPSummary);
             <h1>‹wcp-summary› element · Live code</h1>
             <dia-livecode project="wcp-summary" mode="editor" file="script.js" />
           </dia-po>
-          <dia-po display="sp01">TODO</dia-po>
-          <dia-po display="sp02">TODO</dia-po>
+          <dia-po display="sp01">
+            <h1>‹wcp-summary› element · Live code</h1>
+            <dia-livecode project="wcp-summary" mode="editor" file="script.js" />
+          </dia-po>
+          <dia-po display="sp02">
+            <h1>‹wcp-summary› element · Live code</h1>
+            <dia-livecode project="wcp-summary" mode="editor" file="script.js" />
+          </dia-po>
         </dia-slide>
 
         <!-- Lit-Element Templates -->
@@ -240,8 +148,14 @@ customElements.define( "wcp-summary", WCPSummary);
             <h1>‹wcp-summary› element · Live code</h1>
             <dia-livecode project="wcp-summary" mode="editor" file="script.js" />
           </dia-po>
-          <dia-po display="sp01">TODO</dia-po>
-          <dia-po display="sp02">TODO</dia-po>
+          <dia-po display="sp01">
+            <h1>‹wcp-summary› element · Live code</h1>
+            <dia-livecode project="wcp-summary" mode="editor" file="script.js" />
+          </dia-po>
+          <dia-po display="sp02">
+            <h1>‹wcp-summary› element · Live code</h1>
+            <dia-livecode project="wcp-summary" mode="editor" file="script.js" />
+          </dia-po>
         </dia-slide>
 
         <!-- Lit-Element Data bindings -->
@@ -252,8 +166,14 @@ customElements.define( "wcp-summary", WCPSummary);
             <h1>‹wcp-summary› element · Live code</h1>
             <dia-livecode project="wcp-summary" mode="editor" file="script.js" />
           </dia-po>
-          <dia-po display="sp01">TODO</dia-po>
-          <dia-po display="sp02">TODO</dia-po>
+          <dia-po display="sp01">
+            <h1>‹wcp-summary› element · Live code</h1>
+            <dia-livecode project="wcp-summary" mode="editor" file="script.js" />
+          </dia-po>
+          <dia-po display="sp02">
+            <h1>‹wcp-summary› element · Live code</h1>
+            <dia-livecode project="wcp-summary" mode="editor" file="script.js" />
+          </dia-po>
         </dia-slide>
 
         <!-- 3. DATAFLOWS OF WEB COMPONENTS -->
@@ -266,8 +186,14 @@ customElements.define( "wcp-summary", WCPSummary);
             <h1>‹wcp-vega-histogram› element · Live code</h1>
             <dia-livecode project="wcp-vega-histogram" mode="editor" file="index.html" />
           </dia-po>
-          <dia-po display="sp01">TODO</dia-po>
-          <dia-po display="sp02">TODO</dia-po>
+          <dia-po display="sp01">
+            <h1>‹wcp-vega-histogram› element · Live code</h1>
+            <dia-livecode project="wcp-vega-histogram" mode="editor" file="index.html" />
+          </dia-po>
+          <dia-po display="sp02">
+            <h1>‹wcp-vega-histogram› element · Live code</h1>
+            <dia-livecode project="wcp-vega-histogram" mode="editor" file="index.html" />
+          </dia-po>
         </dia-slide>
 
         <!-- Retrieving and storing data -->
@@ -288,7 +214,7 @@ customElements.define( "wcp-summary", WCPSummary);
 
         <!-- The Promises of Web Components -->
         <dia-slide id="C01">
-          <dia-po display="pj01"><wcp-summary active-index="C01" /></dia-po>
+          <dia-po display="pj01"><wcp-summary active-index="C" /></dia-po>
           <dia-po display="tv01" default>${diapoWebComponentPromises()}</dia-po>
           <dia-po display="tv02">${diapoColorOfTimePatchwork()}</dia-po>
           <dia-po display="sp01">${diapoWebComponentPromisesAsideOlivier()}</dia-po>
@@ -297,9 +223,9 @@ customElements.define( "wcp-summary", WCPSummary);
 
         <!-- Difficult bits & Learning investment -->
         <dia-slide id="C02">
-          <dia-po display="pj01"><wcp-summary active-index="C02" /></dia-po>
-          <dia-po display="tv01" default>${diapoDifficultBits()}</dia-po>
-          <dia-po display="tv02">${diapoLearningInvestment()}</dia-po>
+          <dia-po display="pj01"><wcp-summary active-index="C" /></dia-po>
+          <dia-po display="tv01">${diapoDifficultBits()}</dia-po>
+          <dia-po display="tv02" default>${diapoLearningInvestment()}</dia-po>
           <dia-po display="sp01">${diapoDifficultBits()}</dia-po>
           <dia-po display="sp02">${diapoLearningInvestment()}</dia-po>
         </dia-slide>

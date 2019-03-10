@@ -161,7 +161,7 @@ export function diapoBrowserLatestVersions() {
     <ul>
       <li>Chrome 72</li>
       <li>Safari 12</li>
-      <li>Firefox 667</li>
+      <li>Firefox 65</li>
       <li>Edge 18</li>
     </ul>
   `;
