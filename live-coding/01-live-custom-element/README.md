@@ -1,12 +1,10 @@
 # Example of custom element, live in the browser console
 
-Open [about:blank](about:blank) browser window, then the console and elements views of developer tools (CMD-ALT-I).
+Open <a href="about:blank">about:blank</a> browser window, then the console and elements views of developer tools (CMD-ALT-I).
 
 <img height="400" src="01-live-custom-element(step02).png" />
 
-Observe that no library is needed, no compilation step — the definition and upgrade of the custom element are immediate.
-
-## In the DOM inspector
+## 1. Add ‹my-element› tag in the DOM inspector
 
 The tag ‹my-element› is first unknown to the browser — it will just get ignored.
 
@@ -19,9 +17,7 @@ The tag ‹my-element› is first unknown to the browser — it will just get i
 </html>
 ```
 
-## In the Javascript Console
-
-### 1. ‹my-element› displays a simple text
+## 2. Add definition of ‹my-element› in the Console
 
 Enter following definition, which will upgrade the previously unknown ‹my-element› tag instance, and display a text.
 
@@ -35,9 +31,11 @@ customElements.define( "my-element", class extends HTMLElement {
 });
 ```
 
-### 2. ‹my-styled-element› has additional styling
+Observe that no library was needed, no compilation step — the definition and upgrade of the custom element were immediate.
 
-Add an additional element definition, with a Shadow DOM containing some CSS styling.
+## 3. Add new definition of ‹my-styled-element› – an element with CSS scoped styling
+
+Add an additional element definition in the console, with a Shadow DOM containing some CSS styling.
 
 ```
 customElements.define( "my-styled-element", class extends HTMLElement {
@@ -49,7 +47,7 @@ customElements.define( "my-styled-element", class extends HTMLElement {
 });
 ```
 
-And add it to the DOM; you'll see it be rendered in green. Nothing special so far, however note that the style belongs to the Shadow DOM.
+And add our new ‹my-styled-element› to the DOM in the inspector. You'll see it be rendered in green. Nothing special so far — however note that the style belongs to the Shadow DOM.
 
 ```
 <html>
@@ -61,7 +59,7 @@ And add it to the DOM; you'll see it be rendered in green. Nothing special so fa
 </html>
 ```
 
-### 3. Styles defined in the Shadow DOM have no effect outside
+## 4. Styles defined in the Shadow DOM have no effect outside
 
 ```
 <html>
@@ -75,7 +73,7 @@ And add it to the DOM; you'll see it be rendered in green. Nothing special so fa
 </html>
 ```
 
-### 4. And vice-versa — styles defined in the DOM have no effect on the Shadow DOM
+## 5. And vice-versa — styles defined in the DOM have no effect on the Shadow DOM
 
 To the exception of CSS properties that are inherited — such as font styles — these would affect the Shadow DOM.
 
