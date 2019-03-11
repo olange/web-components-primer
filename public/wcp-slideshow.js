@@ -22,9 +22,9 @@ import { diapoLitElementDataBindings } from "./wcp-parts-U03.js";
 import { diapoDataBindingsMantra } from "./wcp-parts-D01.js";
 import { diapoRetrieveAndStoreData } from "./wcp-parts-D02.js";
 
-import { diapoPolymerProject } from "./wcp-parts-E01.js";
-import { diapoWebComponentsCollections } from "./wcp-parts-E02.js";
-import { diapoMaterialDesignAndA11Y } from "./wcp-parts-E03.js";
+import { diapoPolymerProject, diapoPolymerProjectDetail } from "./wcp-parts-E01.js";
+import { diapoWebComponentsCollections, diapoWebComponentsCollectionsDetail } from "./wcp-parts-E02.js";
+import { diapoMaterialDesignAndA11Y, diapoMaterialDesignAndA11YDetail } from "./wcp-parts-E03.js";
 
 import { diapoWebComponentPromises, diapoColorOfTimePatchwork, diapoWebComponentPromisesAsideOlivier } from "./wcp-parts-C01.js";
 import { diapoDifficultBits, diapoLearningInvestment } from "./wcp-parts-C02.js";
@@ -234,27 +234,27 @@ export class WebComponentsPrimerSlideshow extends LitElement {
         <dia-slide id="E01">
           <dia-po display="pj01"><wcp-summary active-index="E01" /></dia-po>
           <dia-po display="tv01" default>${diapoPolymerProject()}</dia-po>
-          <dia-po display="tv02"></dia-po>
+          <dia-po display="tv02">${diapoPolymerProjectDetail()}</dia-po>
           <dia-po display="sp01">${diapoPolymerProject()}</dia-po>
-          <dia-po display="sp02"></dia-po>
+          <dia-po display="sp02">${diapoPolymerProjectDetail()}</dia-po>
         </dia-slide>
 
         <!-- Navigate WebComponents.org and discover its main collections -->
         <dia-slide id="E01">
           <dia-po display="pj01"><wcp-summary active-index="E02" /></dia-po>
           <dia-po display="tv01" default>${diapoWebComponentsCollections()}</dia-po>
-          <dia-po display="tv02"></dia-po>
+          <dia-po display="tv02">${diapoWebComponentsCollectionsDetail()}</dia-po>
           <dia-po display="sp01">${diapoWebComponentsCollections()}</dia-po>
-          <dia-po display="sp02"></dia-po>
+          <dia-po display="sp02">${diapoWebComponentsCollectionsDetail()}</dia-po>
         </dia-slide>
 
         <!-- Understand Material Design and A11Y -->
         <dia-slide id="E01">
           <dia-po display="pj01"><wcp-summary active-index="E03" /></dia-po>
           <dia-po display="tv01" default>${diapoMaterialDesignAndA11Y()}</dia-po>
-          <dia-po display="tv02"></dia-po>
+          <dia-po display="tv02">${diapoMaterialDesignAndA11YDetail()}</dia-po>
           <dia-po display="sp01">${diapoMaterialDesignAndA11Y()}</dia-po>
-          <dia-po display="sp02"></dia-po>
+          <dia-po display="sp02">${diapoMaterialDesignAndA11YDetail()}</dia-po>
         </dia-slide>
 
         <!-- 5. CONCLUSION -->

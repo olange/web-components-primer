@@ -5,3 +5,7 @@ export function diapoMaterialDesignAndA11Y() {
     <h1>Understand Material Design and A11Y</h1>
   `;
 }
+
+export function diapoMaterialDesignAndA11YDetail() {
+  return html`&nbsp;`;
+}

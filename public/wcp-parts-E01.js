@@ -5,3 +5,7 @@ export function diapoPolymerProject() {
     <h1>Understand the Polymer project</h1>
   `;
 }
+
+export function diapoPolymerProjectDetail() {
+  return html`&nbsp;`;
+}
