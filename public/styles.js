@@ -38,7 +38,7 @@ const SlideshowStyles = css`
     background-color: var(--primary-bg-color); }
 
   dia-livecode {
-    width: 100vh; height: calc( 100vh); }
+    width: 100vw; height: calc( 100vh - 4em); }
 
   /* Scale of diapositive contents */
   dia-po {
