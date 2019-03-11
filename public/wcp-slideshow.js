@@ -240,7 +240,7 @@ export class WebComponentsPrimerSlideshow extends LitElement {
         </dia-slide>
 
         <!-- Navigate WebComponents.org and discover its main collections -->
-        <dia-slide id="E01">
+        <dia-slide id="E02">
           <dia-po display="pj01"><wcp-summary active-index="E02" /></dia-po>
           <dia-po display="tv01" default>${diapoWebComponentsCollections()}</dia-po>
           <dia-po display="tv02">${diapoWebComponentsCollectionsDetail()}</dia-po>
@@ -249,7 +249,7 @@ export class WebComponentsPrimerSlideshow extends LitElement {
         </dia-slide>
 
         <!-- Understand Material Design and A11Y -->
-        <dia-slide id="E01">
+        <dia-slide id="E03">
           <dia-po display="pj01"><wcp-summary active-index="E03" /></dia-po>
           <dia-po display="tv01" default>${diapoMaterialDesignAndA11Y()}</dia-po>
           <dia-po display="tv02">${diapoMaterialDesignAndA11YDetail()}</dia-po>
