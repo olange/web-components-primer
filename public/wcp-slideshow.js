@@ -5,17 +5,31 @@ import "@petitatelier/dia-code";
 import "@petitatelier/dia-livecode";
 
 import { SlideshowStyles } from "./styles.js";
+import "./wcp-summary.js";
+
 import { diapoWCPTitle, diapoWCPTitleAsideOlivier, diapoWCPTitleAsideYves, diapoWiFi, diapoModelViewer } from "./wcp-parts-I01.js";
+
 import { diapoWhatAreWebComponents, diapoLiveCodeCustomElement, diapoLiveCodeCustomElementWithSlot } from "./wcp-parts-F01.js";
 import { diapo1BDevices, diapoCanIUseWebComponents, diapoWebComponentsPolyfill, diapoBrowserReleases, diapoBrowserLatestVersions } from "./wcp-parts-F01B.js";
 import { diapoCustomElements, diapoCustomElementsAside } from "./wcp-parts-F02.js";
 import { diapoShadowDOM } from "./wcp-parts-F03.js";
 import { diapoModulesAndImports, diapoModuleImportExample } from "./wcp-parts-F04.js";
+
+import { diapoHowToStart } from "./wcp-parts-U01.js";
+import { diapoLitElementTemplate } from "./wcp-parts-U02.js";
+import { diapoLitElementDataBindings } from "./wcp-parts-U03.js";
+
+import { diapoDataBindingsMantra } from "./wcp-parts-D01.js";
+import { diapoRetrieveAndStoreData } from "./wcp-parts-D02.js";
+
+import { diapoPolymerProject } from "./wcp-parts-E01.js";
+import { diapoWebComponentsCollections } from "./wcp-parts-E02.js";
+import { diapoMaterialDesignAndA11Y } from "./wcp-parts-E03.js";
+
 import { diapoWebComponentPromises, diapoColorOfTimePatchwork, diapoWebComponentPromisesAsideOlivier } from "./wcp-parts-C01.js";
 import { diapoDifficultBits, diapoLearningInvestment } from "./wcp-parts-C02.js";
 import { diapoSlideshowShare, diapoThankYouFeedback, diapoPetitAtelier } from "./wcp-parts-C03.js";
 import { diapoGōngfuIO, diapoPlayWithWebComponents, diapoPlayWithDemonstrates, diapoPlayWithWebComponentsAside } from "./wcp-parts-C04.js";
-import "./wcp-summary.js";
 
 export class WebComponentsPrimerSlideshow extends LitElement {
 
@@ -125,7 +139,7 @@ export class WebComponentsPrimerSlideshow extends LitElement {
         <!-- How to start? -->
         <dia-slide id="U01">
           <dia-po display="pj01"><dia-livecode project="wcp-summary" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
-          <dia-po display="tv01">TODO</dia-po>
+          <dia-po display="tv01">${diapoHowToStart()}</dia-po>
           <dia-po display="tv02" default>
             <h1>‹wcp-summary› element · Live code</h1>
             <dia-livecode project="wcp-summary" mode="editor" file="script.js" />
@@ -143,7 +157,7 @@ export class WebComponentsPrimerSlideshow extends LitElement {
         <!-- Lit-Element Templates -->
         <dia-slide id="U02">
           <dia-po display="pj01"><dia-livecode project="wcp-summary" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
-          <dia-po display="tv01">TODO</dia-po>
+          <dia-po display="tv01">${diapoLitElementTemplate()}</dia-po>
           <dia-po display="tv02" default>
             <h1>‹wcp-summary› element · Live code</h1>
             <dia-livecode project="wcp-summary" mode="editor" file="script.js" />
@@ -161,7 +175,7 @@ export class WebComponentsPrimerSlideshow extends LitElement {
         <!-- Lit-Element Data bindings -->
         <dia-slide id="U03">
           <dia-po display="pj01"><dia-livecode project="wcp-summary" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
-          <dia-po display="tv01">TODO</dia-po>
+          <dia-po display="tv01">${diapoLitElementDataBindings()}</dia-po>
           <dia-po display="tv02" default>
             <h1>‹wcp-summary› element · Live code</h1>
             <dia-livecode project="wcp-summary" mode="editor" file="script.js" />
@@ -181,7 +195,7 @@ export class WebComponentsPrimerSlideshow extends LitElement {
         <!-- Vanilla data bindings: « data-in via attributes, data-out via events » -->
         <dia-slide id="D01">
           <dia-po display="pj01"><dia-livecode project="wcp-vega-histogram" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
-          <dia-po display="tv01">TODO</dia-po>
+          <dia-po display="tv01">${diapoDataBindingsMantra()}</dia-po>
           <dia-po display="tv02" default>
             <h1>‹wcp-vega-histogram› element · Live code</h1>
             <dia-livecode project="wcp-vega-histogram" mode="editor" file="index.html" />
@@ -199,16 +213,49 @@ export class WebComponentsPrimerSlideshow extends LitElement {
         <!-- Retrieving and storing data -->
         <dia-slide id="D02">
           <dia-po display="pj01"><dia-livecode project="wcp-vega-histogram" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
-          <dia-po display="tv01">TODO</dia-po>
+          <dia-po display="tv01">${diapoRetrieveAndStoreData()}</dia-po>
           <dia-po display="tv02" default>
             <h1>‹wcp-vega-histogram› element · Live code</h1>
             <dia-livecode project="wcp-vega-histogram" mode="editor" file="index.html" />
           </dia-po>
-          <dia-po display="sp01">TODO</dia-po>
-          <dia-po display="sp02">TODO</dia-po>
+          <dia-po display="sp01">
+            <h1>‹wcp-vega-histogram› element · Live code</h1>
+            <dia-livecode project="wcp-vega-histogram" mode="editor" file="index.html" />
+          </dia-po>
+          <dia-po display="sp02">
+            <h1>‹wcp-vega-histogram› element · Live code</h1>
+            <dia-livecode project="wcp-vega-histogram" mode="editor" file="index.html" />
+          </dia-po>
         </dia-slide>
 
         <!-- 4. THE ECOSYSTEM OF WEB COMPONENTS -->
+
+        <!-- Understand the Polymer project -->
+        <dia-slide id="E01">
+          <dia-po display="pj01"><wcp-summary active-index="E01" /></dia-po>
+          <dia-po display="tv01" default>${diapoPolymerProject()}</dia-po>
+          <dia-po display="tv02"></dia-po>
+          <dia-po display="sp01">${diapoPolymerProject()}</dia-po>
+          <dia-po display="sp02"></dia-po>
+        </dia-slide>
+
+        <!-- Navigate WebComponents.org and discover its main collections -->
+        <dia-slide id="E01">
+          <dia-po display="pj01"><wcp-summary active-index="E02" /></dia-po>
+          <dia-po display="tv01" default>${diapoWebComponentsCollections()}</dia-po>
+          <dia-po display="tv02"></dia-po>
+          <dia-po display="sp01">${diapoWebComponentsCollections()}</dia-po>
+          <dia-po display="sp02"></dia-po>
+        </dia-slide>
+
+        <!-- Understand Material Design and A11Y -->
+        <dia-slide id="E01">
+          <dia-po display="pj01"><wcp-summary active-index="E03" /></dia-po>
+          <dia-po display="tv01" default>${diapoMaterialDesignAndA11Y()}</dia-po>
+          <dia-po display="tv02"></dia-po>
+          <dia-po display="sp01">${diapoMaterialDesignAndA11Y()}</dia-po>
+          <dia-po display="sp02"></dia-po>
+        </dia-slide>
 
         <!-- 5. CONCLUSION -->
 
