@@ -1,0 +1,22 @@
+{
+  "name": "wcp-summary-step04",
+  "version": "0.1.0",
+  "description": "Web Components Primer · 4. Dataflow · Live Coding",
+  "scripts": {
+    "start": "polyserve --npm --module-resolution=node"
+  },
+  "dependencies": {
+    "@petitatelier/osc-stream": "^0.2.2",
+    "@webcomponents/webcomponentsjs": "^2.2.7",
+    "lit-element": "^2.0.1"
+  },
+  "devDependencies": {
+    "polyserve": "latest"
+  },
+  "author": "Olivier Lange",
+  "contributors": [
+    "Yves Lange"
+  ],
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/petitatelier/web-components-primer/tree/master/live-coding/02-wcp-summary/step-04#readme"
+}
