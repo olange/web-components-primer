@@ -1,7 +1,7 @@
 import { LitElement, html } from "lit-element";
 import "./wcp-summary";
 import "./wcp-select";
- 
+
 export class WCPSummaryReader extends LitElement {
 
   static get properties() {
@@ -30,7 +30,6 @@ export class WCPSummaryReader extends LitElement {
   }
 
   onSelected( event) {
-    console.log( event);
     this._summaryElement.active = event.detail.selected;
   }
 

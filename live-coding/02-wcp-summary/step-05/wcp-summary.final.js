@@ -1,6 +1,6 @@
 import { LitElement, html } from "lit-element";
 import { SummaryStyles } from "./wcp-summary.css.js";
- 
+
 export class WCPSummary extends LitElement {
 
   static get styles() {

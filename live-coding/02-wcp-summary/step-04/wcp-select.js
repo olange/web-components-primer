@@ -1,4 +1,4 @@
- import { LitElement, html } from "lit-element";
+import { LitElement, html } from "lit-element";
 
 export class WCPSummarySelect extends LitElement {
   render() {
@@ -28,15 +28,15 @@ export class WCPSummarySelect extends LitElement {
   constructor() {
     super();
   }
-  
+
   firstUpdated() {
-    const mySelectElement = this.shadowRoot.getElementById( "my-select");
-    mySelectElement.addEventListener( "change", (e) => {
-      const selectedOptionIndex = mySelectElement.selectedIndex;
-      const selectedOptionValue = mySelectElement.options[ selectedOptionIndex].value;
+    const selectElement = this.shadowRoot.getElementById( "my-select");
+    selectElement.addEventListener( "change", (e) => {
+      const selectedIndex = selectElement.selectedIndex;
+      const selectedValue = selectElement.options[ selectedIndex].value;
       this.dispatchEvent(
         new CustomEvent( "on-change",
-                         { "detail": { selected: selectedOptionValue }})
+                         { "detail": { selected: selectedValue }})
       )
     });
   }

@@ -1,7 +1,7 @@
 import { LitElement, html } from "lit-element";
 
 export class WCPSummarySelect extends LitElement {
-  
+
   static get properties() {
     return {
       items: { type: Object }  // nested array of { id: "F", text: "FOUNDATIONS …" }
@@ -42,7 +42,7 @@ export class WCPSummarySelect extends LitElement {
       [ { id: "C",   text: "AS A CONCLUSION" } ]
     ];
   }
-  
+
   onChange( event) {
     const selectElement = event.target,
           selectedIndex = selectElement.selectedIndex,

@@ -1,7 +1,7 @@
 import { LitElement, html } from "lit-element";
 
 export class WCPSummarySelect extends LitElement {
-  
+
   render() {
     return html`
       <select @change="${this.onChange}">
@@ -30,7 +30,7 @@ export class WCPSummarySelect extends LitElement {
     super();
     this.items = new Map();
   }
-  
+
   onChange( event) {
     const selectElement = event.target,
           selectedIndex = selectElement.selectedIndex,
