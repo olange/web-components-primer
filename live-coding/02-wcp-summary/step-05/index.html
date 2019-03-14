@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Web Components Primer · 5. Fetching data · Live-coding example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Global stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- Web Components polyfills (they will detect if there are needed) -->
+    <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    
+    <!-- Definition of our ‹wcp-summary› and ‹wcp-select› custom elements -->
+    <script type="module" src="/wcp-summary-reader.js" defer></script>
+  </head>
+  <body>
+    <h1>5. Dataflow – Fetching data</h1>
+
+    <!-- Here are the custom elements and the data-binding logic -->
+    <blockquote>
+
+      <wcp-summary-reader src="wcp-summary-data.json" />
+
+    </blockquote>
+  </body>
+</html>
