@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Web Components Primer · 3. Lit-Element Data-bindings · Live-coding example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Global stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- Web Components polyfills (they will detect if there are needed) -->
+    <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    
+    <!-- Definition of our ‹wcp-summary› and ‹wcp-select› custom elements -->
+    <script type="module" src="/wcp-summary.js" defer></script>
+    <script type="module" src="/wcp-select.js" defer></script>
+  </head>
+  <body>
+    <h1>3. Using Web Components – Lit-Element Data-bindings</h1>
+
+    <!-- Here are the custom elements and the data-binding logic -->
+    <blockquote>
+
+      <wcp-select></wcp-select> <!-- data-out: `on-change` custom event -->
+      <wcp-summary active-index="F" /> <!-- data-in: thru `active-index` attribute -->
+
+      <script>
+        const selectElement = document.querySelector( "wcp-select");
+        const summaryElement = document.querySelector( "wcp-summary");
+        selectElement.addEventListener( "selected", (event) => {
+          summaryElement.setAttribute( "active-index", event.detail.selected);
+        });
+      </script>
+
+    </blockquote>
+  </body>
+</html>

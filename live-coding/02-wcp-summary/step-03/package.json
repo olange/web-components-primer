@@ -1,0 +1,19 @@
+{
+  "name": "wcp-summary-step03",
+  "version": "0.1.0",
+  "description": "Web Components Primer · 3. Lit-Element Data-bindings · Live Coding",
+  "scripts": {
+    "start": "polyserve --npm --module-resolution=node"
+  },
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.2.7",
+    "lit-element": "^2.0.1"
+  },
+  "devDependencies": {
+    "polyserve": "latest"
+  },
+  "author": "Olivier Lange",
+  "contributors": [ "Yves Lange" ],
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/petitatelier/web-components-primer/tree/master/live-coding/02-wcp-summary/step-03#readme"
+}
