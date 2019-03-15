@@ -17,6 +17,8 @@ Part of the live-coding examples of the talk [A Primer to Web Components](https:
   * Property to attribute reflection
 * Declaration of an event handler
 
+![Bindings – Attribute reflected to property](../../../public/images/wcp-summary-bindings.svg)
+
 ## While live-coding, we would have said…
 
 ### …about observed attributes and properties of ‹wcp-summary›
@@ -25,7 +27,7 @@ We defined a new **`active-index`** _attribute_ on our **‹wcp-summary›**
 element. And the attribute will automatically be bound by Lit-Element
 to the **`active`** _property_ of the WCPSummary class instance.
 
-Both `active-index` attribute and `active` property are being declared 
+Both `active-index` attribute and `active` property are being declared
 to Lit-Element, by a static `properties()` getter; Lit-Element will
 register their type and consequently observe changes for both
 _attribute_ and _property_:
@@ -34,7 +36,7 @@ _attribute_ and _property_:
 propagated to the `active` _property_ by Lit-Element; they are said
 to be bound to each other. Once the `active` property was updated,
 the HTML template that is defined by `render()` gets re-rendered.
-2. Changes to the `active` _property_ are reflected to the `active-index` 
+2. Changes to the `active` _property_ are reflected to the `active-index`
 _attribute_ — by a setter automatically defined by Lit-Element.
 
 We also observe these changes, in logic we defined:
@@ -55,13 +57,13 @@ the « outside world » of the element — that is, logic from the DOM
 around it. You can consider attributes being observed as « the
 API » of a Web Component. Whereas changes to the values of observed _properties_ would usually come from the custom element itself.
 
-Yet there are cases where you would also consider some _property_ 
+Yet there are cases where you would also consider some _property_
 as part of « the API » of a Web Component. _Attribute_ value indeed
 need to    be parsed and converted to _property_ values — which comes
 at a  cost, for big datastructures, such as tables or complex objects.
 You'll see such a case in [step 5](https://glitch.com/edit/#!/wcp-summary-step05?path=README.md) of this live-coding example.
 
-There would be much more to say about bindings between attributes 
+There would be much more to say about bindings between attributes
 of an element and the properties of its class instance; a glimpse:
 
 * you can define a _property_ as being observed by Lit-Element, without
