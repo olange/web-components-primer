@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Web Components Primer · 2. Lit-Element Templates · Live-coding example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Global stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- Web Components polyfills (they will detect if there are needed) -->
+    <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    
+    <!-- Definition of our ‹wcp-summary› custom element -->
+    <script type="module" src="/wcp-summary.js" defer></script>
+  </head>
+  <body>
+    <h1>2. Using Web Components — Lit-Element Templates</h1>
+
+    <!-- Here is the custom element -->
+    <blockquote>
+
+      <wcp-summary active-index="F" />
+
+    </blockquote>
+  </body>
+</html>
