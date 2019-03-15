@@ -8,7 +8,7 @@ Part of the live-coding examples of the talk [A Primer to Web Components](https:
 
 ---
 
-![Dataflow – Data-out via custom-event, data-in via attribute](https://cdn.glitch.com/a1031bf5-851a-455a-a4e0-7195fd78c7a1%2Fwcp-summary-flow.svg?1552510153125)
+![Dataflow – Data-out via custom-event, data-in via attribute](wcp-summary-dataflow.svg)
 
 **Data-out** – when you pick an item from the `‹wcp-select›` element, it will dispatch an `on-change` custom event, with the identifier of the selected item in its detail.
 

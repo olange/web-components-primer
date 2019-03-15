@@ -4,7 +4,7 @@ export class WCPSummarySelect extends LitElement {
 
   render() {
     return html`
-      <select> <!-- TODO: register `onSelected()` event handler for `change` event -->
+      <select> <!-- TODO: register onSelected() event handler for 'change' event -->
         <option value="F"  >FOUNDATIONS OF WEB COMPONENTS</option>
         <option value="F01">– What are they? Can I use them?</option>
         <option value="F02">– Custom Elements</option>

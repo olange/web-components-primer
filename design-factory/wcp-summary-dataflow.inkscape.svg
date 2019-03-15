@@ -9,14 +9,14 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="990"
-   height="210"
-   viewBox="0 0 261.93749 55.562502"
+   width="1142.3427"
+   height="215.71866"
+   viewBox="0 0 302.24481 57.075563"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.2 5c3e80d, 2017-08-06"
-   sodipodi:docname="wcp-summary-flow.svg"
-   inkscape:export-filename="/Users/oliv/Sources/web-components-primer/public/images/wcp-summary-flow.png"
+   sodipodi:docname="wcp-summary-dataflow.inkscape.svg"
+   inkscape:export-filename="/Users/oliv/Sources/web-components-primer/public/images/wcp-summary-dataflow.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96">
   <defs
@@ -268,22 +268,22 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.75"
-     inkscape:cx="493.77991"
-     inkscape:cy="77.538726"
+     inkscape:zoom="1"
+     inkscape:cx="576.09055"
+     inkscape:cy="79.084241"
      inkscape:document-units="px"
-     inkscape:current-layer="g5793"
+     inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1440"
-     inkscape:window-height="856"
-     inkscape:window-x="0"
+     inkscape:window-width="2081"
+     inkscape:window-height="1035"
+     inkscape:window-x="9"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      units="px"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0" />
+     fit-margin-top="4"
+     fit-margin-left="4"
+     fit-margin-right="4"
+     fit-margin-bottom="4" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -292,7 +292,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -300,97 +300,165 @@
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-0.65050489,-240.78628)">
+     transform="translate(-0.24267688,-239.68213)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="65.351341"
+       y="275.64307"
+       id="text3720"><tspan
+         sodipodi:role="line"
+         id="tspan3718"
+         x="65.351341"
+         y="285.00684"
+         style="stroke-width:0.26458332" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#008ee8;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="169.86177"
+       y="271.77487"
+       id="text3724"><tspan
+         sodipodi:role="line"
+         id="tspan1243"
+         style="fill:#000000;fill-opacity:1"
+         x="169.86177"
+         y="271.77487">‹<tspan
+   style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:10.58333302px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+   id="tspan1255">wcp-summary</tspan></tspan><tspan
+         sodipodi:role="line"
+         id="tspan1245"
+         x="169.86177"
+         y="285.00403"><tspan
+           style="fill:#000000;fill-opacity:1"
+           id="tspan1247">  active-index=&quot;</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:10.58333302px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           id="tspan1257">F01</tspan><tspan
+           style="fill:#000000;fill-opacity:1"
+           id="tspan1253">&quot;›</tspan></tspan></text>
+    <text
+       id="text3728"
+       y="271.77487"
+       x="-0.79448974"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:10.58333302px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         y="271.77487"
+         x="-0.79448974"
+         id="tspan3726"
+         sodipodi:role="line">‹<tspan
+   id="tspan69"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">wcp-select</tspan>› </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="91.244392"
+       y="271.77487"
+       id="text3732"><tspan
+         sodipodi:role="line"
+         id="tspan3730"
+         x="91.244392"
+         y="271.77487"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">index.html </tspan></text>
+    <path
+       style="fill:none;stroke:#008ee6;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:15;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#DotL);marker-end:url(#Arrow2Lend)"
+       d="m 33.374556,259.07113 c 15.847963,-20.1624 36.843658,-21.29564 48.267558,-15.72381 12.881043,6.28253 19.201196,15.38363 19.201196,15.38363"
+       id="path3734"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc" />
+    <path
+       sodipodi:nodetypes="csc"
+       inkscape:connector-curvature="0"
+       id="path14565"
+       d="m 113.8079,276.8904 c 15.3188,17.51657 33.93324,20.76647 50.91339,14.13631 13.34988,-5.21267 15.76161,-6.3878 15.76161,-6.3878"
+       style="fill:none;stroke:#008ee8;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:15;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker3618);marker-end:url(#marker3434)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.76926661px;line-height:1.25;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#008ee8;fill-opacity:1;stroke:none;stroke-width:0.25549641"
+       x="175.51195"
+       y="284.72348"
+       id="text15743"
+       transform="scale(0.96565576,1.0355657)"><tspan
+         sodipodi:role="line"
+         id="tspan1811"
+         x="175.51195"
+         y="284.72348"
+         style="stroke-width:0.25549641">setAttribute( &quot;active-index&quot;, e.detail.selected)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#008ee8;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="39.650631"
+       y="261.04987"
+       id="text176"><tspan
+         id="tspan174"
+         sodipodi:role="line"
+         x="39.650631"
+         y="261.04987"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.93888903px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008ee8;fill-opacity:1;stroke-width:0.26458332">on-change</tspan></text>
+    <text
+       id="text1215"
+       y="278.2478"
+       x="122.03607"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#008ee8;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.93888903px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008ee8;fill-opacity:1;stroke-width:0.26458332"
+         y="278.2478"
+         x="122.03607"
+         sodipodi:role="line"
+         id="tspan1213">on-selected</tspan></text>
     <g
-       id="g5793"
-       transform="translate(0.65050529,-0.27103385)">
-      <text
-         id="text3720"
-         y="275.91409"
-         x="64.700836"
-         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         xml:space="preserve"><tspan
-           style="stroke-width:0.26458332"
-           y="285.27786"
-           x="64.700836"
-           id="tspan3718"
-           sodipodi:role="line" /></text>
-      <text
-         id="text3724"
-         y="272.0459"
-         x="169.21126"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:10.58333302px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
-           y="272.0459"
-           x="169.21126"
-           id="tspan3722"
-           sodipodi:role="line">‹<tspan
-   style="-inkscape-font-specification:'Fira Code, Normal';font-family:'Fira Code';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.58333332px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"
-   id="tspan67">wcp-summary</tspan>› </tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         x="-1.444995"
-         y="272.0459"
-         id="text3728"><tspan
-           sodipodi:role="line"
-           id="tspan3726"
-           x="-1.444995"
-           y="272.0459"
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:10.58333302px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">‹<tspan
-   style="-inkscape-font-specification:'Fira Code, Normal';font-family:'Fira Code';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.58333332px;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal"
-   id="tspan69">wcp-select</tspan>› </tspan></text>
-      <text
-         id="text3732"
-         y="272.0459"
-         x="90.593887"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333332px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr;text-anchor:start;stroke-width:0.26458332"
-           y="272.0459"
-           x="90.593887"
-           id="tspan3730"
-           sodipodi:role="line">index.html </tspan></text>
-      <path
-         sodipodi:nodetypes="csc"
-         inkscape:connector-curvature="0"
-         id="path3734"
-         d="m 33.253218,276.63226 c 15.847963,20.1624 31.287408,21.29563 48.267558,14.66547 13.349885,-5.21267 19.201194,-14.32529 19.201194,-14.32529"
-         style="fill:none;stroke:#008ee6;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:15;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#DotL);marker-end:url(#Arrow2Lend)" />
-      <path
-         style="fill:none;stroke:#008ee8;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:15;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker3618);marker-end:url(#marker3434)"
-         d="m 113.15739,259.87133 c 15.84796,-20.1624 31.28741,-21.29563 48.26756,-14.66547 13.34988,5.21267 19.20119,14.32529 19.20119,14.32529"
-         id="path14565"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="csc" />
+       id="g8968"
+       transform="translate(13.229167,2.7202791)">
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#008ee8;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         x="97.208466"
-         y="289.50842"
+         x="92.14727"
+         y="245.12866"
          id="text15735"><tspan
            sodipodi:role="line"
            id="tspan15733"
-           x="97.208466"
-           y="289.50842"
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.93888903px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008ee8;fill-opacity:1;stroke-width:0.26458332">new CustomEvent( &quot;selected&quot;,</tspan><tspan
+           x="92.14727"
+           y="245.12866"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.93888903px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008ee8;fill-opacity:1;stroke-width:0.26458332">new CustomEvent( &quot;<tspan
+   style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.93888903px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+   id="tspan164">selected</tspan>&quot;,</tspan><tspan
            id="tspan15737"
            sodipodi:role="line"
-           x="97.208466"
-           y="295.68204"
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.93888903px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008ee8;fill-opacity:1;stroke-width:0.26458332">    { detail: { selected: index }})</tspan></text>
-      <text
-         id="text15743"
-         y="245.09178"
-         x="167.05847"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#008ee8;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.93888903px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008ee8;fill-opacity:1;stroke-width:0.26458332"
-           y="245.09178"
-           x="167.05847"
-           sodipodi:role="line"
-           id="tspan15741">active-index = e.detail.selected</tspan></text>
+           x="92.14727"
+           y="251.30228"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.93888903px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008ee8;fill-opacity:1;stroke-width:0.26458332">    { detail: { selected: &quot;<tspan
+   style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.93888903px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start"
+   id="tspan162">F01</tspan>&quot; }})</tspan></text>
+      <rect
+         y="238.02019"
+         x="89.142677"
+         height="16.933332"
+         width="109.00832"
+         id="rect5269"
+         style="fill:#008ee8;fill-opacity:0.1254902;stroke:none;stroke-width:0.48114583;stroke-miterlimit:15;stroke-dasharray:0.48114583, 0.48114583;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
+    <rect
+       y="275.06183"
+       x="181.57294"
+       height="13.493749"
+       width="120.91457"
+       id="rect8960"
+       style="fill:#008ee8;fill-opacity:0.1254902;stroke:none;stroke-width:0.45235696;stroke-miterlimit:15;stroke-dasharray:0.45235701, 0.45235701;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       sodipodi:nodetypes="csc"
+       inkscape:connector-curvature="0"
+       id="path79"
+       d="m 236.04841,259.07113 c 15.58337,-9.57907 23.47058,-13.49933 32.39256,-13.34256 9.95223,0.17487 17.87829,10.35655 17.87829,10.35655"
+       style="fill:none;stroke:#008ee6;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:15;stroke-dasharray:0.5, 0.5;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#DotL);marker-end:url(#Arrow2Lend)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#008ee8;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="278.30893"
+       y="262.05246"
+       id="text83"><tspan
+         id="tspan81"
+         sodipodi:role="line"
+         x="278.30893"
+         y="262.05246"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4.93888903px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#008ee8;fill-opacity:1;stroke-width:0.26458332">render()</tspan></text>
   </g>
 </svg>
