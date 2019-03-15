@@ -7,5 +7,5 @@ Complete example of a [`Lit-Element`](https://lit-element.polymer-project.org/),
 [View it on Glitch](https://wcp-summary-step01.glitch.me/) /
 [Remix it on Glitch](https://glitch.com/edit/#!/wcp-summary-step01)
 
-<div class="glitchButton" style="position:fixed;top:20px;right:20px;" />
+<div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
 <script src="https://button.glitch.me/button.js"></script>
