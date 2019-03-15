@@ -3,7 +3,7 @@ import { LitElement, html } from "lit-element";
 export class WCPSummarySelect extends LitElement {
   render() {
     return html`
-      <select id="my-select">
+      <select @change="${this.onSelected}">
         <option value="F"  >FOUNDATIONS OF WEB COMPONENTS</option>
         <option value="F01">– What are they? Can I use them?</option>
         <option value="F02">– Custom Elements</option>
@@ -29,16 +29,14 @@ export class WCPSummarySelect extends LitElement {
     super();
   }
 
-  firstUpdated() {
-    const selectElement = this.shadowRoot.getElementById( "my-select");
-    selectElement.addEventListener( "change", (e) => {
-      const selectedIndex = selectElement.selectedIndex;
-      const selectedValue = selectElement.options[ selectedIndex].value;
-      this.dispatchEvent(
-        new CustomEvent( "on-change",
-                         { "detail": { selected: selectedValue }})
-      )
-    });
+  onSelected( event) {
+    const selectElement = event.target,
+          selectedIndex = selectElement.selectedIndex,
+          selectedValue = selectElement.options[ selectedIndex].value;
+    this.dispatchEvent(
+      new CustomEvent( "selected",
+                       { "detail": { selected: selectedValue }})
+    );
   }
 }
 

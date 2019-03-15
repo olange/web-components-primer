@@ -25,10 +25,10 @@
       <wcp-summary active-index="F" /> <!-- data-in: thru `active-index` attribute -->
 
       <script>
-        const mySelectElement = document.querySelector( "wcp-select");
-        const mySummaryElement = document.querySelector( "wcp-summary");
-        mySelectElement.addEventListener( "on-change", (event) => {
-          mySummaryElement.setAttribute( "active-index", event.detail.selected);
+        const selectElement = document.querySelector( "wcp-select"),
+              summaryElement = document.querySelector( "wcp-summary");
+        selectElement.addEventListener( "selected", (event) => {
+          summaryElement.setAttribute( "active-index", event.detail.selected);
         });
       </script>
 
