@@ -2,7 +2,7 @@ import { LitElement, html } from "lit-element";
 import "./wcp-summary";
 import "./wcp-select";
 
-export class WCPSummaryReader extends LitElement {
+export class WCPDynamicSummary extends LitElement {
 
   static get properties() {
     return {
@@ -44,4 +44,4 @@ export class WCPSummaryReader extends LitElement {
 }
 
 // Register the element with the browser
-customElements.define( "wcp-summary-reader", WCPSummaryReader);
+customElements.define( "wcp-dynamic-summary", WCPDynamicSummary);
