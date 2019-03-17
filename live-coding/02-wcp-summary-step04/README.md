@@ -1,8 +1,6 @@
-[« prev](../02-wcp-summary-step03/ [next »](../02-wcp-summary-step05/)
+[« prev](../02-wcp-summary-step03/) [next »](../02-wcp-summary-step05/)
 
 # 4. Dataflow – Vanilla data-bindings
-
----
 
 Part of the live-coding examples of the talk [A Primer to Web Components](https://web-components-primer.firebaseapp.com).
 
