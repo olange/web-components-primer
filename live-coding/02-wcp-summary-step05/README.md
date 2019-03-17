@@ -1,6 +1,6 @@
 [« prev](../02-wcp-summary-step04/)
 
-# 5. Dataflow – Retrieving and storing data
+# 5. Dataflow – Fetching data
 
 Part of the live-coding examples of the talk [A Primer to Web Components](https://web-components-primer.firebaseapp.com).
 

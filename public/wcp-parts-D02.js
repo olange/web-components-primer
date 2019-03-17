@@ -1,7 +1,7 @@
 import { html } from "lit-element";
 
-export function diapoRetrieveAndStoreData() {
+export function diapoFetchingData() {
   return html`
-    <h1>Retrieving and storing data</h1>
+    <h1>Fetching data</h1>
   `;
 }

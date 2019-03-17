@@ -20,7 +20,7 @@ import { diapoLitElementTemplate } from "./wcp-parts-U02.js";
 import { diapoLitElementDataBindings } from "./wcp-parts-U03.js";
 
 import { diapoDataBindingsMantra } from "./wcp-parts-D01.js";
-import { diapoRetrieveAndStoreData } from "./wcp-parts-D02.js";
+import { diapoFetchingData } from "./wcp-parts-D02.js";
 
 import { diapoPolymerProject, diapoPolymerProjectDetail } from "./wcp-parts-E01.js";
 import { diapoWebComponentsCollections, diapoWebComponentsCollectionsDetail } from "./wcp-parts-E02.js";
@@ -210,10 +210,10 @@ export class WebComponentsPrimerSlideshow extends LitElement {
           </dia-po>
         </dia-slide>
 
-        <!-- Retrieving and storing data -->
+        <!-- Fetching data -->
         <dia-slide id="D02">
           <dia-po display="pj01"><dia-livecode project="wcp-summary-step05" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
-          <dia-po display="tv01">${diapoRetrieveAndStoreData()}</dia-po>
+          <dia-po display="tv01">${diapoFetchingData()}</dia-po>
           <dia-po display="tv02" default>
             <h1>‹wcp-summary› element · Live code</h1>
             <dia-livecode project="wcp-summary-step05" mode="editor" file="wcp-summary-data.json" />
