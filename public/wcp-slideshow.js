@@ -138,55 +138,55 @@ export class WebComponentsPrimerSlideshow extends LitElement {
 
         <!-- How to start? -->
         <dia-slide id="U01">
-          <dia-po display="pj01"><dia-livecode project="wcp-summary" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
+          <dia-po display="pj01"><dia-livecode project="wcp-summary-step01" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
           <dia-po display="tv01">${diapoHowToStart()}</dia-po>
           <dia-po display="tv02" default>
             <h1>‹wcp-summary› element · Live code</h1>
-            <dia-livecode project="wcp-summary" mode="editor" file="script.js" />
+            <dia-livecode project="wcp-summary-step01" mode="editor" file="index.html" />
           </dia-po>
           <dia-po display="sp01">
             <h1>‹wcp-summary› element · Live code</h1>
-            <dia-livecode project="wcp-summary" mode="editor" file="script.js" />
+            <dia-livecode project="wcp-summary-step01" mode="editor" file="index.html" />
           </dia-po>
           <dia-po display="sp02">
             <h1>‹wcp-summary› element · Live code</h1>
-            <dia-livecode project="wcp-summary" mode="editor" file="script.js" />
+            <dia-livecode project="wcp-summary-step01" mode="editor" file="index.html" />
           </dia-po>
         </dia-slide>
 
         <!-- Lit-Element Templates -->
         <dia-slide id="U02">
-          <dia-po display="pj01"><dia-livecode project="wcp-summary" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
+          <dia-po display="pj01"><dia-livecode project="wcp-summary-step02" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
           <dia-po display="tv01">${diapoLitElementTemplate()}</dia-po>
           <dia-po display="tv02" default>
             <h1>‹wcp-summary› element · Live code</h1>
-            <dia-livecode project="wcp-summary" mode="editor" file="script.js" />
+            <dia-livecode project="wcp-summary-step02" mode="editor" file="wcp-summary.js" />
           </dia-po>
           <dia-po display="sp01">
             <h1>‹wcp-summary› element · Live code</h1>
-            <dia-livecode project="wcp-summary" mode="editor" file="script.js" />
+            <dia-livecode project="wcp-summary-step02" mode="editor" file="wcp-summary.js" />
           </dia-po>
           <dia-po display="sp02">
             <h1>‹wcp-summary› element · Live code</h1>
-            <dia-livecode project="wcp-summary" mode="editor" file="script.js" />
+            <dia-livecode project="wcp-summary-step02" mode="editor" file="wcp-summary.js" />
           </dia-po>
         </dia-slide>
 
         <!-- Lit-Element Data bindings -->
         <dia-slide id="U03">
-          <dia-po display="pj01"><dia-livecode project="wcp-summary" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
+          <dia-po display="pj01"><dia-livecode project="wcp-summary-step03" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
           <dia-po display="tv01">${diapoLitElementDataBindings()}</dia-po>
           <dia-po display="tv02" default>
             <h1>‹wcp-summary› element · Live code</h1>
-            <dia-livecode project="wcp-summary" mode="editor" file="script.js" />
+            <dia-livecode project="wcp-summary-step03" mode="editor" file="index.html" />
           </dia-po>
           <dia-po display="sp01">
             <h1>‹wcp-summary› element · Live code</h1>
-            <dia-livecode project="wcp-summary" mode="editor" file="script.js" />
+            <dia-livecode project="wcp-summary-step03" mode="editor" file="index.html" />
           </dia-po>
           <dia-po display="sp02">
             <h1>‹wcp-summary› element · Live code</h1>
-            <dia-livecode project="wcp-summary" mode="editor" file="script.js" />
+            <dia-livecode project="wcp-summary-step03" mode="editor" file="index.html" />
           </dia-po>
         </dia-slide>
 
@@ -194,37 +194,37 @@ export class WebComponentsPrimerSlideshow extends LitElement {
 
         <!-- Vanilla data bindings: « data-in via attributes, data-out via events » -->
         <dia-slide id="D01">
-          <dia-po display="pj01"><dia-livecode project="wcp-vega-histogram" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
+          <dia-po display="pj01"><dia-livecode project="wcp-summary-step04" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
           <dia-po display="tv01">${diapoDataBindingsMantra()}</dia-po>
           <dia-po display="tv02" default>
-            <h1>‹wcp-vega-histogram› element · Live code</h1>
-            <dia-livecode project="wcp-vega-histogram" mode="editor" file="index.html" />
+            <h1>‹wcp-summary› element · Live code</h1>
+            <dia-livecode project="wcp-summary-step04" mode="editor" file="README.md" />
           </dia-po>
           <dia-po display="sp01">
-            <h1>‹wcp-vega-histogram› element · Live code</h1>
-            <dia-livecode project="wcp-vega-histogram" mode="editor" file="index.html" />
+            <h1>‹wcp-summary› element · Live code</h1>
+            <dia-livecode project="wcp-summary-step04" mode="editor" file="README.md" />
           </dia-po>
           <dia-po display="sp02">
-            <h1>‹wcp-vega-histogram› element · Live code</h1>
-            <dia-livecode project="wcp-vega-histogram" mode="editor" file="index.html" />
+            <h1>‹wcp-summary› element · Live code</h1>
+            <dia-livecode project="wcp-summary-step04" mode="editor" file="README.md" />
           </dia-po>
         </dia-slide>
 
         <!-- Retrieving and storing data -->
         <dia-slide id="D02">
-          <dia-po display="pj01"><dia-livecode project="wcp-vega-histogram" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
+          <dia-po display="pj01"><dia-livecode project="wcp-summary-step05" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
           <dia-po display="tv01">${diapoRetrieveAndStoreData()}</dia-po>
           <dia-po display="tv02" default>
-            <h1>‹wcp-vega-histogram› element · Live code</h1>
-            <dia-livecode project="wcp-vega-histogram" mode="editor" file="index.html" />
+            <h1>‹wcp-summary› element · Live code</h1>
+            <dia-livecode project="wcp-summary-step05" mode="editor" file="wcp-summary-data.json" />
           </dia-po>
           <dia-po display="sp01">
-            <h1>‹wcp-vega-histogram› element · Live code</h1>
-            <dia-livecode project="wcp-vega-histogram" mode="editor" file="index.html" />
+            <h1>‹wcp-summary› element · Live code</h1>
+            <dia-livecode project="wcp-summary-step05" mode="editor" file="wcp-summary-data.json" />
           </dia-po>
           <dia-po display="sp02">
-            <h1>‹wcp-vega-histogram› element · Live code</h1>
-            <dia-livecode project="wcp-vega-histogram" mode="editor" file="index.html" />
+            <h1>‹wcp-summary› element · Live code</h1>
+            <dia-livecode project="wcp-summary-step05" mode="editor" file="wcp-summary-data.json" />
           </dia-po>
         </dia-slide>
 
