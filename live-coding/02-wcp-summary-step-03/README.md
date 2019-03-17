@@ -1,8 +1,6 @@
-[« prev](https://glitch.com/edit/#!/wcp-summary-step02?path=README.md) [next »](https://glitch.com/edit/#!/wcp-summary-step04?path=README.md)
+[« prev](../02-wcp-summary-step02/) [next »](../02-wcp-summary-step04/)
 
 # 3. Using Web Components – Lit-Element Data-bindings
-
----
 
 Part of the live-coding examples of the talk [A Primer to Web Components](https://web-components-primer.firebaseapp.com).
 
@@ -104,4 +102,5 @@ concise and avoids the idiosynchrasy of Javascript's event scope.
 
 ---
 
-Click `Show` in the header to see this example live. Updates to the code will instantly deploy and update live. Made with [Glitch](https://glitch.com/about).
+[View it on Glitch](https://wcp-summary-step03.glitch.me/) /
+[Remix it on Glitch](https://glitch.com/edit/#!/wcp-summary-step03)
