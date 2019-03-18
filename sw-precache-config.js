@@ -43,6 +43,10 @@ module.exports = {
     {
       urlPattern: /^https:\/\/www.gstatic.com\/firebasejs\//,
       handler: 'fastest'
+    },
+    {
+      urlPattern: /^https:\/\/wcp-.+\.glitch\.me\//,
+      handler: 'fastest'
     }
   ],
   // Ignore reserved namespace of Firebase Auth
