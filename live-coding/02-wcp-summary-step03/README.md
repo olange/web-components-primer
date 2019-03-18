@@ -15,7 +15,7 @@ Part of the live-coding examples of the talk [A Primer to Web Components](https:
   * Property to attribute reflection
 * Declaration of an event handler
 
-![Bindings – Attribute reflected to property](../../../public/images/wcp-summary-bindings.svg)
+![Bindings – Attribute reflected to property](../../public/images/wcp-summary-bindings.svg)
 
 ## While live-coding, we would have said…
 
