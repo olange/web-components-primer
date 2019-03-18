@@ -76,228 +76,142 @@ export class WebComponentsPrimerSlideshow extends LitElement {
           meetupURLShortened = `${meetupURL.host}/GenevaWeb`
 
     return html`
-      <dia-show slide="F03">
+      <dia-show slide="I01:tv01" display="web">
         <!-- 0. INTRODUCTION -->
 
-        <dia-slide id="I01">
-          <dia-po display="pj01" class="center">${diapoWiFi( wifiSSID, wifiPWD, primerURL, primerURLShortened)}</dia-po>
-          <dia-po display="tv01" default>${diapoWCPTitle()}</dia-po>
-          <dia-po display="tv02">${diapoModelViewer()}</dia-po>
-          <dia-po display="sp01">${diapoWCPTitleAsideOlivier()}</dia-po>
-          <dia-po display="sp02">${diapoWCPTitleAsideYves()}</dia-po>
-        </dia-slide>
+        <dia-slide id="I01:tv01"><dia-po display="web">${diapoWCPTitle()}</dia-po></dia-slide>
+        <dia-slide id="I01:tv02"><dia-po display="web">${diapoModelViewer()}</dia-po></dia-slide>
 
         <!-- 1. FOUNDATIONS OF WEB COMPONENTS -->
 
         <!-- What are Web Components? -->
-        <dia-slide id="F01">
-          <dia-po display="pj01"><wcp-summary active-index="F01" /></dia-po>
-          <dia-po display="tv01">${diapoWhatAreWebComponents()}</dia-po>
-          <dia-po display="tv02" default>${diapoLiveCodeCustomElement( false)}</dia-po>
-          <dia-po display="sp01">${diapoWhatAreWebComponents()}</dia-po>
-          <dia-po display="sp02">${diapoLiveCodeCustomElement( false)}</dia-po>
-        </dia-slide>
+        <dia-slide id="F01:pj01"><dia-po display="web"><wcp-summary active-index="F01" /></dia-po></dia-slide>
+        <dia-slide id="F01:tv01"><dia-po display="web">${diapoWhatAreWebComponents()}</dia-po></dia-slide>
+        <dia-slide id="F01:tv02"><dia-po display="web">${diapoLiveCodeCustomElement( false)}</dia-po></dia-slide>
 
         <!-- Can I Use Web Components? -->
-        <dia-slide id="F01B">
-          <dia-po display="pj01">${diapo1BDevices()}</dia-po>
-          <dia-po display="tv01" default>${diapoCanIUseWebComponents()}</dia-po>
-          <dia-po display="tv02">${diapoWebComponentsPolyfill()}</dia-po>
-          <dia-po display="sp01">${diapoBrowserReleases()}</dia-po>
-          <dia-po display="sp02">${diapoBrowserLatestVersions()}</dia-po>
-        </dia-slide>
+        <dia-slide id="F01B:pj01"><dia-po display="web">${diapo1BDevices()}</dia-po></dia-slide>
+        <dia-slide id="F01B:tv01"><dia-po display="web">${diapoCanIUseWebComponents()}</dia-po></dia-slide>
+        <dia-slide id="F01B:tv02"><dia-po display="web">${diapoWebComponentsPolyfill()}</dia-po></dia-slide>
+        <dia-slide id="F01B:sp01"><dia-po display="web">${diapoBrowserReleases()}</dia-po></dia-slide>
+        <dia-slide id="F01B:sp02"><dia-po display="web">${diapoBrowserLatestVersions()}</dia-po></dia-slide>
 
         <!-- Custom Elements (& Shadow DOM) -->
-        <dia-slide id="F02">
-          <dia-po display="pj01"><wcp-summary active-index="F02" /></dia-po>
-          <dia-po display="tv01">${diapoCustomElements()}</dia-po>
-          <dia-po display="tv02" default>${diapoLiveCodeCustomElement( true)}</dia-po>
-          <dia-po display="sp01">${diapoCustomElementsAside()}</dia-po>
-          <dia-po display="sp02">${diapoLiveCodeCustomElement( true)}</dia-po>
-        </dia-slide>
+        <dia-slide id="F02:pj01"><dia-po display="web"><wcp-summary active-index="F02" /></dia-po></dia-slide>
+        <dia-slide id="F02:tv01"><dia-po display="web">${diapoCustomElements()}</dia-po></dia-slide>
+        <dia-slide id="F02:tv02"><dia-po display="web">${diapoLiveCodeCustomElement( true)}</dia-po></dia-slide>
 
         <!-- Shadow DOM -->
-        <dia-slide id="F03">
-          <dia-po display="pj01"><wcp-summary active-index="F03" /></dia-po>
-          <dia-po display="tv01">${diapoShadowDOM()}</dia-po>
-          <dia-po display="tv02" default>${diapoLiveCodeCustomElementWithSlot()}</dia-po>
-          <dia-po display="sp01">${diapoShadowDOM()}</dia-po>
-          <dia-po display="sp02">${diapoLiveCodeCustomElementWithSlot()}</dia-po>
-        </dia-slide>
+        <dia-slide id="F03:pj01"><dia-po display="web"><wcp-summary active-index="F03" /></dia-po></dia-slide>
+        <dia-slide id="F03:tv01"><dia-po display="web">${diapoShadowDOM()}</dia-po></dia-slide>
+        <dia-slide id="F03:tv02"><dia-po display="web">${diapoLiveCodeCustomElementWithSlot()}</dia-po></dia-slide>
 
         <!-- Modules & Templates -->
-        <dia-slide id="F04">
-          <dia-po display="pj01"><wcp-summary active-index="F04" /></dia-po>
-          <dia-po display="tv01">${diapoModulesAndImports()}</dia-po>
-          <dia-po display="tv02" default>${diapoModuleImportExample()}</dia-po>
-          <dia-po display="sp01">${diapoModulesAndImports()}</dia-po>
-          <dia-po display="sp02">${diapoModuleImportExample()}</dia-po>
-        </dia-slide>
+        <dia-slide id="F04:pj01"><dia-po display="web"><wcp-summary active-index="F04" /></dia-po></dia-slide>
+        <dia-slide id="F04:tv01"><dia-po display="web">${diapoModulesAndImports()}</dia-po></dia-slide>
+        <dia-slide id="F04:tv02"><dia-po display="web">${diapoModuleImportExample()}</dia-po></dia-slide>
 
         <!-- 2. CREATING AND USING WEB COMPONENTS -->
 
         <!-- How to start? -->
-        <dia-slide id="U01">
-          <dia-po display="pj01"><dia-livecode project="wcp-summary-step01" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
-          <dia-po display="tv01">${diapoHowToStart()}</dia-po>
-          <dia-po display="tv02" default>
-            <h1>‹wcp-summary› element · Live code</h1>
-            <dia-livecode project="wcp-summary-step01" mode="editor" file="index.html" />
-          </dia-po>
-          <dia-po display="sp01">
-            <h1>‹wcp-summary› element · Live code</h1>
-            <dia-livecode project="wcp-summary-step01" mode="editor" file="index.html" />
-          </dia-po>
-          <dia-po display="sp02">
-            <h1>‹wcp-summary› element · Live code</h1>
-            <dia-livecode project="wcp-summary-step01" mode="editor" file="index.html" />
-          </dia-po>
-        </dia-slide>
+        <dia-slide id="U01:tv01"><dia-po display="web">${diapoHowToStart()}</dia-po></dia-slide>
+        <dia-slide id="U01:pj01"><dia-po display="web">
+          <dia-livecode project="wcp-summary-step01" mode="preview" /><!-- refresh="${this.refresh}" -->
+        </dia-po></dia-slide>
+        <dia-slide id="U01:tv02"><dia-po display="web">
+          <h1>‹wcp-summary› element · Live code</h1>
+          <dia-livecode project="wcp-summary-step01" mode="editor" file="index.html" />
+        </dia-po></dia-slide>
 
         <!-- Lit-Element Templates -->
-        <dia-slide id="U02">
-          <dia-po display="pj01"><dia-livecode project="wcp-summary-step02" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
-          <dia-po display="tv01">${diapoLitElementTemplate()}</dia-po>
-          <dia-po display="tv02" default>
-            <h1>‹wcp-summary› element · Live code</h1>
-            <dia-livecode project="wcp-summary-step02" mode="editor" file="wcp-summary.js" />
-          </dia-po>
-          <dia-po display="sp01">
-            <h1>‹wcp-summary› element · Live code</h1>
-            <dia-livecode project="wcp-summary-step02" mode="editor" file="wcp-summary.js" />
-          </dia-po>
-          <dia-po display="sp02">
-            <h1>‹wcp-summary› element · Live code</h1>
-            <dia-livecode project="wcp-summary-step02" mode="editor" file="wcp-summary.js" />
-          </dia-po>
+        <dia-slide id="U02:tv01"><dia-po display="web">${diapoLitElementTemplate()}</dia-po></dia-slide>
+        <dia-slide id="U02:pj01"><dia-po display="web">
+          <dia-livecode project="wcp-summary-step02" mode="preview" /></dia-po>
         </dia-slide>
+        <dia-slide id="U02:tv02"><dia-po display="web">
+          <h1>‹wcp-summary› element · Live code</h1>
+          <dia-livecode project="wcp-summary-step02" mode="editor" file="wcp-summary.js" />
+        </dia-po></dia-slide>
 
         <!-- Lit-Element Data bindings -->
-        <dia-slide id="U03">
-          <dia-po display="pj01"><dia-livecode project="wcp-summary-step03" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
-          <dia-po display="tv01">${diapoLitElementDataBindings()}</dia-po>
-          <dia-po display="tv02" default>
-            <h1>‹wcp-summary› element · Live code</h1>
-            <dia-livecode project="wcp-summary-step03" mode="editor" file="index.html" />
-          </dia-po>
-          <dia-po display="sp01">
-            <h1>‹wcp-summary› element · Live code</h1>
-            <dia-livecode project="wcp-summary-step03" mode="editor" file="index.html" />
-          </dia-po>
-          <dia-po display="sp02">
-            <h1>‹wcp-summary› element · Live code</h1>
-            <dia-livecode project="wcp-summary-step03" mode="editor" file="index.html" />
-          </dia-po>
-        </dia-slide>
+        <dia-slide id="U03:tv01"><dia-po display="web">${diapoLitElementDataBindings()}</dia-po></dia-slide>
+        <dia-slide id="U03:pj01"><dia-po display="web">
+          <dia-livecode project="wcp-summary-step03" mode="preview" /><!-- refresh="${this.refresh}" -->
+        </dia-po></dia-slide>
+        <dia-slide id="U03:tv02"><dia-po display="web">
+          <h1>‹wcp-summary› element · Live code</h1>
+          <dia-livecode project="wcp-summary-step03" mode="editor" file="index.html" />
+        </dia-po></dia-slide>
 
         <!-- 3. DATAFLOWS OF WEB COMPONENTS -->
 
         <!-- Vanilla data bindings: « data-in via attributes, data-out via events » -->
-        <dia-slide id="D01">
-          <dia-po display="pj01"><dia-livecode project="wcp-summary-step04" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
-          <dia-po display="tv01">${diapoDataBindingsMantra()}</dia-po>
-          <dia-po display="tv02" default>
-            <h1>‹wcp-summary› element · Live code</h1>
-            <dia-livecode project="wcp-summary-step04" mode="editor" file="README.md" />
-          </dia-po>
-          <dia-po display="sp01">
-            <h1>‹wcp-summary› element · Live code</h1>
-            <dia-livecode project="wcp-summary-step04" mode="editor" file="README.md" />
-          </dia-po>
-          <dia-po display="sp02">
-            <h1>‹wcp-summary› element · Live code</h1>
-            <dia-livecode project="wcp-summary-step04" mode="editor" file="README.md" />
-          </dia-po>
-        </dia-slide>
+        <dia-slide id="D01:tv01"><dia-po display="web">${diapoDataBindingsMantra()}</dia-po></dia-slide>
+        <dia-slide id="D01:pj01"><dia-po display="web">
+          <dia-livecode project="wcp-summary-step04" mode="preview" /><!-- refresh="${this.refresh}" -->
+        </dia-po></dia-slide>
+        <dia-slide id="D01:tv02"><dia-po display="web">
+          <h1>‹wcp-summary› element · Live code</h1>
+          <dia-livecode project="wcp-summary-step04" mode="editor" file="README.md" />
+        </dia-po></dia-slide>
 
         <!-- Fetching data -->
-        <dia-slide id="D02">
-          <dia-po display="pj01"><dia-livecode project="wcp-summary-step05" mode="preview" /></dia-po><!-- refresh="${this.refresh}" -->
-          <dia-po display="tv01">${diapoFetchingData()}</dia-po>
-          <dia-po display="tv02" default>
-            <h1>‹wcp-summary› element · Live code</h1>
-            <dia-livecode project="wcp-summary-step05" mode="editor" file="wcp-summary-data.json" />
-          </dia-po>
-          <dia-po display="sp01">
-            <h1>‹wcp-summary› element · Live code</h1>
-            <dia-livecode project="wcp-summary-step05" mode="editor" file="wcp-summary-data.json" />
-          </dia-po>
-          <dia-po display="sp02">
-            <h1>‹wcp-summary› element · Live code</h1>
-            <dia-livecode project="wcp-summary-step05" mode="editor" file="wcp-summary-data.json" />
-          </dia-po>
-        </dia-slide>
+        <dia-slide id="D02:tv01"><dia-po display="web">${diapoFetchingData()}</dia-po></dia-slide>
+        <dia-slide id="D02:pj01"><dia-po display="web">
+          <dia-livecode project="wcp-summary-step05" mode="preview" /><!-- refresh="${this.refresh}" -->
+        </dia-po></dia-slide>
+        <dia-slide id="D02:tv02"><dia-po display="web">
+          <h1>‹wcp-summary› element · Live code</h1>
+          <dia-livecode project="wcp-summary-step05" mode="editor" file="wcp-summary-data.json" />
+        </dia-po></dia-slide>
 
         <!-- 4. THE ECOSYSTEM OF WEB COMPONENTS -->
 
         <!-- Understand the Polymer project -->
-        <dia-slide id="E01">
-          <dia-po display="pj01"><wcp-summary active-index="E01" /></dia-po>
-          <dia-po display="tv01" default>${diapoPolymerProject()}</dia-po>
-          <dia-po display="tv02">${diapoPolymerProjectDetail()}</dia-po>
-          <dia-po display="sp01">${diapoPolymerProject()}</dia-po>
-          <dia-po display="sp02">${diapoPolymerProjectDetail()}</dia-po>
-        </dia-slide>
+        <dia-slide id="E01:pj01"><dia-po display="web"><wcp-summary active-index="E01" /></dia-po></dia-slide>
+        <dia-slide id="E01:tv01"><dia-po display="web">${diapoPolymerProject()}</dia-po></dia-slide>
+        <dia-slide id="E01:tv02"><dia-po display="web">${diapoPolymerProjectDetail()}</dia-po></dia-slide>
 
         <!-- Navigate WebComponents.org and discover its main collections -->
-        <dia-slide id="E02">
-          <dia-po display="pj01"><wcp-summary active-index="E02" /></dia-po>
-          <dia-po display="tv01" default>${diapoWebComponentsCollections()}</dia-po>
-          <dia-po display="tv02">${diapoWebComponentsCollectionsDetail()}</dia-po>
-          <dia-po display="sp01">${diapoWebComponentsCollections()}</dia-po>
-          <dia-po display="sp02">${diapoWebComponentsCollectionsDetail()}</dia-po>
-        </dia-slide>
+        <dia-slide id="E02:pj01"><dia-po display="web"><wcp-summary active-index="E02" /></dia-po></dia-slide>
+        <dia-slide id="E02:tv01"><dia-po display="web">${diapoWebComponentsCollections()}</dia-po></dia-slide>
+        <dia-slide id="E02:tv02"><dia-po display="web">${diapoWebComponentsCollectionsDetail()}</dia-po></dia-slide>
 
         <!-- Understand Material Design and A11Y -->
-        <dia-slide id="E03">
-          <dia-po display="pj01"><wcp-summary active-index="E03" /></dia-po>
-          <dia-po display="tv01" default>${diapoMaterialDesignAndA11Y()}</dia-po>
-          <dia-po display="tv02">${diapoMaterialDesignAndA11YDetail()}</dia-po>
-          <dia-po display="sp01">${diapoMaterialDesignAndA11Y()}</dia-po>
-          <dia-po display="sp02">${diapoMaterialDesignAndA11YDetail()}</dia-po>
-        </dia-slide>
+        <dia-slide id="E03:pj01"><dia-po display="web"><wcp-summary active-index="E03" /></dia-po></dia-slide>
+        <dia-slide id="E03:tv01"><dia-po display="web">${diapoMaterialDesignAndA11Y()}</dia-po></dia-slide>
+        <dia-slide id="E03:tv02"><dia-po display="web">${diapoMaterialDesignAndA11YDetail()}</dia-po></dia-slide>
 
         <!-- 5. CONCLUSION -->
 
         <!-- The Promises of Web Components -->
-        <dia-slide id="C01">
-          <dia-po display="pj01"><wcp-summary active-index="C" /></dia-po>
-          <dia-po display="tv01" default>${diapoWebComponentPromises()}</dia-po>
-          <dia-po display="tv02">${diapoColorOfTimePatchwork()}</dia-po>
-          <dia-po display="sp01">${diapoWebComponentPromisesAsideOlivier()}</dia-po>
-          <dia-po display="sp02">${diapoColorOfTimePatchwork()}</dia-po>
-        </dia-slide>
+        <dia-slide id="C01:pj01"><dia-po display="web"><wcp-summary active-index="C" /></dia-po></dia-slide>
+        <dia-slide id="C01:tv01"><dia-po display="web">${diapoWebComponentPromises()}</dia-po></dia-slide>
+        <dia-slide id="C01:tv02"><dia-po display="web">${diapoColorOfTimePatchwork()}</dia-po></dia-slide>
 
         <!-- Difficult bits & Learning investment -->
-        <dia-slide id="C02">
-          <dia-po display="pj01"><wcp-summary active-index="C" /></dia-po>
-          <dia-po display="tv01">${diapoDifficultBits()}</dia-po>
-          <dia-po display="tv02" default>${diapoLearningInvestment()}</dia-po>
-          <dia-po display="sp01">${diapoDifficultBits()}</dia-po>
-          <dia-po display="sp02">${diapoLearningInvestment()}</dia-po>
-        </dia-slide>
+        <dia-slide id="C02:pj01"><dia-po display="web"><wcp-summary active-index="C" /></dia-po></dia-slide>
+        <dia-slide id="C02:tv01"><dia-po display="web">${diapoDifficultBits()}</dia-po></dia-slide>
+        <dia-slide id="C02:tv02"><dia-po display="web">${diapoLearningInvestment()}</dia-po></dia-slide>
 
         <!-- Thank You for Your Attention -->
-        <dia-slide id="C03">
-          <dia-po display="pj01" class="center">${diapoSlideshowShare( primerURL, primerURLShortened, starterURL, starterURLShortened)}</dia-po>
-          <dia-po display="tv01" default class="center">${diapoThankYouFeedback( meetupURL, meetupURLShortened, this.slackURL)}</dia-po>
-          <dia-po display="tv02" class="center">${diapoPetitAtelier()}</dia-po>
-          <dia-po display="sp01" class="center">${diapoSlideshowShare( primerURL, primerURLShortened, starterURL, starterURLShortened)}</dia-po>
-          <dia-po display="sp02" class="center">${diapoThankYouFeedback( meetupURL, meetupURLShortened, this.slackURL)}</dia-po>
-        </dia-slide>
+        <dia-slide id="C03:pj01"><dia-po display="web">
+          ${diapoSlideshowShare( primerURL, primerURLShortened, starterURL, starterURLShortened)}
+        </dia-po></dia-slide>
+        <dia-slide id="C03:tv01"><dia-po display="web">
+          ${diapoThankYouFeedback( meetupURL, meetupURLShortened, this.slackURL)}
+        </dia-po></dia-slide>
+        <dia-slide id="C03:tv02"><dia-po display="web">
+          ${diapoPetitAtelier()}
+        </dia-po></dia-slide>
 
         <!-- Gōng-fu I/O & Play with Web Components -->
-        <dia-slide id="C04">
-          <dia-po display="pj01" class="center">${diapoGōngfuIO()}</dia-po>
-          <dia-po display="tv01" default>${diapoPlayWithWebComponents()}</dia-po>
-          <dia-po display="tv02">${diapoPlayWithDemonstrates()}</dia-po>
-          <dia-po display="sp01">${diapoPlayWithWebComponentsAside()}</dia-po>
-          <dia-po display="sp02">${diapoPlayWithDemonstrates()}</dia-po>
-        </dia-slide>
+        <dia-slide id="C04:pj01"><dia-po display="web">${diapoGōngfuIO()}</dia-po></dia-slide>
+        <dia-slide id="C04:tv01"><dia-po display="web">${diapoPlayWithWebComponents()}</dia-po></dia-slide>
+        <dia-slide id="C04:tv02"><dia-po display="web">${diapoPlayWithDemonstrates()}</dia-po></dia-slide>
       </dia-show>
     `;
   }
-
 }
 
 // Register the element with the browser

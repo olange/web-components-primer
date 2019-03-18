@@ -29,6 +29,6 @@ export function diapoLearningInvestment() {
       challenges, it is a foundation that proved sound — the standards,
       libraries and tools and are actively developed, supported and
       well documented, and there is a vibrant community.
-      We will definitively continue investing in learning using it.</p>
+      We will definitively continue invest in learning using it.</p>
   `;
 }
