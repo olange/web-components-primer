@@ -20,7 +20,7 @@ export function diapoSlideshowShare( primerURL, primerURLShortened, starterURL, 
 
 export function diapoThankYouFeedback( meetupURL, meetupURLShortened, slackURL) {
   return html`
-    <h1>Thank you for your attention<br>🙏🏻</h1>
+    <h1 class="center">Thank you for your attention<br>🙏🏻</h1>
     <p class="big">Your feedback is appreciated</p>
     <p>Please leave a comment on <a href="${meetupURL}">${meetupURLShortened}</a><br>
       or ping us on Twitter <a href="https://twitter.com/olange">@olange</a>

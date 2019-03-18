@@ -93,8 +93,7 @@ export class WebComponentsPrimerSlideshow extends LitElement {
         <dia-slide id="F01B:pj01"><dia-po display="web">${diapo1BDevices()}</dia-po></dia-slide>
         <dia-slide id="F01B:tv01"><dia-po display="web">${diapoCanIUseWebComponents()}</dia-po></dia-slide>
         <dia-slide id="F01B:tv02"><dia-po display="web">${diapoWebComponentsPolyfill()}</dia-po></dia-slide>
-        <dia-slide id="F01B:sp01"><dia-po display="web">${diapoBrowserReleases()}</dia-po></dia-slide>
-        <dia-slide id="F01B:sp02"><dia-po display="web">${diapoBrowserLatestVersions()}</dia-po></dia-slide>
+        <dia-slide id="F01B:sp01"><dia-po display="web">${diapoBrowserReleases()}${diapoBrowserLatestVersions()}</dia-po></dia-slide>
 
         <!-- Custom Elements (& Shadow DOM) -->
         <dia-slide id="F02:pj01"><dia-po display="web"><wcp-summary active-index="F02" /></dia-po></dia-slide>
