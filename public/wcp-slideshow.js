@@ -114,30 +114,30 @@ export class WebComponentsPrimerSlideshow extends LitElement {
 
         <!-- How to start? -->
         <dia-slide id="U01:tv01"><dia-po display="web">${diapoHowToStart()}</dia-po></dia-slide>
-        <dia-slide id="U01:pj01"><dia-po display="web">
+        <dia-slide id="U01:pj01"><dia-po display="web" fullbleed>
           <dia-livecode project="wcp-summary-step01" mode="preview" /><!-- refresh="${this.refresh}" -->
         </dia-po></dia-slide>
-        <dia-slide id="U01:tv02"><dia-po display="web">
+        <dia-slide id="U01:tv02"><dia-po display="web" fullbleed>
           <h1>‹wcp-summary› element · Live code</h1>
           <dia-livecode project="wcp-summary-step01" mode="editor" file="index.html" />
         </dia-po></dia-slide>
 
         <!-- Lit-Element Templates -->
         <dia-slide id="U02:tv01"><dia-po display="web">${diapoLitElementTemplate()}</dia-po></dia-slide>
-        <dia-slide id="U02:pj01"><dia-po display="web">
+        <dia-slide id="U02:pj01"><dia-po display="web" fullbleed>
           <dia-livecode project="wcp-summary-step02" mode="preview" /></dia-po>
         </dia-slide>
-        <dia-slide id="U02:tv02"><dia-po display="web">
+        <dia-slide id="U02:tv02"><dia-po display="web" fullbleed>
           <h1>‹wcp-summary› element · Live code</h1>
           <dia-livecode project="wcp-summary-step02" mode="editor" file="wcp-summary.js" />
         </dia-po></dia-slide>
 
         <!-- Lit-Element Data bindings -->
         <dia-slide id="U03:tv01"><dia-po display="web">${diapoLitElementDataBindings()}</dia-po></dia-slide>
-        <dia-slide id="U03:pj01"><dia-po display="web">
+        <dia-slide id="U03:pj01"><dia-po display="web" fullbleed>
           <dia-livecode project="wcp-summary-step03" mode="preview" /><!-- refresh="${this.refresh}" -->
         </dia-po></dia-slide>
-        <dia-slide id="U03:tv02"><dia-po display="web">
+        <dia-slide id="U03:tv02"><dia-po display="web" fullbleed>
           <h1>‹wcp-summary› element · Live code</h1>
           <dia-livecode project="wcp-summary-step03" mode="editor" file="index.html" />
         </dia-po></dia-slide>
@@ -146,20 +146,20 @@ export class WebComponentsPrimerSlideshow extends LitElement {
 
         <!-- Vanilla data bindings: « data-in via attributes, data-out via events » -->
         <dia-slide id="D01:tv01"><dia-po display="web">${diapoDataBindingsMantra()}</dia-po></dia-slide>
-        <dia-slide id="D01:pj01"><dia-po display="web">
+        <dia-slide id="D01:pj01"><dia-po display="web" fullbleed>
           <dia-livecode project="wcp-summary-step04" mode="preview" /><!-- refresh="${this.refresh}" -->
         </dia-po></dia-slide>
-        <dia-slide id="D01:tv02"><dia-po display="web">
+        <dia-slide id="D01:tv02"><dia-po display="web" fullbleed>
           <h1>‹wcp-summary› element · Live code</h1>
           <dia-livecode project="wcp-summary-step04" mode="editor" file="README.md" />
         </dia-po></dia-slide>
 
         <!-- Fetching data -->
         <dia-slide id="D02:tv01"><dia-po display="web">${diapoFetchingData()}</dia-po></dia-slide>
-        <dia-slide id="D02:pj01"><dia-po display="web">
+        <dia-slide id="D02:pj01"><dia-po display="web" fullbleed>
           <dia-livecode project="wcp-summary-step05" mode="preview" /><!-- refresh="${this.refresh}" -->
         </dia-po></dia-slide>
-        <dia-slide id="D02:tv02"><dia-po display="web">
+        <dia-slide id="D02:tv02"><dia-po display="web" fullbleed>
           <h1>‹wcp-summary› element · Live code</h1>
           <dia-livecode project="wcp-summary-step05" mode="editor" file="wcp-summary-data.json" />
         </dia-po></dia-slide>
