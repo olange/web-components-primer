@@ -6,20 +6,16 @@ Part of the live-coding examples of the talk [A Primer to Web Components](https:
 
 ---
 
-## Essentially, this example shows
-
-* Observed attribute and bound property
-  * Definition of an observed attribute and property
-  * Automatic attribute to property reflection
-  * Reacting to a change of the property value
-  * Property to attribute reflection
-* Declaration of an event handler
-
 ![Bindings – Attribute reflected to property](../../public/images/wcp-summary-bindings.svg)
 
-## While live-coding, we would have said…
+## Essentially, this example shows
 
-### …about observed attributes and properties of ‹wcp-summary›
+* Definition of an observed attribute (`active-index`) and property (`active`)
+* Automatic attribute to property reflection (`active-index` ⟶ `active`)
+* Reacting to a change of the property value (`active`)
+* Property to attribute reflection (`active` ⟶ `active-index`)
+
+## In detail, the observed attributes and properties of ‹wcp-summary›
 
 We defined a new **`active-index`** _attribute_ on our **‹wcp-summary›**
 element. And the attribute will automatically be bound by Lit-Element
@@ -71,34 +67,6 @@ of an element and the properties of its class instance; a glimpse:
   (`{ type: …, reflect: true }`) – or not, in which case the attribute
   always keeps the value that is defined in the DOM; while the property
   holds a different updated value.
-
-### … about the event handler of of ‹wcp-select›
-
-The `@change=${this.onSelected}` shorthand notation asks Lit-Element
-to register the `onSelected()` method of the WCPSummarySelect class
-as an event handler of the `change` event. The `change` event fires
-for the `‹select›` HTML element, when the user selects a new option.
-
-When the `onSelected()` event handler is called, note it was bound
-to the class instance by Lit-Element previously – so the `this`
-keyword, used  inside that method, correctly refers to the custom
-element class instance, as you would expect. Lit-Element takes that
-step for us; otherwise you would have the `this` keyword referring
-to the dispatched event target — that is, the `select` HTML element.
-
-In summary, with the `@change=${this.onSelected}` syntax, Lit-Element
-does the following for us:
-
-```
-  firstUpdated() {
-    this.shadowRoot.querySelector( "select")
-      .addEventListener( "change", this.onSelected.bind( this));
-
-  }
-```
-
-Isn't it neat? Less code to write. `@change=${this.onSelected}` is
-concise and avoids the idiosynchrasy of Javascript's event scope.
 
 ---
 
