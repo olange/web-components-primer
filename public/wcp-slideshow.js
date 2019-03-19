@@ -41,6 +41,7 @@ export class WebComponentsPrimerSlideshow extends LitElement {
     return {
       wifi: { type: Array, attribute: "wifi" },
       primerURL: { type: String, attribute: "primer-url" },
+      examplesURL: { type: String, attribute: "examples-url" },
       starterURL: { type: String, attribute: "starter-url" },
       meetupURL: { type: String, attribute: "meetup-url" },
       slackURL: { type: String, attribute: "slack-url" },
@@ -60,6 +61,8 @@ export class WebComponentsPrimerSlideshow extends LitElement {
     this.primerURL = "https://ptat.ch/webcomponents-primer";
     // URL of the « Web Components Starter » kit on GitHub
     this.starterURL = "https://ptat.ch/webcomponents-starter";
+    // URL of the « Web Components Live-coding Examples » on Glitch
+    this.examplesURL = "https://ptat.ch/webcomponents-examples";
     // URL of the Geneva Web Meetup of 11.03.2019 (where to leave feedback)
     this.meetupURL = "https://www.meetup.com/fr-FR/GenevaWeb/events/258787967";
     // URL of our `#webcomponents-primer` channel on Slack
@@ -72,6 +75,8 @@ export class WebComponentsPrimerSlideshow extends LitElement {
           primerURLShortened = `${primerURL.host}${primerURL.pathname}`,
           starterURL = new URL( this.starterURL),
           starterURLShortened = `${starterURL.host}${starterURL.pathname}`,
+          examplesURL = new URL( this.examplesURL),
+          examplesURLShortened = `${examplesURL.host}${examplesURL.pathname}`,
           meetupURL = new URL( this.meetupURL),
           meetupURLShortened = `${meetupURL.host}/GenevaWeb`
 
@@ -195,7 +200,7 @@ export class WebComponentsPrimerSlideshow extends LitElement {
 
         <!-- Thank You for Your Attention -->
         <dia-slide id="C03:pj01"><dia-po display="web">
-          ${diapoSlideshowShare( primerURL, primerURLShortened, starterURL, starterURLShortened)}
+          ${diapoSlideshowShare( primerURL, primerURLShortened, examplesURL, examplesURLShortened, starterURL, starterURLShortened)}
         </dia-po></dia-slide>
         <dia-slide id="C03:tv01"><dia-po display="web">
           ${diapoThankYouFeedback( meetupURL, meetupURLShortened, this.slackURL)}

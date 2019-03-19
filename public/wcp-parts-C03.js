@@ -1,13 +1,16 @@
 import { html } from "lit-element";
 
-export function diapoSlideshowShare( primerURL, primerURLShortened, starterURL, starterURLShortened) {
+export function diapoSlideshowShare( primerURL, primerURLShortened, examplesURL, examplesURLShortened, starterURL, starterURLShortened) {
   return html`
     <h2>Slides of the presentation</h2>
     <p class="big">
       A Primer on Web Components<br/>
       <a href="${primerURL}">${primerURLShortened}</a></p>
+    <p class="big">
+      Live-coding examples<br/>
+      <a href="${examplesURL}">${examplesURLShortened}</a></p>
     <h2>Share your components</h2>
-    <p>Once you're ready to roll your own collection of Web Components and publish them to NPM:</p>
+    <p>To roll your own collection of Web Components and publish them to NPM:</p>
     <p class="big">
       Web Components Starter<br/>
       <a href="${starterURL}">${starterURLShortened}</a></p>
