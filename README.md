@@ -1,5 +1,7 @@
 # A Primer on Web Components
 
+[Online slideshow](https://ptat.ch/webcomponents-primer) / [Live-coding examples](https://ptat.ch/webcomponents-examples) / [Starter kit](https://ptat.ch/webcomponents-starter)
+
 ### Performance
 
 * Geneva Web meetup, 11.03.2019, 12h–14h
@@ -24,20 +26,19 @@ At the end of the talk, you should be able to start building such an app and web
 
 #### Primary topics covered
 
-* Foundation of Web Components:
-· What they are? Custom Elements, Shadow DOM, Templates, Modules
-· How to create, use and publish them
-· Web Components Best practices
+* Foundation of Web Components:  
+· What they are? Custom Elements, Shadow DOM, Templates, Modules  
+· How to create, use and publish them  
+· Lit-Element Templates and Data bindings
 
-* Dataflows of Web Components:
-· Fetching data
+* Dataflows of Web Components:  
+· Fetching data  
 · Vanilla data bindings: « data in via attributes, data out via events »
 
-* The Ecosystem of Web Components:
-· Understand the Polymer project
-· Navigate WebComponents.org and discover its main collections
+* The Ecosystem of Web Components:  
+· Understand the Polymer project  
+· Navigate WebComponents.org and discover its main collections  
 · Understand Material Design and A11Y
-· Lit-HTML and Lit-Element
 
 #### Secondary topics
 
