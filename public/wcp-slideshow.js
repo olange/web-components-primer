@@ -124,7 +124,7 @@ export class WebComponentsPrimerSlideshow extends LitElement {
         </dia-po></dia-slide>
         <dia-slide id="U01:tv02"><dia-po display="web" fullbleed>
           <h1>How to start? · Live code</h1>
-          <dia-livecode project="wcp-summary-step01" mode="editor" file="index.html" />
+          <dia-livecode project="wcp-summary-step01" mode="editor" file="package.json" />
         </dia-po></dia-slide>
 
         <!-- Lit-Element Templates -->
