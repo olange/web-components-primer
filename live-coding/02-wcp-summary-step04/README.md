@@ -2,7 +2,7 @@
 
 # 4. Dataflow – Vanilla data-bindings
 
-Part of the live-coding examples of the talk [A Primer to Web Components](https://web-components-primer.firebaseapp.com).
+Part of the live-coding examples of the talk [A Primer on Web Components](https://web-components-primer.firebaseapp.com).
 
 ---
 

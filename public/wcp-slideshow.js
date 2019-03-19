@@ -56,7 +56,7 @@ export class WebComponentsPrimerSlideshow extends LitElement {
     // Wifi SSID & pwd
     this.wifi = [ "wifi-network", "123456" ];
 
-    // URL of this slideshow « A Primer to Web Components »
+    // URL of this slideshow « A Primer on Web Components »
     this.primerURL = "https://ptat.ch/webcomponents-primer";
     // URL of the « Web Components Starter » kit on GitHub
     this.starterURL = "https://ptat.ch/webcomponents-starter";
