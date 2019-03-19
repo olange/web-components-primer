@@ -1,6 +1,6 @@
 import { LitElement, html } from "lit-element";
 import { SummaryStyles } from "./wcp-summary.css.js";
- 
+
 export class WCPSummary extends LitElement {
 
   static get styles() {
@@ -54,7 +54,7 @@ export class WCPSummary extends LitElement {
         <h1 id="D">Dataflows of Web Components</h1>
         <ul>
           <li id="D01">Vanilla data bindings: « data-in via attributes, data-out via events »</li>
-          <li id="D02">Retrieving and storing data</li>
+          <li id="D02">Fetching data</li>
         </ul>
 
         <h1 id="E">The Ecosystem of Web Components</h1>

@@ -42,7 +42,7 @@ export class WCPSummary extends LitElement {
         { id: "U03", text: "Lit-Element Data bindings" } ],
       [ { id: "D",   text: "DATAFLOWS OF WEB COMPONENTS" },
         { id: "D01", text: "Vanilla data bindings: « data-in via attributes, data-out via events »" },
-        { id: "D02", text: "Retrieving and storing data" } ],
+        { id: "D02", text: "Fetching data" } ],
       [ { id: "E",   text: "THE ECOSYSTEM OF WEB COMPONENTS" },
         { id: "E01", text: "Understanding the Polymer project" },
         { id: "E02", text: "Navigate WebComponents.org and discover its main collections" },

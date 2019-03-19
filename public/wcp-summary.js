@@ -52,7 +52,7 @@ export class WebComponentsPrimerSummary extends LitElement {
         <h1 id="D">Dataflows of Web Components</h1>
         <ul>
           <li id="D01">Vanilla data bindings: « data-in via attributes, data-out via events »</li>
-          <li id="D02">Retrieving and storing data</li>
+          <li id="D02">Fetching data</li>
         </ul>
 
         <h1 id="E">The Ecosystem of Web Components</h1>

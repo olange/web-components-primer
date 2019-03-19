@@ -16,7 +16,7 @@ export class WCPSummarySelect extends LitElement {
         <option value="U03">– Lit-Element Data bindings</option>
         <option value="D"  >DATAFLOWS OF WEB COMPONENTS</option>
         <option value="D01">– Vanilla data bindings: « data-in via attributes, data-out via events »</option>
-        <option value="D02">– Retrieving and storing data</option>
+        <option value="D02">– Fetching data</option>
         <option value="E"  >THE ECOSYSTEM OF WEB COMPONENTS</option>
         <option value="E01">– Understanding the Polymer project</option>
         <option value="E02">– Navigate WebComponents.org and discover its main collections</option>
