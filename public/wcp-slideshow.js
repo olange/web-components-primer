@@ -155,7 +155,7 @@ export class WebComponentsPrimerSlideshow extends LitElement {
           <dia-livecode project="wcp-summary-step04" mode="preview" /><!-- refresh="${this.refresh}" -->
         </dia-po></dia-slide>
         <dia-slide id="D01:tv02"><dia-po display="web" fullbleed>
-          <h1>Dataflow · Live code</h1>
+          <h1>Dataflow · Vanilla data bindings · Live code</h1>
           <dia-livecode project="wcp-summary-step04" mode="editor" file="README.md" />
         </dia-po></dia-slide>
 
@@ -165,7 +165,7 @@ export class WebComponentsPrimerSlideshow extends LitElement {
           <dia-livecode project="wcp-summary-step05" mode="preview" /><!-- refresh="${this.refresh}" -->
         </dia-po></dia-slide>
         <dia-slide id="D02:tv02"><dia-po display="web" fullbleed>
-          <h1>Fetching data · Live code</h1>
+          <h1>Dataflow · Fetching data · Live code</h1>
           <dia-livecode project="wcp-summary-step05" mode="editor" file="wcp-summary-data.json" />
         </dia-po></dia-slide>
 
@@ -194,7 +194,6 @@ export class WebComponentsPrimerSlideshow extends LitElement {
         <dia-slide id="C01:tv02"><dia-po display="web">${diapoColorOfTimePatchwork()}</dia-po></dia-slide>
 
         <!-- Difficult bits & Learning investment -->
-        <dia-slide id="C02:pj01"><dia-po display="web"><wcp-summary active-index="C" /></dia-po></dia-slide>
         <dia-slide id="C02:tv01"><dia-po display="web">${diapoDifficultBits()}</dia-po></dia-slide>
         <dia-slide id="C02:tv02"><dia-po display="web">${diapoLearningInvestment()}</dia-po></dia-slide>
 

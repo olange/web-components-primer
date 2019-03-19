@@ -2,7 +2,7 @@ import { html } from "lit-element";
 
 export function diapoDataBindingsMantra() {
   return html`
-    <h1>Dataflow — <em>Vanilla</em> data bindings</h1>
+    <h1>Dataflow — Vanilla data bindings</h1>
     <blockquote class="big" cite="https://robdodson.me/interoperable-custom-elements/">
       <p>« Keep this mantra in mind: ‹&nbsp;Data-in via attributes<br/>
         and properties, data-out via events&nbsp;› »</p>
