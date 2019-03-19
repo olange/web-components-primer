@@ -73,10 +73,10 @@ const SlideshowStyles = css`
   table th { font-weight: 600; }
 
   cite { font-style: normal; }
-  .blockquote { margin: 1em 1em; }
+  .blockquote { margin: 1em 0; }
   blockquote {
     background-color: var(--secondary-bg-color);
-    padding: 2em 2em; margin: 1em 1em; }
+    padding: 2em 2em; margin: 1em 0; }
 `;
 
 export {
