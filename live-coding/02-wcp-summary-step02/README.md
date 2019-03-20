@@ -24,7 +24,7 @@ export class WCPSummary extends LitElement {
 
 ### Rendering to Shadow DOM
 
-Add a `render()` method to your class and make it return a Lit-HTML [template result](https://lit-html.polymer-project.org/guide/writing-templates), by using the `html` template literal tag:
+Add a `render()` method to your class and return a Lit-HTML [template result](https://lit-html.polymer-project.org/guide/writing-templates), by using the `html` template literal tag:
 
 ```
 class WCPSummary extends LitElement {
@@ -56,7 +56,7 @@ customElements.define( "wcp-summary", WCPSummary);
 
 There are various ways to add CSS style rules to your custom element. You could simply add a `‹style›` tag to your template.
 
-The most efficient one is to override the `styles()` getter of your Lit-Element and make it return a [constructable stylesheet](https://wicg.github.io/construct-stylesheets/) — or an array thereof; in your `wcp-summary.js` definition:
+The most efficient way is to override the [`styles()` static getter](https://lit-element.polymer-project.org/guide/styles#static-styles) of your Lit-Element class and return a [constructable stylesheet](https://wicg.github.io/construct-stylesheets/) — or an array thereof; in your `wcp-summary.js` definition:
 
 ```
 import { SummaryStyles } from "./wcp-summary.css.js";
@@ -71,7 +71,7 @@ class WCPSummary extends LitElement {
 
 ### Constructable stylesheet definition
 
-Within `wcp-summary.css.js`, use the `css` literal template helper from Lit-HTML to define a [constructable stylesheet](https://wicg.github.io/construct-stylesheets/) from your CSS selectors and rules:
+Within a separate `wcp-summary.css.js` file, use the `css` literal template helper from Lit-HTML to define a [constructable stylesheet](https://wicg.github.io/construct-stylesheets/) for your CSS rules:
 
 ```
 import { css } from "lit-element";
@@ -91,13 +91,13 @@ export {
 
 The browser will attach the _constructable stylesheet_ to every instance of your custom element — without the need of re-parse it, every time the Shadow DOM is created.
 
-This comes with a big performance boost, when you instantiate hundreds of your custom elements, such as cells of a grid. And it comes at no cost, when you would use only one, so we suggest using that way.
+This comes with an important performance advantage, when you instantiate hundreds of your custom elements, such as the cells of a grid. And it comes at no cost, when you would use only one, so we suggest always defining your styles that way – that is, override the static `styles()` getter and return a constructable stylesheet.
 
 ## About Lit-Element and Lit-HTML
 
 ### Lit-Element Features
 
-Lit-Element provides us with some essential abilities — here a simplified overview:
+Lit-Element provides us with some essential abilities — here is a simplified overview:
 
 * Observe changes to attribute values, and reflect those changes to properties of your custom element class;
 * Observe changes to the values of properties and allows you to handle these changes;
@@ -127,26 +127,26 @@ Most of the time, you'll use its features without even noticing: Lit-HTML templa
 
 ### Reactive dataflow
 
-You can think about Lit-Element and Lit-HTML as composing in a [reactive dataflow processing system](https://en.wikipedia.org/wiki/Dataflow_programming), where both would collaboratively maintain a _computational graph_ for every custom element and its templates:
+You can think about Lit-Element and Lit-HTML as composing in a [reactive dataflow processing system](https://en.wikipedia.org/wiki/Dataflow_programming), where both would collaboratively maintain a _computational graph_ for every template of a custom element:
 
 * the graph would link attributes to properties of a custom element, and vice-versa;
 * and link properties to template parts.
 
 Whenever an attribute or property value changes, the change propagates along the edges of the graph, until a _part_ of the template is reached – allowing Lit-Element and Lit-HTML to know which _parts_ of a template are using that changed value and need to be re-rendered.
 
-(This _reactive dataflow processing_ and its _computational graph_ are emergent characteristics of the _design_ of both Lit-Element and Lit-HTML – but do not exist _per se_ in their implementation.)
+(This _reactive dataflow processing_ and its _computational graph_ are emergent _conceptual characteristics_ of the design of both Lit-Element and Lit-HTML – but do not exist _per se_ in their [implementation](https://github.com/Polymer/lit-html/wiki/How-it-Works).)
 
 ### Significant updates
 
-Before triggering a re-render upon change of an attribute or property value, Lit-Element gives you an opportunity to determine whether the change is significant or not.
+Before triggering a re-render upon change of an attribute or property value, Lit-Element gives you the opportunity to determine whether the change is significant or not.
 
-Lit-Element automatically defines a setter (and a getter) for every property. This setter will check that the old and new values are different; if they are not different, the change will result in a no-op in the update/render process.
+Lit-Element automatically defines a setter (and a getter) for every property. This default setter will check that the old and new values are different; if they are not different, the change will result in a no-op in the update/render process.
 
 You can override the setter (and the getter) to provide logic specific to some value, namely when it is an object or an array, where simple comparison by reference would not detect any change — you might need a deep comparison in those cases.
 
 ### Lifecyle of a Lit-Element
 
-Detecting changes to attribute and property values is just a part of Lit-Element's [rich lifecycle](#TODO:linkLitElementLifecycle).
+Detecting changes to attribute and property values is just a part of Lit-Element's [rich lifecycle](https://lit-element.polymer-project.org/guide/lifecycle).
 
 You'll probably spend time understanding it in depth – especially when you start to write custom elements, that collaborate with other elements they know about.
 
@@ -159,7 +159,7 @@ To start with, you might want to remember those events:
 
 When you are designing a « system of custom elements », that is, multiple custom elements that would collaborate with each other, note that you are on a _cross-road_, with many ways to choose from.
 
-Essentially remember that, at this time of writing, knowing when a parent/child/sibling custom element was instantiated is a tricky question — subject of [debate and proposals](#TODO:definition).
+Essentially remember that, at this time of writing, knowing when a parent/child/sibling custom element was instantiated is a tricky question — subject of [debate and a proposal](#TODO:definition).
 
 For instance, let's say you are designing a set of custom elements to build a 3D game app. In the hypothetic design of the following example, the `‹three-view›` would need to grab some `Scene` and `Camera` objects from the properties of its sibling `‹three-scene›` and `‹three-camera›` custom elements class instances, to be able to render the scene to its WebGL renderer:
 
