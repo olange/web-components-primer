@@ -2,11 +2,25 @@
 
 [Online slideshow](https://ptat.ch/webcomponents-primer) / [Live-coding examples](https://ptat.ch/webcomponents-examples) / [Starter kit](https://ptat.ch/webcomponents-starter)
 
+The slideshow was designed for a 2 TV-screens and 1-projector setup, positioned next to each other, simultaneously displaying 3 diapositives for every slide.
+
+The above online version will display the diapositives individually, one after each other – so they might sometimes lack a bit of context in that mode.
+
+If you discovered this slideshow while navigating the web, looking for a tutorial on Web Components, you might be interested in the [Live-coding examples](https://ptat.ch/webcomponents-examples) and their READMEs, which contain a full transcript of our performance: they will walk you thru creating and using Web Components, step-by-step.
+
+### Contributing
+
+Would you have a question, a suggestion, noticed an error, or a request for an enhancement about the slides and/or the live-coding examples, feel free to [open an issue](issues/).
+
 ### Performance
 
-* Geneva Web meetup, 11.03.2019, 12h–14h
-  https://www.meetup.com/fr-FR/GenevaWeb/events/258787967/
-  http://techup.ch/2700/genevaweb-a-primer-on-web-components
+* Geneva Web meetup, 11.03.2019, 12h–14h  
+  https://www.meetup.com/fr-FR/GenevaWeb/events/258787967  
+  http://techup.ch/2700/genevaweb-a-primer-on-web-components  
+  
+  <a href="https://twitter.com/GenevaWeb/status/1105051359383117826">
+  <img alt="Slideshow setup at Geneva Web · 11.03.2019 · photo by Yannis Jacquet"
+    width="400" src="public/images/geneva-web-setup.jpg"></a>
 
 ### Audiences
 
