@@ -155,13 +155,13 @@ To start with, you might want to remember those events:
 * `updated( changedProps)` — invoked by Lit-Element upon change of one or more attribute/property values (Lit-Element will debounce changes, yeah!), after the template was re-rendered; by overriding this method, you can insert additional logic to handle a value change
 * `firstUpdated()` — invoked _once_ by Lit-Element, after it first rendered the template to the Shadow DOM; overriding this method allows you to perform additional initialization logic, at a special time, where you are guaranteed that your custom element was upgraded by the browser; and that your Shadow DOM is initialized.
 
-### Caveats
+### _Caveat_
 
 When you are designing a « system of custom elements », that is, multiple custom elements that would collaborate with each other, note that you are on a _cross-road_, with many ways to choose from.
 
-Essentially remember that, at this time of writing, knowing when a parent/child/sibling custom element was instantiated is a tricky question — subject of [debate and a proposal](#TODO:definition).
+Essentially remember that, there is no guarantee about when a parent/child/sibling custom element will be upgraded. This is _by design_ — so to have robust custom elements — yet subject of debate and proposals for possible work-arounds (see for instance [w3c/webcomponents#737](https://github.com/w3c/webcomponents/issues/737)).
 
-For instance, let's say you are designing a set of custom elements to build a 3D game app. In the hypothetic design of the following example, the `‹three-view›` would need to grab some `Scene` and `Camera` objects from the properties of its sibling `‹three-scene›` and `‹three-camera›` custom elements class instances, to be able to render the scene to its WebGL renderer:
+Let's say you are designing a set of custom elements to build a 3D game app. In the hypothetic design of the following example, the `‹three-view›` would need to grab some `Scene` and `Camera` objects from the properties of its sibling `‹three-scene›` and `‹three-camera›` custom elements class instances, to be able to render the scene to its WebGL renderer:
 
 ```
 <three-app active-view="V01">
@@ -173,15 +173,15 @@ For instance, let's say you are designing a set of custom elements to build a 3D
 </three-app>
 ```
 
-But `‹three-view›` has no easy way to know when those class instances and objects will be available. You'll need to implement some initialization logic, specific to your solution.
+But `‹three-view›` has no easy way to know when those class instances and objects will be available. You'll need to implement some initialization logic, specific to your solution — may be using the [Mutation Observer API](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) or the [`customElements.whenDefined()`](https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/whenDefined) method from the registry.
 
-Custom elements definitions will indeed be loaded – and the custom elements will be upgraded — _concurrently_ by the browser.
+Custom elements definitions will indeed be loaded – and the custom elements will be upgraded — _synchrounously_ by the browser, in an order that it is free to choose.
 
 You have **no guarantee** that the browser would upgrade the parent of a custom element first, because it appears in the DOM as its parent, or vice-versa; or upgrade them in the order in which siblings appear in the DOM — they won't upgrade in order, and it is browser dependent in some cases!
 
-What you know for sure, is that all custom elements live in the DOM, as you placed them, once your class gets constructed. So you're safe to establish _references_ to parent/sibling/child custom elements from the DOM.
+What you know for sure, is that all custom elements live in the DOM, as you placed them, once your class gets constructed. So you're safe to establish _references_ to parent/sibling/child _custom elements_ from the DOM.
 
-But at the time of construction, the classes of those parent/sibling/child custom elements might not have been instantiated yet! so you just have a reference to the elements. And if their class have been instantiated, they might not yet have rendered, so their Shadow DOM might not be there (which applies to your custom element as well).
+But at the time of construction, the classes of those parent/sibling/child custom elements might not have been instantiated yet! so you just have a reference to the elements. And if their class had been instantiated, they might not yet have rendered, so their Shadow DOM might not be there (which applies to your custom element as well).
 
 The only thing you can rely on for sure, is the `firstUpdated()` method invocation of Lit-Element: it comes at a late stage in your custom element's lifecycle, where its class was constructed; and your template was rendered to Shadow DOM.
 
