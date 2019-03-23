@@ -17,8 +17,8 @@ export function diapoLearningInvestment() {
   return html`
     <h1>Learning is an investment</h1>
     <blockquote cite="https://malloc.fi/go-long-on-web-components">
-      <p>« If I had to choose a single front end technology in 2017 for a long<br/>
-        lasting career in Web Development, I would choose Web Components. »</p>
+      <p>«&nbsp;If I had to choose a single front end technology in 2017 for a long<br/>
+        lasting career in Web Development, I would choose Web Components.&nbsp;»</p>
       <p><cite>— Jani Tarvainen, 18.05.2017, <a href="https://malloc.fi/go-long-on-web-components"
         >Go Long on Web Components</a></cite></p>
     </blockquote>

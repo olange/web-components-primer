@@ -3,7 +3,7 @@ import { html } from "lit-element";
 export function diapo1BDevices() {
   return html`
     <blockquote cite="https://youtu.be/cuoZenpQveQ?t=960" style="padding: 4em 4em">
-      <h2>« Web Components run natively on 1B+ devices »</h2>
+      <h2>«&nbsp;Web Components run natively on 1B+ devices&nbsp;»</h2>
       <p><cite>— Wendy Ginsberg, announcing at Google I/O, 17.05.2017</cite></p>
     </blockquote>
     <p class="blockquote"><cite><a href="https://youtu.be/cuoZenpQveQ?t=960">Future, Faster: Unlock the Power of Web Components with Polymer (Google I/O '17)</a></cite> at min. 16:00 of the talk</p>
