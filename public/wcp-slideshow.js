@@ -52,7 +52,7 @@ export class WebComponentsPrimerSlideshow extends LitElement {
   constructor() {
     super();
     // Refresh timeout of the live-coding previews (in milliseconds)
-    this.refresh = 60000; // 60 sec; change to 7.5 for the talk
+    this.refresh = 7500; // 7.5 sec
 
     // Wifi SSID & pwd
     this.wifi = [ "wifi-network", "123456" ];
@@ -90,7 +90,7 @@ export class WebComponentsPrimerSlideshow extends LitElement {
         <!-- 1. FOUNDATIONS OF WEB COMPONENTS -->
 
         <!-- What are Web Components? -->
-        <dia-slide id="F01:pj01"><dia-po display="web"><wcp-summary active-index="F01" /></dia-po></dia-slide>
+        <dia-slide id="F01:pj01"><dia-po display="web"><wcp-summary active-index="F01"></wcp-summary></dia-po></dia-slide>
         <dia-slide id="F01:tv01"><dia-po display="web">${diapoWhatAreWebComponents()}</dia-po></dia-slide>
         <dia-slide id="F01:tv02"><dia-po display="web">${diapoLiveCodeCustomElement( false)}</dia-po></dia-slide>
 
@@ -101,17 +101,17 @@ export class WebComponentsPrimerSlideshow extends LitElement {
         <dia-slide id="F01B:sp01"><dia-po display="web">${diapoBrowserReleases()}${diapoBrowserLatestVersions()}</dia-po></dia-slide>
 
         <!-- Custom Elements (& Shadow DOM) -->
-        <dia-slide id="F02:pj01"><dia-po display="web"><wcp-summary active-index="F02" /></dia-po></dia-slide>
+        <dia-slide id="F02:pj01"><dia-po display="web"><wcp-summary active-index="F02"></wcp-summary></dia-po></dia-slide>
         <dia-slide id="F02:tv01"><dia-po display="web">${diapoCustomElements()}</dia-po></dia-slide>
         <dia-slide id="F02:tv02"><dia-po display="web">${diapoLiveCodeCustomElement( true)}</dia-po></dia-slide>
 
         <!-- Shadow DOM -->
-        <dia-slide id="F03:pj01"><dia-po display="web"><wcp-summary active-index="F03" /></dia-po></dia-slide>
+        <dia-slide id="F03:pj01"><dia-po display="web"><wcp-summary active-index="F03"></wcp-summary></dia-po></dia-slide>
         <dia-slide id="F03:tv01"><dia-po display="web">${diapoShadowDOM()}</dia-po></dia-slide>
         <dia-slide id="F03:tv02"><dia-po display="web">${diapoLiveCodeCustomElementWithSlot()}</dia-po></dia-slide>
 
         <!-- Modules & Templates -->
-        <dia-slide id="F04:pj01"><dia-po display="web"><wcp-summary active-index="F04" /></dia-po></dia-slide>
+        <dia-slide id="F04:pj01"><dia-po display="web"><wcp-summary active-index="F04"></wcp-summary></dia-po></dia-slide>
         <dia-slide id="F04:tv01"><dia-po display="web">${diapoModulesAndImports()}</dia-po></dia-slide>
         <dia-slide id="F04:tv02"><dia-po display="web">${diapoModuleImportExample()}</dia-po></dia-slide>
 
@@ -120,31 +120,31 @@ export class WebComponentsPrimerSlideshow extends LitElement {
         <!-- How to start? -->
         <dia-slide id="U01:tv01"><dia-po display="web">${diapoHowToStart()}</dia-po></dia-slide>
         <dia-slide id="U01:pj01"><dia-po display="web" fullbleed>
-          <dia-livecode project="wcp-summary-step01" mode="preview" /><!-- refresh="${this.refresh}" -->
+          <dia-livecode project="wcp-summary-step01" mode="preview" refresh="${this.refresh}"></dia-livecode>
         </dia-po></dia-slide>
         <dia-slide id="U01:tv02"><dia-po display="web" fullbleed>
           <h1>How to start? · Live code</h1>
-          <dia-livecode project="wcp-summary-step01" mode="editor" file="package.json" />
+          <dia-livecode project="wcp-summary-step01" mode="editor" file="package.json"></dia-livecode>
         </dia-po></dia-slide>
 
         <!-- Lit-Element Templates -->
         <dia-slide id="U02:tv01"><dia-po display="web">${diapoLitElementTemplate()}</dia-po></dia-slide>
         <dia-slide id="U02:pj01"><dia-po display="web" fullbleed>
-          <dia-livecode project="wcp-summary-step02" mode="preview" /></dia-po>
-        </dia-slide>
+          <dia-livecode project="wcp-summary-step02" mode="preview"></dia-livecode>
+        </dia-po></dia-slide>
         <dia-slide id="U02:tv02"><dia-po display="web" fullbleed>
           <h1>Lit-Element Templates · Live code</h1>
-          <dia-livecode project="wcp-summary-step02" mode="editor" file="wcp-summary.js" />
+          <dia-livecode project="wcp-summary-step02" mode="editor" file="wcp-summary.js"></dia-livecode>
         </dia-po></dia-slide>
 
         <!-- Lit-Element Data bindings -->
         <dia-slide id="U03:tv01"><dia-po display="web">${diapoLitElementDataBindings()}</dia-po></dia-slide>
         <dia-slide id="U03:pj01"><dia-po display="web" fullbleed>
-          <dia-livecode project="wcp-summary-step03" mode="preview" /><!-- refresh="${this.refresh}" -->
+          <dia-livecode project="wcp-summary-step03" mode="preview" refresh="${this.refresh}"></dia-livecode>
         </dia-po></dia-slide>
         <dia-slide id="U03:tv02"><dia-po display="web" fullbleed>
           <h1>Lit-Element Data bindings · Live code</h1>
-          <dia-livecode project="wcp-summary-step03" mode="editor" file="index.html" />
+          <dia-livecode project="wcp-summary-step03" mode="editor" file="index.html"></dia-livecode>
         </dia-po></dia-slide>
 
         <!-- 3. DATAFLOWS OF WEB COMPONENTS -->
@@ -152,44 +152,44 @@ export class WebComponentsPrimerSlideshow extends LitElement {
         <!-- Vanilla data bindings: « data-in via attributes, data-out via events » -->
         <dia-slide id="D01:tv01"><dia-po display="web">${diapoDataBindingsMantra()}</dia-po></dia-slide>
         <dia-slide id="D01:pj01"><dia-po display="web" fullbleed>
-          <dia-livecode project="wcp-summary-step04" mode="preview" /><!-- refresh="${this.refresh}" -->
+          <dia-livecode project="wcp-summary-step04" mode="preview" refresh="${this.refresh}"></dia-livecode>
         </dia-po></dia-slide>
         <dia-slide id="D01:tv02"><dia-po display="web" fullbleed>
           <h1>Dataflow · Vanilla data bindings · Live code</h1>
-          <dia-livecode project="wcp-summary-step04" mode="editor" file="README.md" />
+          <dia-livecode project="wcp-summary-step04" mode="editor" file="README.md"></dia-livecode>
         </dia-po></dia-slide>
 
         <!-- Fetching data -->
         <dia-slide id="D02:tv01"><dia-po display="web">${diapoFetchingData()}</dia-po></dia-slide>
         <dia-slide id="D02:pj01"><dia-po display="web" fullbleed>
-          <dia-livecode project="wcp-summary-step05" mode="preview" /><!-- refresh="${this.refresh}" -->
+          <dia-livecode project="wcp-summary-step05" mode="preview" refresh="${this.refresh}"></dia-livecode>
         </dia-po></dia-slide>
         <dia-slide id="D02:tv02"><dia-po display="web" fullbleed>
           <h1>Dataflow · Fetching data · Live code</h1>
-          <dia-livecode project="wcp-summary-step05" mode="editor" file="wcp-summary-data.json" />
+          <dia-livecode project="wcp-summary-step05" mode="editor" file="wcp-summary-data.json"></dia-livecode>
         </dia-po></dia-slide>
 
         <!-- 4. THE ECOSYSTEM OF WEB COMPONENTS -->
 
         <!-- Understand the Polymer project -->
-        <dia-slide id="E01:pj01"><dia-po display="web"><wcp-summary active-index="E01" /></dia-po></dia-slide>
+        <dia-slide id="E01:pj01"><dia-po display="web"><wcp-summary active-index="E01"></wcp-summary></dia-po></dia-slide>
         <dia-slide id="E01:tv01"><dia-po display="web">${diapoPolymerProject()}</dia-po></dia-slide>
         <dia-slide id="E01:tv02"><dia-po display="web">${diapoPolymerProjectDetail()}</dia-po></dia-slide>
 
         <!-- Navigate WebComponents.org and discover its main collections -->
-        <dia-slide id="E02:pj01"><dia-po display="web"><wcp-summary active-index="E02" /></dia-po></dia-slide>
+        <dia-slide id="E02:pj01"><dia-po display="web"><wcp-summary active-index="E02"></wcp-summary></dia-po></dia-slide>
         <dia-slide id="E02:tv01"><dia-po display="web">${diapoWebComponentsCollections()}</dia-po></dia-slide>
         <dia-slide id="E02:tv02"><dia-po display="web">${diapoWebComponentsCollectionsDetail()}</dia-po></dia-slide>
 
         <!-- Understand Material Design and A11Y -->
-        <dia-slide id="E03:pj01"><dia-po display="web"><wcp-summary active-index="E03" /></dia-po></dia-slide>
+        <dia-slide id="E03:pj01"><dia-po display="web"><wcp-summary active-index="E03"></wcp-summary></dia-po></dia-slide>
         <dia-slide id="E03:tv01"><dia-po display="web">${diapoMaterialDesignAndA11Y()}</dia-po></dia-slide>
         <dia-slide id="E03:tv02"><dia-po display="web">${diapoMaterialDesignAndA11YDetail()}</dia-po></dia-slide>
 
         <!-- 5. CONCLUSION -->
 
         <!-- The Promises of Web Components -->
-        <dia-slide id="C01:pj01"><dia-po display="web"><wcp-summary active-index="C" /></dia-po></dia-slide>
+        <dia-slide id="C01:pj01"><dia-po display="web"><wcp-summary active-index="C"></wcp-summary></dia-po></dia-slide>
         <dia-slide id="C01:tv01"><dia-po display="web">${diapoWebComponentPromises()}</dia-po></dia-slide>
         <dia-slide id="C01:tv02"><dia-po display="web">${diapoColorOfTimePatchwork()}</dia-po></dia-slide>
 
