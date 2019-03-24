@@ -33,5 +33,10 @@
   "bugs": {
     "url": "https://github.com/petitatelier/web-components-primer/issues"
   },
-  "homepage": "https://github.com/petitatelier/web-components-primer#readme"
+  "homepage": "https://github.com/petitatelier/web-components-primer#readme",
+  "dependencies": {
+    "@petitatelier/dia-code": "^0.2.11",
+    "@petitatelier/dia-livecode": "^0.2.11",
+    "@petitatelier/dia-show": "^0.2.12"
+  }
 }
